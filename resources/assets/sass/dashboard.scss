@@ -1,0 +1,35 @@
+.dashboard{
+	margin-top: 30px;
+}
+
+.tope{
+	text-align: center;
+	border: 2px solid #ccc;
+	padding: 12px;
+	margin-bottom: 15px;
+	img{
+		width: 80px;
+	}
+	h4{
+		color: #00aef0;
+		font-weight: bold;
+	}
+}
+
+.bus{
+	h1{
+		font-size: 25px;
+		color: #0a4fa3;
+		font-weight: bold;
+	}
+	.userBox{
+		border:none;
+		min-height: 350px;
+		.bio{
+			display: none;
+		}
+		h3{
+			font-size: 20px;
+		}
+	}
+}

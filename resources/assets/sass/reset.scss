@@ -1,0 +1,26 @@
+a{
+	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+		color: inherit;
+	}
+	&:hover{
+		text-decoration: none;
+		// font-weight:bold;
+	}
+}
+
+.editorImage{
+	max-width:400px;
+	max-height:400px;
+}
+
+.container{
+	max-width:100%;
+}
+
+.container-fluid{
+	padding:0;
+}
+
+#fold{
+	min-height:100vh;
+}

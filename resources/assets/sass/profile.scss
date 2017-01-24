@@ -1,0 +1,61 @@
+#EditProfileForm,#ChangePasswordForm{
+	display: none;
+}
+.topi{
+	margin-top: 25px;
+
+	.lefti,.righti{
+		width: 48%;
+		display: inline-block;
+	}
+}
+
+.talentList{
+	position: relative;
+	.trash{
+		position: absolute;
+		right: 10px;
+	}
+}
+
+.sim{
+	width:100px;
+	height: 100px;
+	object-fit: cover;
+}
+
+.profileImage{
+	width:100px;
+	height: 100px;
+	object-fit: cover;
+}
+
+.folioImage{
+	max-width: 200px;
+	max-height: 300px;
+	margin: 10px;
+	display: inline-block;
+}
+.river{
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:300;
+	padding:20px;
+	height: 100vh;
+	width: 100%;
+	text-align: center;
+	background: rgba(255, 255, 255, 0.79);
+}
+.waterImage{
+	width: auto;
+	height: auto;
+	max-width: 100%;
+}
+
+.portfolio{
+	.videos{
+		display: none;
+	}
+}

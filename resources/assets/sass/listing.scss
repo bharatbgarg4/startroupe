@@ -1,0 +1,77 @@
+.userBox{
+	min-height: 448px;
+	border: 7px solid #e8e8e8;
+	margin: 10px 0;
+	text-align:center;
+	h3{
+		margin: 5px;
+	}
+	img{
+		display: inline-block;
+	}
+	a{
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+
+.jobBox{
+	border: 2px solid #cecece;
+	padding: 18px;
+	margin: 5px auto;
+	.title{
+		color: #0a4fa3;
+		font-weight: bold;
+		margin-top: 0;
+	}
+	a{
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+
+#listing{
+	margin-top: 20px;
+	.head{
+		font-size: 16px;
+		display: inline-block;
+		margin-top: -10px;
+		border-bottom:1px dotted;
+	}
+	a{
+		color: #666;
+		&:hover{
+			color: #444;
+		}
+	}
+	.lside{
+		select  {
+			border-color: #88bfff;
+		}
+	}
+	.topper{
+		margin-bottom: 13px;
+		.ing {
+			color: #ffffff;
+			    background-color: #2bbcf3;
+			    border: 1px solid #2bbcf3;
+			    border-radius: 0;
+			    padding: 8px 18px 12px 16px;
+			    margin-left: -4px;
+		}
+		.form-control{
+			border-radius: 0;
+			border: 1px solid #2bbcf3;
+		}
+		.labels{
+			margin-top:10px;
+		}
+		.search{
+		// width: 400px;
+			// display: inline-block;
+			// float: right;
+		}
+	}
+}

@@ -1,0 +1,99 @@
+.tac{
+	font-size: 54px;
+	text-align: center;
+	color: #0a4fa3;;
+	font-weight: bold;
+}
+#home{
+	.banner{
+		background: url('/images/banner.jpg') no-repeat;
+		background-size: cover;
+		height: 420px;
+		padding: 60px;
+	}
+	.companies{
+		margin: 10px 0;
+		background: #fbeadc;
+		.imal{
+			text-align:center;
+		}
+		.imah{
+			display: inline-block;
+			width: 18%;
+			padding: 3px 4%;
+			img{
+				width:100%;
+			}
+		}
+	}
+	.profile{
+		margin-top: 20px;
+		text-align: center;
+		.list a{
+			padding: 21px 36px;
+			display: inline-block;
+			background: #00aef0;
+			margin: 17px 9px;
+			font-size: 22px;
+			font-weight: bold;
+			color: #fff;
+		}
+	}
+	.works{
+		background: url('/images/how-works-bg.jpg') no-repeat;
+		background-size: cover;
+		.con{
+			font-size: 32px;
+			color: #733092;
+			text-align: center;
+			margin-bottom: 14px;
+		}
+	}
+	.top-talent{
+		a{
+			color: #4d5254;
+			text-decoration: none;
+			font-size: 22px;
+			&:hover{
+				color: #333c40;
+				text-decoration: underline;
+			}
+		}
+	}
+	.reviewed{
+		.artist{
+			text-align: right;
+			img{
+				width: 138px;
+			}
+		}
+		.content{
+			margin-top: 7px;
+			font-size: 19px;
+			color: #000;
+		}
+	}
+	.invitation{
+		background: #7ec243;
+		color: #fff;
+		padding: 15px;
+		text-align: center;
+		margin-top: 37px;
+		.inn{
+			color: #fff;
+			font-size: 60px;
+		}
+		.started{
+			color: #fff;
+			padding: 10px;
+			border: 7px solid;
+			margin: 30px;
+			display: inline-block;
+			font-size: 33px;
+			font-weight: bold;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+}

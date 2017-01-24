@@ -1,0 +1,41 @@
+footer{
+	background:#7d7d7d;
+	color:#fff;
+	padding-top:30px;
+	a{
+		color: #fff;
+		&:hover{
+			color:#fff;
+		}
+	}
+	ul{
+		padding: 0;
+	}
+	li{
+		list-style: none;
+		font-size: 20px;
+		cursor:pointer;
+	}
+	.social{
+
+		margin-bottom: 0;
+		li{
+			display: inline-block;
+		}
+		img{
+			width: 80%;
+			margin:0;
+		}
+	}
+	.hothead{
+		font-size: 30px;
+	}
+	.lower{
+		margin-top:30px;
+		background:#000;
+		text-align: center;
+		padding:10px;
+		font-size: 20px;
+		color: #fff;
+	}
+}
