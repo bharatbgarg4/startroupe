@@ -32,6 +32,13 @@
 				<input type="hidden" name="type" value="0" id="typeHolder">
 				<input type="text" name="username" value="{{ old('username') }}" class="form-control" placeholder="Username">
 				<input type="password" name="password" class="form-control" placeholder="Password">
+				<div class="ci">
+					{!! Form::radio('artist', '0',true) !!}
+					Sign up as Individual
+					<br>
+					{!! Form::radio('artist', '1') !!}
+					Sign up as Group
+				</div>
 				<script src='https://www.google.com/recaptcha/api.js'></script>
 				<div class="g-recaptcha" data-sitekey="{{env('GOOGLE_RECAPTCHA_KEY')}}"></div>
 				<button type="submit" class="btn btn-success">SUBMIT</button>

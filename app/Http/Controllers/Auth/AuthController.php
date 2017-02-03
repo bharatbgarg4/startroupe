@@ -64,30 +64,19 @@ class AuthController extends Controller
 			$captcha=$data['g-recaptcha-response'];
 			$respon=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".env('GOOGLE_RECAPTCHA_SECRET')."&response=".$captcha);
 			$respon=json_decode($respon,true);
-			if($respon['success']){
-				$user=User::create([
-					'name' => $data['name'],
-					'username' => $data['username'],
-					'email' => $data['email'],
-					'editor' => intval($data['type']),
-					'password' => bcrypt($data['password']),
-					'confirmation_code'=>$confirmation_code,
-					]);				
-			}
-			else{
+			if(!$respon['success']){
 				return redirect()->back()->with('status-danger','Spam');
 			}
 		}
-		else{
-			$user=User::create([
-				'name' => $data['name'],
-				'username' => $data['username'],
-				'email' => $data['email'],
-				'editor' => intval($data['type']),
-				'password' => bcrypt($data['password']),
-				'confirmation_code'=>$confirmation_code,
-				]);
+
+		$editor=intval($data['type']);
+		if(!$editor){
+			$data['artist']=intval($data['artist']);
 		}
+		$data['editor']=$editor;
+		$data['confirmation_code']=$confirmation_code;
+		$data['password']=bcrypt($data['password']);
+		$user=User::create($data);
 		Mail::queue('emails.verify', ['token' => $confirmation_code], function($message) use ($user){
 			$message->to($user->email, $user->username)
 			->subject('Verify Your email');

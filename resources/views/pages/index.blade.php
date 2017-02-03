@@ -35,6 +35,7 @@
 				@foreach($talents as $talent)
 				<span><a href="/talent/{{$talent->slug}}"> {{$talent->title}} </a></span>
 				@endforeach
+				<span><a href="/talent" class="seeall"> See All </a></span>
 			</div>
 			<div class="row categories">
 				@if($users->isEmpty())

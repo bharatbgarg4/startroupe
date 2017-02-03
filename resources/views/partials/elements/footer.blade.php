@@ -18,9 +18,9 @@
 			<div class="col col-sm-4">
 				<h4 class="hothead"><strong> Contact </strong> </h4>
 				<ul>
-					<li> Address: </li>
-					<li> Email: </li>
-					<li> Phone Number: </li>
+					<li> Address: F-452, Phase 8B Industrial Area, Near Sector 91 - Mohali</li>
+					<li> Email: info@startroupe.com</li>
+					<li> Phone Number: 9888366200</li>
 				</ul>
 				<h4 class="hothead"><strong> Social </strong> </h4>
 				<ul class="social">

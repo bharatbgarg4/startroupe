@@ -52,12 +52,14 @@ $( "#datepicker" ).datepicker({ dateFormat: 'd M, yy' });
 $("#artist").click(function(){
 	$('.regmodal').show();
 	$('#regtxt').html('AS ARTIST');
+	$('.ci').show();
 	$('#typeHolder').val('0');
 });
 
 $("#bussiness").click(function(){
 	$('.regmodal').show();
 	$('#regtxt').html('AS BUSSINESS');
+	$('.ci').hide();
 	$('#typeHolder').val('1');
 });
 

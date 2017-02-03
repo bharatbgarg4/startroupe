@@ -53,6 +53,7 @@ class CreateUsersTable extends Migration
 			$table->boolean('admin')->default(false);
 			$table->boolean('editor')->default(false);
 			$table->boolean('is_confirmed')->default(false);
+			$table->boolean('artist')->default(false);
 			$table->string('confirmation_code')->nullable();
 			$table->rememberToken();
 			$table->timestamps();
