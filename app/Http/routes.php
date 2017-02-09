@@ -10,6 +10,7 @@ Route::get('search/{type}', array(
  ));
 
 Route::get('/', 'PageController@index');
+Route::get('coming-soon', 'PageController@coming');
 
 Route::get('signin', 'Auth\AuthController@getLogin');
 Route::post('login', 'Auth\AuthController@postLogin');

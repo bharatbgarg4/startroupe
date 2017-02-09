@@ -37,6 +37,10 @@ class PageController extends Controller
 		return redirect()->back()->with('status','Link Created');
 	}
 
+	public function coming(){
+		return view('pages.coming');
+	}
+
 
 	public function search(Request $request){
 		$input=$request->all();
@@ -52,17 +56,17 @@ class PageController extends Controller
 				$url='/'.$type;
 			}
 			else{
-				$url='/'.$type.'/'.$talent;				
+				$url='/'.$type.'/'.$talent;
 			}
 		}
 		else{
-			$url='/'.$type.'/'.$talent.'/'.$location;				
+			$url='/'.$type.'/'.$talent.'/'.$location;
 		}
 		return redirect($url);
 	}
 
 	public function deleteLink(Link $link){
-		
+
 		return redirect()->back()->with('status-danger','Link Deleted');
 	}
 

@@ -88,3 +88,13 @@ $(".btn-videos").click(function(){
 	$('.videos').show();
 	$('.images').hide();
 });
+
+$(document).ready(function(){
+	var w = window.innerWidth;var h = window.innerHeight;
+	console.log(w,h);
+	    $(".coming-page").css({"position" : "relative","height" : h,"color" : "#fff","width" : "w"});
+	    $(".coming-inner").css({"position" : "relative","height" : h/2,"color" : "#fff","width" : "100%"});
+
+
+
+	});
