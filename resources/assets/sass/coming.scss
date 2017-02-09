@@ -1,23 +1,23 @@
 .coming-page {
- background:#000 url(/images/imgback.jpg) no-repeat;background-size:cover;
-    float: left;
-    width: 100%;
-    text-align: center;
-    margin: 0px;
-    height: 100%;
-    padding:20px 0px;
+	background:#222222 url(/images/imgback.jpg) no-repeat;background-size:cover;
+	float: left;
+	width: 100%;
+	text-align: center;
+	margin: 0px;
+	height: 100%;
+	padding:20px 0px;
 }
 .coming-page h2 {
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    font: bold italic 50px/80px "Source Sans Pro",Calibri,Candara,Arial,sans-serif;
-    color: #ffffff !important;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	font: bold italic 50px/80px "Source Sans Pro",Calibri,Candara,Arial,sans-serif;
+	color: #ffffff !important;
 }
 .coming-page img {
-    width: 200px;
-    margin: 0px;
-    padding: 0px;
+	width: 200px;
+	margin: 0px;
+	padding: 0px;
 }
 .coming-page form{
 	width:100%;
@@ -26,50 +26,52 @@
 	float: left;
 }
 .coming-page form p {
-    width: 320px;
-    margin: 0px;
-    padding: 5px;
-    display: inline-block;
-    background: #222;
+	// background: #343434 ;
+	display:block;
+	margin: 0 auto;
+	padding: 8px 2px;
+	width: 320px;
 }
 .coming-page form p input{
+	background: #343434 ;
 	width:100%;
 	margin: 0px;
 	padding: 0px;
 	float: left;
+	margin-bottom:3px;
 }
 .coming-page form label {
-    float: left;
-    width: 100%;
-    margin: 0px;    word-spacing: 2px;
-    padding: 20px 0px 0px 0px;
-    color: #888;
-    font: 400 20px/50px "Source Sans Pro",Calibri,Candara,Arial,sans-serif;
-    /* text-shadow: 0px 0px 1px #999; */
-    text-transform: uppercase;
+	float: left;
+	width: 100%;
+	margin: 0px;    word-spacing: 2px;
+	padding: 20px 0px 0px 0px;
+	color: #888;
+	font: 400 20px/50px "Source Sans Pro",Calibri,Candara,Arial,sans-serif;
+	/* text-shadow: 0px 0px 1px #999; */
+	text-transform: uppercase;
 }
 
 .coming-page form p input {
-    width: 86%;
-    margin: 0px;
-    padding: 0px 5px;
-    font:400 16px/24px "Source Sans Pro",Calibri,Candara,Arial,sans-serif;
-    float: left;
-    color: #ffffff;
-    background: transparent;
-    border: none;
+	width: 86%;
+	// margin: 0px;
+	padding: 0px 5px;
+	font:400 16px/24px "Source Sans Pro",Calibri,Candara,Arial,sans-serif;
+	float: left;
+	color: #ffffff;
+	// background: transparent;
+	border: none;
 }
 .coming-page form p input[type="submit"] {
-    width: auto;
-    float: left;
-    background: #00aef0;
-    padding: 0px 10px;
-    color: #fff;
-    font: 600 16px/24px "Source Sans Pro",Calibri,Candara,Arial,sans-serif;
-    text-transform: uppercase;
+	width: auto;
+	float: left;
+	background: #00aef0;
+	padding: 0px 10px;
+	color: #fff;
+	font: 600 16px/24px "Source Sans Pro",Calibri,Candara,Arial,sans-serif;
+	text-transform: uppercase;
 }
 .coming-page form p input:focus {
-    outline: none;
+	outline: none;
 }
 .coming-inner{
 	width:100%;

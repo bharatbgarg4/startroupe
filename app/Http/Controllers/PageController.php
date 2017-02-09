@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use Mail;
 use App\Message;
 use App\Article;
 use App\User;
@@ -35,6 +36,23 @@ class PageController extends Controller
 		$input=$request->all();
 		Link::create($input);
 		return redirect()->back()->with('status','Link Created');
+	}
+
+	public function comingsend(Request $request){
+		$user=$request->all();
+		// dd($user);
+		if($user['name']){
+			if($user['email']){
+				Mail::queue('emails.invite',['user'=>$user],
+					function($m){
+						$m->to('bharatbgarg4@gmail.com','Bharat Garg')
+						->cc('kalra.parampreetsingh@gmail.com','parampreet singh kalra')
+						->cc('himanshu.vasistha@gmail.com','himanshu vasistha')
+						->subject(env('SITE_NAME').' User Register Notification');
+					});
+			}
+		}
+		return redirect('coming-soon');
 	}
 
 	public function coming(){
