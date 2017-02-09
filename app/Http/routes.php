@@ -4,13 +4,19 @@ if(env('HTTPS')){
 	URL::forceSchema('https');
 }
 
+Route::get('coming-soon', 'PageController@coming');
+if(env('APP_DEBUG')){
+	Route::get('/{any}', function ($any) {
+		return redirect('coming-soon');
+	})->where('any', '.*');
+}
+
 Route::get('search/{type}', array(
-     'as'    =>  'search',
-     'uses'  =>  'PageController@searchJobs'
- ));
+	'as'    =>  'search',
+	'uses'  =>  'PageController@searchJobs'
+	));
 
 Route::get('/', 'PageController@index');
-Route::get('coming-soon', 'PageController@coming');
 
 Route::get('signin', 'Auth\AuthController@getLogin');
 Route::post('login', 'Auth\AuthController@postLogin');
