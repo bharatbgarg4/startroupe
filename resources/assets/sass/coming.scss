@@ -26,20 +26,13 @@
 	float: left;
 }
 .coming-page form p {
-	// background: #343434 ;
-	display:block;
-	margin: 0 auto;
-	padding: 8px 2px;
-	width: 320px;
-}
-.coming-page form p input{
 	background: #343434 ;
-	width:100%;
-	margin: 0px;
-	padding: 0px;
-	float: left;
-	margin-bottom:3px;
+	display:inline-block;
+	margin: 0 auto;
+	padding: 5px 2px;
+	width: 350px;
 }
+
 .coming-page form label {
 	float: left;
 	width: 100%;
@@ -52,13 +45,12 @@
 }
 
 .coming-page form p input {
-	width: 86%;
-	// margin: 0px;
-	padding: 0px 5px;
-	font:400 16px/24px "Source Sans Pro",Calibri,Candara,Arial,sans-serif;
+	width: 44%;
+	padding: 0 5px;
+	font: 400 14px/24px "Source Sans Pro",Calibri,Candara,Arial,sans-serif;
 	float: left;
-	color: #ffffff;
-	// background: transparent;
+	background:#343434;
+	color: #fff;
 	border: none;
 }
 .coming-page form p input[type="submit"] {
