@@ -4,17 +4,18 @@
 <div id="home">
 	<section class="banner">
 		<div class="container">
-			<h1 class="tac"> Find Best of Local Artists </h1>
-			<div class="search">
+
+			<div class="home-search">
+				<h1 class="tac"> Find Best of Local Artists </h1>
 				{!!Form::open(['url'=>'/search'])!!}
 
 				<div class="row">
-					<div class="col col-sm-6 form-group">
+					<div class="col col-sm-12 form-group">
 						{!! Form::label('Talent') !!}
 						{!! Form::select('talent',$select_talent,null , ['class'=>'form-control']) !!}
 					</div>
 
-					<div class="col col-sm-6 form-group">
+					<div class="col col-sm-12 form-group">
 						{!! Form::label('Location') !!}
 						{!! Form::select('location',$select_location,null , ['class'=>'form-control']) !!}
 					</div>
@@ -35,7 +36,7 @@
 				@foreach($talents as $talent)
 				<span><a href="/talent/{{$talent->slug}}"> {{$talent->title}} </a></span>
 				@endforeach
-				
+
 				<span><a href="/talent" class="seeall"> See All </a></span>
 			</div>
 			<div class="row categories">

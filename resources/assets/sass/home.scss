@@ -1,15 +1,36 @@
-.tac{
-	font-size: 54px;
-	text-align: center;
-	color: #0a4fa3;;
-	font-weight: bold;
-}
+
 #home{
 	.banner{
 		background: url('/images/banner.jpg') no-repeat;
 		background-size: cover;
-		height: 420px;
-		padding: 60px;
+		height: 550px !important;
+		&:before {
+		    background: rgba(0, 0, 0, 0.45)!important;
+		    content: "";
+		    width: 100%;
+		    left: 0;
+		    top: 0;
+		    height: 551px!important;
+		    position: absolute;
+		}
+
+		.home-search {
+
+		    padding: 30px;
+		    margin: 0px auto;
+		    z-index: 99999!important;
+		    .tac {
+		        font: 600 36px/52px "Source Sans Pro",sans-serif;
+		        text-align: center;
+		        color: #00b9ff;
+		        width: 100% !important;
+		        float: left;
+		        text-align: center;
+		        margin: 0px;
+		        padding: 0px;
+		    }
+		}
+
 	}
 	.companies{
 		margin: 10px 0;
