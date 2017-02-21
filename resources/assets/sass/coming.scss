@@ -27,7 +27,7 @@
 	float: left;
 }
 .coming-page form p {
-	background: #343434 ;
+
 	display:inline-block;
 	margin: 0 auto;
 	padding: 5px 2px;
@@ -46,22 +46,23 @@
 }
 
 .coming-page form p input {
-	width: 44%;
-	padding: 0 5px;
-	font: 400 14px/24px "Source Sans Pro",Calibri,Candara,Arial,sans-serif;
+	width: 100%;
+	padding: 0 12px;
+	font: 400 14px/38px "Source Sans Pro",Calibri,Candara,Arial,sans-serif;
 	float: left;
-	background:#343434;
+	background: #343434;
 	color: #fff;
 	border: none;
+	margin: 0px 0px 10px!important;
 }
 .coming-page form p input[type="submit"] {
-	width: auto;
 	float: left;
 	background: #00aef0;
 	padding: 0px 10px;
 	color: #fff;
-	font: 600 16px/24px "Source Sans Pro",Calibri,Candara,Arial,sans-serif;
+	font: 600 19px/35px "Source Sans Pro",Calibri,Candara,Arial,sans-serif;
 	text-transform: uppercase;
+	width: 100%;
 }
 .coming-page form p input:focus {
 	outline: none;

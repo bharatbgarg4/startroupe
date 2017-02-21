@@ -11,6 +11,16 @@
 
 				<div class="row">
 					<div class="col col-sm-12 form-group">
+
+
+						<input type="text" name="" placeholder="Search actors, singers, photographers, models, other talent">
+					</div>
+					<div class="col col-sm-12 form-group">
+
+
+						<input type="text" name="" placeholder="Location">
+					</div>
+					<!--<div class="col col-sm-12 form-group">
 						{!! Form::label('Talent') !!}
 						{!! Form::select('talent',$select_talent,null , ['class'=>'form-control']) !!}
 					</div>
@@ -18,7 +28,7 @@
 					<div class="col col-sm-12 form-group">
 						{!! Form::label('Location') !!}
 						{!! Form::select('location',$select_location,null , ['class'=>'form-control']) !!}
-					</div>
+					</div> -->
 				</div>
 
 				<div class="form-group">

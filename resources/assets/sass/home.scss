@@ -3,33 +3,54 @@
 	.banner{
 		background: url('/images/banner.jpg') no-repeat;
 		background-size: cover;
-		height: 550px !important;
+		height: 600px !important;
 		&:before {
-		    background: rgba(0, 0, 0, 0.45)!important;
+		    background: rgba(255,255,255,0.24);
 		    content: "";
 		    width: 100%;
 		    left: 0;
 		    top: 0;
-		    height: 551px!important;
+		    height: 600px!important;
 		    position: absolute;
 		}
 
 		.home-search {
+ 		           background: none;
+		           padding: 40px 0px 0px;
+		           margin: 0px auto;
+		           width: 548px;
+		           top: 150px!important;
+		           float: left;
+		           position: relative;
 
-		    padding: 30px;
-		    margin: 0px auto;
-		    z-index: 99999!important;
+
 		    .tac {
-		        font: 600 36px/52px "Source Sans Pro",sans-serif;
+		        font: 300 40px/55px "Source Sans Pro",sans-serif;
 		        text-align: center;
-		        color: #00b9ff;
+		        color: #fff;
 		        width: 100% !important;
 		        float: left;
-		        text-align: center;
+		        text-align: left;
 		        margin: 0px;
 		        padding: 0px;
 		    }
+		    form {
+		        width: 100%;
+		        float: left;
+		        margin: 0px;
+		       padding: 24px 0px;
+		       input[type="text"] {
+		            float: left;
+		            width: 100%;
+		            background: rgba(0, 0, 0, 0.1);
+		            border: 2px solid #fff;
+		            font: 400 18px/42px sans-serif;
+		            padding: 0px 10px;
+		            color: #fff;
+		        }
+		    }
 		}
+
 
 	}
 	.companies{
