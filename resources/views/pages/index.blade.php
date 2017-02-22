@@ -43,11 +43,12 @@
 	<section class="profile">
 		<div class="container">
 			<div class="list">
+				<span><a href="/talent" class="seeall"> All </a></span>
 				@foreach($talents as $talent)
 				<span><a href="/talent/{{$talent->slug}}"> {{$talent->title}} </a></span>
 				@endforeach
 
-				<span><a href="/talent" class="seeall"> See All </a></span>
+
 			</div>
 			<div class="row categories">
 				@if($users->isEmpty())
@@ -68,33 +69,29 @@
 		<div class="container">
 			<h2 class="tac"> How it Works </h2>
 			<div class="row">
-				<div class="col col-sm-6">
-					<div class="side1">
-						<img src="/images/how-works.png ">
-					</div>
-				</div>
+
 				<div class="col col-sm-6 side2">
 					<div class="row inner">
-						<div class="col col-sm-3 icon">
+						<div class="col col-sm-2 icon">
 							<img src="/images/search-person.png">
 						</div>
-						<div class="col col-sm-9 con">
+						<div class="col col-sm-10 con">
 							Search your desired artist by name or category
 						</div>
 					</div>
 					<div class="row inner">
-						<div class="col col-sm-3 icon">
+						<div class="col col-sm-2 icon">
 							<img src="/images/hire.png">
 						</div>
-						<div class="col col-sm-9 con">
+						<div class="col col-sm-10 con">
 							Hire best talent or apply to artist job postings
 						</div>
 					</div>
 					<div class="row inner">
-						<div class="col col-sm-3 icon">
+						<div class="col col-sm-2 icon">
 							<img src="/images/reviews.png">
 						</div>
-						<div class="col col-sm-9 con">
+						<div class="col col-sm-10 con">
 							Leave reviews about your working experience
 						</div>
 					</div>
@@ -103,6 +100,11 @@
 						<div class="col col-sm-9 con">
 							<a href="/signup" class="btn btn-success">Sign Up </a>
 						</div>
+					</div>
+				</div>
+				<div class="col col-sm-6">
+					<div class="side1">
+						<img src="/images/how-works.png ">
 					</div>
 				</div>
 			</div>
@@ -118,7 +120,7 @@
 			<div class="row">
 				@include('partials.elements.linkModal')
 				@foreach($links as $link)
-				<div class="col-sm-4">
+				<div class="col-sm-3">
 					<span class="seo-link"><a href="/talent/{{$link->talent->slug}}/{{$link->location->slug}}">{{$link->title}}</a></span>
 				</div>
 				@endforeach
@@ -127,7 +129,7 @@
 	</section>
 	<section class="companies">
 		<div class="container">
-			<h2 class="tac"> Companies hiring through Startroupe </h2>
+			<!--<h2 class="tac"> Companies hiring through Startroupe </h2>-->
 			<div class="imal">
 				<span class="imah"><img src="/images/company-1.png"> </span>
 				<span class="imah"><img src="/images/company-2.png"> </span>
@@ -142,24 +144,24 @@
 			<h2 class="tac"> Recently Reviewed Artists </h2>
 			<div class="row">
 				<div class="col col-sm-6">
-					<div class="row">
+					<div class="testmonial-in">
 
-						<div class="col col-sm-4 artist">
+						<div class="col col-sm-12 artist">
 							<img src="/images/artist-1.png">
 						</div>
-						<div class="col col-sm-8 content">
+						<div class="col col-sm-12 content">
 							<p> “Parvesh is an awesome artist and is very professional. I’m glad to have worked with him and will do the same in future.”</p>
 							<p class="tar"><strong> -Bunty Bains </strong></p>
 						</div>
 					</div>
 				</div>
 				<div class="col col-sm-6">
-					<div class="row">
+					<div class="testmonial-in">
 
-						<div class="col col-sm-4 artist">
+						<div class="col col-sm-12 artist">
 							<img src="/images/artist-2.png">
 						</div>
-						<div class="col col-sm-8 content">
+						<div class="col col-sm-12 content">
 							<p> “Amanda and her troupe are great singers and perfomers. The show went very well and I’m signing them for next project.”</p>
 							<p class="tar"><strong> -Bunty Bains </strong></p>
 						</div>
