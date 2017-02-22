@@ -54,7 +54,7 @@
 				<h4>No Users in this Category</h4>
 				@else
 				@foreach($users as $user)
-				<div class="col-sm-6 col-md-3">
+				<div class="col-md-4">
 					<div class="inner">
 						@include('partials.elements.userBox')
 					</div>
