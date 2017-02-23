@@ -1,6 +1,7 @@
-@extends('layouts.pageFluid')
+@extends('main')
 
-@section('pagecontent')
+@section('maincontent')
+
 <div id="home">
 	<section class="banner">
 		<div class="container">
@@ -98,7 +99,7 @@
 					<div class="row">
 						<div class="col col-sm-3"></div>
 						<div class="col col-sm-9 con">
-							<a href="/signup" class="btn btn-success">Sign Up </a>
+							<!--<a href="/signup" class="btn btn-success">Sign Up </a>-->
 						</div>
 					</div>
 				</div>
@@ -171,8 +172,8 @@
 		</div>
 	</section>
 	<section class="invitation">
-		<h4 class="inn"> <strong> Invite Your Band, Team, Troupe Onboard </strong> </h4>
+		<div class="container"><h4 class="inn">  Invite Your <span>Band, Team, Troupe Onboard </span> </h4>
 		<a href="/signup" class="started"> Get Started </a>
-	</section>
+	</div></section>
 </div>
 @stop

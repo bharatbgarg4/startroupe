@@ -2,7 +2,7 @@
 
 @section('appcontent')
 <div id="fold">
-	@include('partials.elements.nav')
+	@include('partials.elements.navhome')
 	@yield('maincontent')
 </div>
 @include('partials.notifications')

@@ -33,8 +33,7 @@
 					<li>
 						<a href="#"><img class="img-responsive" src="/images/insta.png"> </a>
 					</li>
-				</ul>
-				<ul class="social">
+
 					<li>
 						<a href="#"><img class="img-responsive" src="/images/in-icon.png"> </a>
 					</li>
@@ -58,10 +57,10 @@
 					<li><a href="#"> Female Model in Chandigarh </a></li>
 				</ul>
 			</div>
-		</div>
-	</div>
-
-	<div class="lower">
+		</div><div class="lower">
 		<p>All Rights Reserved | StarTroupe.com</p>
 	</div>
+	</div>
+
+
 </footer>

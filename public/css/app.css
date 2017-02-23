@@ -10248,6 +10248,16 @@ a:hover {
   background: #00aef0 !important;
 }
 
+#home .categories {
+  /*.col-md-4:nth-child(2n) .inner .userBox a .hover-info{
+
+			display: block !important;
+
+
+
+		}*/
+}
+
 #home .categories .inner {
   width: 100%;
   float: left;
@@ -10281,6 +10291,11 @@ a:hover {
   -moz-transform: scale(1.5) rotateZ(-5deg);
   -webkit-transform: scale(1.5) rotateZ(-5deg);
   -o-transform: scale(1.5) rotateZ(-5deg);
+}
+
+#home .categories .inner .userBox a:hover h3 {
+  background: #00aef0;
+  color: #fff !important;
 }
 
 #home .categories .inner .userBox a .user-box-img {
@@ -10336,7 +10351,7 @@ a:hover {
   padding: 10px;
   font: 400 17px/24px "Source Sans Pro",sans-serif;
   color: #ffffff !important;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 174, 240, 0.53);
 }
 
 #home .categories .inner .userBox h3 {
@@ -10348,10 +10363,6 @@ a:hover {
   width: 100%;
   text-transform: capitalize;
   color: #00aef0 !important;
-}
-
-#home .categories .col-md-4:nth-child(2n) .inner .userBox a .hover-info {
-  display: block !important;
 }
 
 #home .companies {
@@ -10464,7 +10475,7 @@ a:hover {
 }
 
 #home .works .inner {
-  padding: 15px 0px;
+  padding: 22px 0px;
 }
 
 #home .works .inner .icon img {
@@ -10482,6 +10493,11 @@ a:hover {
   margin-bottom: 0;
   float: left;
   padding: 15px 0px 0;
+}
+
+#home .top-talent {
+  float: left;
+  width: 100%;
 }
 
 #home .top-talent h2.tac {
@@ -10515,14 +10531,15 @@ a:hover {
   color: #ffffff;
 }
 
-#home .reviewed #home .reviewed h2.tac {
+#home .reviewed h2.tac {
   color: #555 !important;
+  margin: 0px 0px 20px  !important;
 }
 
 #home .reviewed .testmonial-in {
   float: left;
   width: 100%;
-  margin: 46px 0px 0px;
+  margin: 46px 0px;
   padding: 20px 0px;
   background: #f3f3f3;
 }
@@ -10556,30 +10573,44 @@ a:hover {
 }
 
 #home .invitation {
-  background: #7ec243;
+  background: #00aef0 !important;
   color: #fff;
-  padding: 15px;
+  padding: 40px 0px;
   text-align: center;
-  margin-top: 37px;
+  margin: 0px;
+  float: left;
 }
 
 #home .invitation .inn {
   color: #fff;
-  font-size: 60px;
+  float: left;
+  font: 38px/60px "Source Sans Pro",sans-serif;
+  width: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+#home .invitation .inn span {
+  font-weight: 600 !important;
 }
 
 #home .invitation .started {
   color: #fff;
-  padding: 10px;
-  border: 7px solid;
-  margin: 30px;
+  border: 4px solid #fff;
   display: inline-block;
-  font-size: 33px;
-  font-weight: bold;
+  float: right;
+  font: 600 22px/40px arial;
+  padding: 5px 24px;
+  text-transform: capitalize;
+  background-image: linear-gradient(to bottom, #00aef0 50%, #f3f3f3 50%);
+  transition: background-position 1s;
+  background-size: 100% 200%;
 }
 
 #home .invitation .started:hover {
-  text-decoration: none;
+  background-position: 0 -100%;
+  color: #00aef0;
+  border: 4px solid #fff;
 }
 
 .coming-page {
@@ -11127,8 +11158,10 @@ a:hover {
 }
 
 footer {
-  background: #7d7d7d;
+  background: #313131;
   color: #fff;
+  float: left;
+  width: 100%;
   padding-top: 30px;
 }
 
@@ -11141,21 +11174,38 @@ footer a:hover {
 }
 
 footer ul {
-  padding: 0;
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 10px 0px;
 }
 
-footer li {
+footer ul li {
+  float: left;
+  width: 97%;
+  margin: 0px;
   list-style: none;
-  font-size: 20px;
-  cursor: pointer;
+  padding: 0px;
+  font: 17px/30px arial;
+  color: #ccc;
+}
+
+footer ul li a {
+  float: left;
+  width: auto;
+  margin: 0px;
+  padding: 0px;
+  font: 17px/30px arial;
+  color: #ccc;
 }
 
 footer .social {
-  margin-bottom: 0;
+  margin: 10px 0px;
 }
 
 footer .social li {
   display: inline-block;
+  width: 14% !important;
 }
 
 footer .social img {
@@ -11164,14 +11214,419 @@ footer .social img {
 }
 
 footer .hothead {
-  font-size: 30px;
+  font: 400 22px/40px arial;
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  color: #cccccc;
 }
 
 footer .lower {
-  margin-top: 30px;
-  background: #000;
+  margin-top: 20px;
+  background: none;
   text-align: center;
-  padding: 10px;
-  font-size: 20px;
+  padding: 18px 0px;
   color: #fff;
+  border-top: 1px solid #555555;
+  float: left;
+  width: 100%;
+}
+
+footer .lower p {
+  float: left;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  font: 14px/20px arial;
+  color: #ccc;
+}
+
+@media (max-width: 1050px) {
+  #home .works .inner {
+    padding: 10px 0px !important;
+  }
+
+  #home .top-talent a {
+    float: left;
+    font: 16px/22px Arial !important;
+  }
+
+  #home .top-talent span.seo-link {
+    float: left;
+    height: 70px !important;
+  }
+
+  #home .companies .imah {
+    float: left;
+    margin: 0px 20px 0px 0px !important;
+  }
+
+  #home .banner {
+    background-position: top center;
+  }
+
+  #home .categories .inner .userBox a .user-box-img img {
+    float: left;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 980px) {
+  #home .works .inner .icon img {
+    float: left;
+    width: 47px !important;
+    padding: 6px !important;
+  }
+
+  #home .works .inner .con {
+    font: 18px/22px Arial !important;
+    float: left;
+    padding: 0px 11px 0px !important;
+  }
+
+  #home .companies .imah {
+    float: left;
+    margin: 0px 16px 0px 0px !important;
+  }
+
+  #home .reviewed .testmonial-in {
+    float: left;
+    margin: 44px 0px 20px !important;
+    padding: 6px 0px !important;
+  }
+
+  #home .reviewed .content {
+    font: 17px/24px arial !important;
+    padding: 0px 12px !important;
+  }
+
+  #home .invitation .inn {
+    float: left;
+    font: 28px/60px "Source Sans Pro",sans-serif !important;
+  }
+
+  #home .invitation .started {
+    border: 3px solid #fff !important;
+    float: right;
+    font: 600 18px/40px arial !important;
+    padding: 3px 22px  !important;
+  }
+
+  #home .categories .inner .userBox a .hover-info {
+    padding: 50px 20px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  #home .profile .list a {
+    padding: 10px 12px !important;
+    margin: 10px 20px !important;
+    font: 400 17px/20px "Source Sans Pro",sans-serif !important;
+  }
+
+  #home section h2.tac {
+    float: left;
+    font: 400 32px/42px "Source Sans Pro",sans-serif !important;
+  }
+}
+
+@media (max-width: 852px) {
+  footer .hothead {
+    font: 400 19px/40px arial !important;
+    float: left;
+  }
+
+  #home .banner .home-search {
+    width: 100% !important;
+    float: left;
+  }
+
+  #home .top-talent a {
+    float: left;
+    font: 15px/20px Arial !important;
+  }
+
+  #home .companies .imah img {
+    width: 75px !important;
+  }
+
+  #home .companies .imah {
+    float: left;
+    height: auto !important;
+  }
+
+  #home .invitation .inn {
+    float: left;
+    font: 25px/60px "Source Sans Pro",sans-serif !important;
+  }
+
+  #home .banner .home-search .tac {
+    font: 300 36px/45px "Source Sans Pro",sans-serif !important;
+    float: left;
+  }
+}
+
+@media (max-width: 800px) {
+  #home .banner:before {
+    height: 530px !important;
+  }
+
+  #home .banner {
+    height: 530px !important;
+  }
+
+  #home .banner .home-search {
+    float: left;
+    top: 134px !important;
+  }
+
+  .works .col.col-sm-6 {
+    width: 100% !important;
+    float: left;
+  }
+
+  .works .icon {
+    text-align: center;
+  }
+
+  #home .works .inner .icon img {
+    float: none !important;
+    width: 58px !important;
+    text-align: center;
+  }
+
+  #home .works .inner .con {
+    font: 19px/22px Arial !important;
+    float: left;
+    padding: 14px 11px 0px !important;
+  }
+
+  .reviewed .col.col-sm-6 {
+    width: 100% !important;
+    float: left;
+  }
+}
+
+@media (max-width: 768px) {
+  #home section h2.tac {
+    float: left;
+    font: 400 30px/36px "Source Sans Pro",sans-serif !important;
+  }
+
+  #home .banner .home-search .tac {
+    font: 300 30px/45px "Source Sans Pro",sans-serif !important;
+    float: left;
+  }
+
+  #home .banner .home-search form input[type="text"] {
+    float: left;
+    border: 1px solid #fff !important;
+    font: 400 16px/40px sans-serif !important;
+  }
+
+  #home .banner .home-search {
+    width: 100% !important;
+    float: left;
+  }
+
+  #home .banner .home-search form input[type="text"] {
+    float: left;
+    margin: 0px 0px 18px !important;
+  }
+
+  #home .works h2.tac {
+    text-align: center;
+  }
+
+  #home .works .inner .con {
+    float: left;
+    width: 100% !important;
+    text-align: center;
+  }
+
+  #home .works .inner {
+    padding: 18px 0px !important;
+  }
+
+  #home section h2.tac {
+    text-align: center;
+  }
+
+  #home .invitation .inn {
+    float: left;
+    text-align: center;
+    width: 100% !important;
+  }
+
+  #home .invitation .started {
+    float: none !important;
+    font: 600 18px/35px arial !important;
+  }
+
+  #home .reviewed .artist {
+    position: relative !important;
+    top: auto !important;
+  }
+
+  #home .reviewed .content {
+    margin: 18px 0px 0px !important;
+  }
+
+  #home .reviewed .testmonial-in {
+    float: left;
+    margin: 20px 0px !important;
+    padding: 6px 0px 20px !important;
+  }
+
+  #home .top-talent span.seo-link {
+    float: left;
+    height: auto !important;
+  }
+
+  footer .social img {
+    width: 60% !important;
+    margin: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  #home .companies .imah {
+    float: left;
+    margin: 0px 6px 0px 0px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  #home .companies .imah {
+    display: inline-block;
+    width: 100%;
+  }
+
+  #home .profile .list a {
+    margin: 10px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #home section h2.tac {
+    float: left;
+    font: 400 26px/36px "Source Sans Pro",sans-serif !important;
+  }
+
+  #home section h2.tac {
+    float: left;
+    padding: 10px 0px !important;
+  }
+
+  #home .reviewed .testmonial-in {
+    float: left;
+    margin: 10px 0px !important;
+  }
+
+  #home .reviewed .content {
+    font: 16px/24px arial !important;
+    padding: 0px 26px !important;
+  }
+
+  #home .invitation .inn {
+    float: left;
+    font: 24px/60px "Source Sans Pro",sans-serif !important;
+  }
+
+  #home .invitation {
+    padding: 20px 0px !important;
+    float: left;
+  }
+}
+
+@media (max-width: 480px) {
+  footer ul li a {
+    float: left;
+    font: 15px/25px arial !important;
+  }
+}
+
+@media (max-width: 414px) {
+  #home .invitation .inn {
+    float: left;
+    font: 22px/30px "Source Sans Pro",sans-serif !important;
+    padding: 0px 0px 16px !important;
+  }
+
+  #home .banner {
+    height: 460px !important;
+  }
+
+  #home .banner .home-search .tac {
+    font: 300 26px/35px "Source Sans Pro",sans-serif !important;
+    float: left;
+  }
+
+  #home .banner::before {
+    height: 460px !important;
+  }
+
+  footer .hothead {
+    font: 400 18px/20px arial !important;
+  }
+
+  #home .categories .inner .userBox h3 {
+    float: left;
+    font: 18px/40px Source, sans-serif !important;
+  }
+
+  #home .categories .inner .userBox a .hover-info h4 {
+    float: left;
+    font: 400 24px/32px "Source Sans Pro",sans-serif;
+  }
+
+  #home .works .inner .icon img {
+    width: 52px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  #home .banner .home-search form input.btn {
+    font: 400 16px/35px arial !important;
+    float: left;
+  }
+
+  #home .profile .list a {
+    padding: 6px 12px !important;
+  }
+
+  #home .categories .inner .userBox a .hover-info {
+    padding: 18px 20px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  #home section h2.tac {
+    float: left;
+    font: 400 22px/36px "Source Sans Pro",sans-serif !important;
+  }
+
+  #home .reviewed .content {
+    font: 15px/22px arial !important;
+  }
+
+  #home .invitation .inn {
+    font: 21px/29px "Source Sans Pro",sans-serif !important;
+  }
+
+  footer .lower p {
+    float: left;
+    font: 13px/17px arial !important;
+  }
+
+  footer ul li a {
+    float: left;
+    font: 14px/22px arial !important;
+  }
+
+  footer .hothead {
+    font: 400 17px/20px arial !important;
+  }
 }
