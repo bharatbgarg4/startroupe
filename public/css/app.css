@@ -11123,6 +11123,32 @@ a:hover {
   width: 180px !important;
 }
 
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 8px;
+  margin-top: 26px;
+  margin-right: 4px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 24px !important;
+  height: 3px !important;
+  border-radius: 1px;
+  background: #00aef0 !important;
+}
+
 #nav {
   padding: 10px 0px !important;
   position: absolute !important;
@@ -11489,6 +11515,61 @@ footer .lower p {
     width: 60% !important;
     margin: 0;
   }
+
+  .navbar .nav-collapse .navbar-form {
+    margin: 0;
+  }
+
+  .nav-collapse > li {
+    float: none;
+  }
+
+  .navbar-collapse {
+    overflow-x: visible;
+    padding: 0px !important;
+    border-top: none !important;
+    box-shadow: none !important;
+    -webkit-overflow-scrolling: touch;
+    background: #00aef0;
+    width: 100%;
+    border-radius: 2px;
+    float: right;
+  }
+
+  .navbar {
+    position: relative;
+    min-height: auto !important;
+    margin: 0px !important;
+    float: left;
+    width: 100% !important;
+  }
+
+  #nav .nav {
+    padding: 0px !important;
+    float: left;
+    width: 100%;
+    float: left;
+    margin: 0px !important;
+  }
+
+  #nav .nav li {
+    display: inline-block;
+    float: left;
+    width: 100% !important;
+  }
+
+  #nav .nav li a {
+    font-size: 18px !important;
+    padding: 10px !important;
+    margin: 0px !important;
+    float: left;
+    width: 100% !important;
+    position: relative !important;
+  }
+
+  #nav .nav li a:hover {
+    background: #fff !important;
+  }
 }
 
 @media (max-width: 767px) {
@@ -11506,6 +11587,10 @@ footer .lower p {
 
   #home .profile .list a {
     margin: 10px !important;
+  }
+
+  .logo .img-responsive {
+    width: 130px !important;
   }
 }
 
@@ -11585,11 +11670,29 @@ footer .lower p {
   #home .works .inner .icon img {
     width: 52px !important;
   }
+
+  #home .banner .home-search form input.btn {
+    font: 400 16px/38px arial !important;
+    float: left;
+    width: 100% !important;
+    margin: 0px 0px 11px !important;
+  }
+
+  #home .banner .home-search form input[type="text"] {
+    float: left;
+    border: 1px solid #fff !important;
+    font: 400 16px/32px sans-serif !important;
+  }
+
+  #home .banner .home-search {
+    float: left;
+    top: 85px !important;
+  }
 }
 
 @media (max-width: 360px) {
-  #home .banner .home-search form input.btn {
-    font: 400 16px/35px arial !important;
+  #home .banner .home-search .tac {
+    font: 400 22px/35px "Source Sans Pro",sans-serif !important;
     float: left;
   }
 
