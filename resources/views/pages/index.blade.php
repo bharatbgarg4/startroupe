@@ -1,4 +1,4 @@
-@extends('main')
+@extends('mainHome')
 
 @section('maincontent')
 
@@ -56,7 +56,7 @@
 				<h4>No Users in this Category</h4>
 				@else
 				@foreach($users as $user)
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<div class="inner">
 						@include('partials.elements.userBox')
 					</div>
