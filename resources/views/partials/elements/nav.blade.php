@@ -1,4 +1,4 @@
-<div id="nav" class="nav-page">
+<div id="nav" class="home-nav nav-page ">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-4">

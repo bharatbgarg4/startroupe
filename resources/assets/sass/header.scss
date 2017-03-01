@@ -1,74 +1,111 @@
 .logo {
-    float: left;
-    width: auto;
-    margin: 0px;
-    padding: 0px;
-            .img-responsive {
-            display: block;
-            max-width: 100%;
-            height: auto;
-            width: 180px !important;
-            }
+  float: left;
+  width: auto;
+  margin: 0px;
+  padding: 0px;
+  .img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: 180px !important;
+  }
 
 }
 .navbar-toggle {
-    position: relative;
-float: right;
-padding: 8px;
-margin-top: 26px;
-margin-right: 4px;
-margin-bottom: 8px;
-background-color: transparent;
-background-image: none;
-border: 1px solid transparent;
-border-radius: 4px;
-background: rgba(0, 0, 0, 0.2);
+  position: relative;
+  float: right;
+  padding: 8px;
+  margin-top: 26px;
+  margin-right: 4px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.2);
 }
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #888;
+  background-color: #888;
 }
 .navbar-toggle .icon-bar {
-    display: block;
-    width: 24px !important;
-    height: 3px !important;
-    border-radius: 1px;
-    background: #00aef0 !important;
+  display: block;
+  width: 24px !important;
+  height: 3px !important;
+  border-radius: 1px;
+  background: #00aef0 !important;
+}
+.home-nav.nav-page{
+  float:left;
+  position:relative !important;
+  width:100%;
+  .nav {
+    padding: 22px 0px 0px !important;
+    float: right;
+    width: auto;
+    li {
+        a{
+      transition: 0.3s ease;
+      color: #000 !important;
+      font-size: 20px!important;
+      text-decoration: none;
+      padding: 8px 15px !important;
+      margin: 0 20px;
+      font-weight: 500!important;
+
+      &:hover {
+       background: transparent!important;
+       color: #00aef0!important;
+            }
+
+
+      }
+
+      }
+
 }
 
-#nav {
-    padding: 10px 0px !important;
-    position: absolute!important;
-    width: 100%;
-    border: none;
-    z-index: 999;
-             .nav {
-                padding: 22px 0px 0px !important;
-                float: right;
-                width: auto;
-                            li {
-                                        	a{
-                                          transition: 0.3s ease;
-                                              color: #fff;
-                                              font-size: 20px;
-                                              text-decoration: none;
-                                              padding: 20px 0;
-                                              margin: 0 20px;
-                                              font-weight: 500!important;
+.home-nav {
+  padding: 10px 0px !important;
+  position: absolute!important;
+  border: none !important;
+  width: 100%;
+  border: none;
+  z-index: 999;
 
-                                              &:hover {
-                                   background: transparent!important;
-                                              color: #00aef0!important;
-                                              }
+  .nav {
+    padding: 22px 0px 0px !important;
+    float: right;
+    width: auto;
+    li {
+        a{
+      transition: 0.3s ease;
+      color: #fff !important;
+      font-size: 20px!important;
+      text-decoration: none;
+      padding: 8px 15px !important;
+      margin: 0 20px;
+      font-weight: 500!important;
+
+      &:hover {
+       background: transparent!important;
+       color: #00aef0!important;
+            }
 
 
-                                            }
+      }
 
-                                }
-                                .signup a {
-                                    background: transparent !important;
-                                    color: #fff;
-                                }
-              }
+      }
+ .signup a {
+  background: #15a45b;
+  color: #fff;
+  float: left;
+  border-radius: 4px;
+  &:hover {
+      background: #000 !important;
+      color: #fff!important;
+  }
+}
+}
 
-    }
+}
 

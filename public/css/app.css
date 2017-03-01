@@ -10174,7 +10174,7 @@ a:hover {
 #home .banner {
   background: url("/images/banner.jpg") no-repeat;
   background-size: cover;
-  height: 600px !important;
+  height: 572px !important;
 }
 
 #home .banner:before {
@@ -10183,7 +10183,7 @@ a:hover {
   width: 100%;
   left: 0;
   top: 0;
-  height: 600px !important;
+  height: 572px !important;
   position: absolute;
 }
 
@@ -10327,11 +10327,11 @@ a:hover {
 }
 
 #home .categories .inner .userBox .hover-info h5 {
-  font: 400 17px/40px "Source Sans Pro",sans-serif;
+  font: 400 17px/20px "Source Sans Pro",sans-serif;
   float: left;
   width: 100%;
   margin: 0px;
-  padding: 0px;
+  padding: 10px 0px 0px;
   color: #ccc !important;
 }
 
@@ -10339,7 +10339,7 @@ a:hover {
   float: left;
   width: 100%;
   margin: 0px;
-  padding: 24px 14px 16px;
+  padding: 18px 14px 8px;
   font: 400 16px/20px "Source Sans Pro",sans-serif;
   color: #333 !important;
   background: #fff;
@@ -10350,7 +10350,7 @@ a:hover {
   width: 100%;
   float: left;
   margin: 0px;
-  padding: 10px 20px;
+  padding: 10px 20px 5px;
 }
 
 #home .categories .inner .userBox .hover-info ul li {
@@ -10377,17 +10377,17 @@ a:hover {
 #home .categories .inner h3 {
   float: none !important;
   padding: 0px;
-  font: 16px/35px Source, sans-serif;
-  width: 136px;
+  font: 15px/32px Source, sans-serif;
+  width: 118px;
   text-transform: capitalize;
   background: #00aef0 !important;
   position: absolute;
-  bottom: -15px;
+  bottom: -12px;
   margin: 0px auto !important;
   color: #fff;
   text-align: center;
   vertical-align: middle;
-  left: 23%;
+  left: 28%;
 }
 
 #home .companies {
@@ -10410,7 +10410,7 @@ a:hover {
   padding: 3px 4%;
   /* border: 1px solid #555; */
   float: left;
-  height: 172px;
+  height: auto;
   text-align: center;
   margin: 0px 28px 0px 0px;
 }
@@ -10422,7 +10422,7 @@ a:hover {
 #home .companies .imah img {
   width: 100%;
   vertical-align: middle;
-  width: 95px;
+  width: 68px;
   float: none;
   padding: 10px 0px;
 }
@@ -10444,7 +10444,7 @@ a:hover {
   padding: 10px 15px;
   display: inline-block;
   background: none;
-  margin: 20px;
+  margin: 10px 20px;
   font: 400 18px/30px "Source Sans Pro",sans-serif;
   color: #000;
 }
@@ -10471,7 +10471,7 @@ a:hover {
   margin: 0px;
   text-transform: capitalize;
   padding: 20px 0px;
-  font: 400 40px/55px "Source Sans Pro",sans-serif;
+  font: 400 34px/55px "Source Sans Pro",sans-serif;
 }
 
 #home .works {
@@ -10581,10 +10581,9 @@ a:hover {
 }
 
 #home .reviewed .content {
-  margin-top: 7px;
-  font: 19px/28px arial;
+  font: 16px/24px arial;
   color: #000;
-  margin: 78px 0px 0px;
+  margin: 58px 0px 0px;
   padding: 0px 48px;
   text-align: center;
 }
@@ -10600,7 +10599,7 @@ a:hover {
 #home .invitation {
   background: #00aef0 !important;
   color: #fff;
-  padding: 40px 0px;
+  padding: 30px 0px;
   text-align: center;
   margin: 0px;
   float: left;
@@ -10609,7 +10608,7 @@ a:hover {
 #home .invitation .inn {
   color: #fff;
   float: left;
-  font: 38px/60px "Source Sans Pro",sans-serif;
+  font: 34px/60px "Source Sans Pro",sans-serif;
   width: auto;
   margin: 0px;
   padding: 0px;
@@ -10624,7 +10623,7 @@ a:hover {
   border: 4px solid #fff;
   display: inline-block;
   float: right;
-  font: 600 22px/40px arial;
+  font: 600 22px/36px arial;
   padding: 5px 24px;
   text-transform: capitalize;
   background-image: linear-gradient(to bottom, #00aef0 50%, #f3f3f3 50%);
@@ -11174,38 +11173,52 @@ a:hover {
   background: #00aef0 !important;
 }
 
-#nav {
+.home-nav.nav-page {
+  float: left;
+  position: relative !important;
+  width: 100%;
+}
+
+.home-nav {
   padding: 10px 0px !important;
   position: absolute !important;
+  border: none !important;
   width: 100%;
   border: none;
   z-index: 999;
 }
 
-#nav .nav {
+.home-nav .nav {
   padding: 22px 0px 0px !important;
   float: right;
   width: auto;
 }
 
-#nav .nav li a {
+.home-nav .nav li a {
   transition: 0.3s ease;
-  color: #fff;
-  font-size: 20px;
+  color: #fff !important;
+  font-size: 20px !important;
   text-decoration: none;
-  padding: 20px 0;
+  padding: 8px 15px !important;
   margin: 0 20px;
   font-weight: 500 !important;
 }
 
-#nav .nav li a:hover {
+.home-nav .nav li a:hover {
   background: transparent !important;
   color: #00aef0 !important;
 }
 
-#nav .nav .signup a {
-  background: transparent !important;
+.home-nav .nav .signup a {
+  background: #15a45b;
   color: #fff;
+  float: left;
+  border-radius: 4px;
+}
+
+.home-nav .nav .signup a:hover {
+  background: #000 !important;
+  color: #fff !important;
 }
 
 footer {
