@@ -10183,7 +10183,7 @@ a:hover {
   width: 100%;
   left: 0;
   top: 0;
-  height: 572px !important;
+  height: 705px !important;
   position: absolute;
 }
 
@@ -10246,16 +10246,6 @@ a:hover {
 
 #home .banner .home-search form input.btn .btn-info:hover {
   background: #00aef0 !important;
-}
-
-#home .categories {
-  /*.col-md-4:nth-child(2n) .inner .userBox a .hover-info{
-
-			display: block !important;
-
-
-
-			}*/
 }
 
 #home .categories .inner {
@@ -10343,7 +10333,6 @@ a:hover {
   font: 400 16px/20px "Source Sans Pro",sans-serif;
   color: #333 !important;
   background: #fff;
-  /* height: 80px; */
 }
 
 #home .categories .inner .userBox .hover-info ul {
@@ -10391,8 +10380,10 @@ a:hover {
 }
 
 #home .companies {
-  margin: 10px 0;
-  /*background: #fbeadc;*/
+  margin: 0px;
+  padding: 0px !important;
+  float: left;
+  width: 100%;
   background: #313131;
 }
 
@@ -10475,7 +10466,6 @@ a:hover {
 }
 
 #home .works {
-  /*background: url('/images/how-works-bg.jpg') no-repeat;*/
   background: #00aef0 !important;
   float: left;
   width: 100% !important;
@@ -10558,41 +10548,46 @@ a:hover {
 
 #home .reviewed h2.tac {
   color: #555 !important;
-  margin: 0px 0px 20px  !important;
+  margin: 0px   !important;
 }
 
 #home .reviewed .testmonial-in {
   float: left;
   width: 100%;
-  margin: 46px 0px;
+  margin: 0px;
   padding: 20px 0px;
-  background: #f3f3f3;
+  background: none;
 }
 
 #home .reviewed .artist {
   text-align: center;
   position: absolute;
-  top: -17px;
-  width: 100%;
+  top: 20px;
+  width: 28%;
+  z-index: 999;
 }
 
 #home .reviewed .artist img {
-  width: 138px;
+  width: 108px;
 }
 
 #home .reviewed .content {
-  font: 16px/24px arial;
+  font: 15px/20px arial;
   color: #000;
-  margin: 58px 0px 0px;
-  padding: 0px 48px;
-  text-align: center;
+  margin: 0px;
+  padding: 15px 15px 12px 11%;
+  text-align: left;
+  background: #f3f3f3;
+  float: right;
+  width: 83%;
+  height: 120px;
 }
 
 #home .reviewed .content strong {
   color: #00aef0 !important;
-  font: 600 18px/30px arial;
+  font: 600 14px/22px arial;
   float: left;
-  text-align: center;
+  text-align: left;
   width: 100%;
 }
 
@@ -10763,97 +10758,102 @@ a:hover {
 }
 
 #auth {
+  height: 550px;
+  background: url(/images/hiring-banner.jpg) 0% 0%/cover no-repeat;
+  width: 100%;
+  float: left;
   position: relative;
+  background-position: 0 -266px;
+  background-size: cover;
 }
 
 #auth .banner img {
-  max-height: 334px;
   width: 100%;
 }
 
 #auth .tac {
   color: #fff;
-  position: absolute;
-  width: 700px;
-  top: 0;
-  left: 50%;
-  margin-left: -350px;
-  margin-top: 47px;
+  width: 100%;
+  float: left;
+  margin: 0px;
+  padding: 50px 0px 0;
+  font-size: 34px;
+  text-align: center;
+  line-height: 40px;
 }
 
 #auth .signin {
-  background: #fff;
-  width: 400px;
-  margin: 0 auto;
+  background: #00aef0;
+  width: 420px;
+  margin: 10% auto;
   padding: 20px;
-  margin-top: 40px;
-  border: 5px solid #c2c4c7;
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  margin-left: -200px;
-  border-radius: 10px;
 }
 
 #auth .signin p {
-  color: #0a4fa3;
+  color: #fff;
   text-align: center;
-  font-size: 18px;
+  font-size: 22px;
+  padding: 0px 0px 10px;
 }
 
 #auth .signin .btn {
-  font-size: 23px;
+  font-size: 18px;
   height: auto;
   font-weight: bold;
-  margin-top: 16px;
+  margin: 0;
 }
 
-#auth .signin input {
+#auth .signin form {
+  width: 100%;
+  padding: 20px 0px;
+  position: relative;
+}
+
+#auth .signin form input {
   border: none;
   border-bottom: 1px solid #7ec243;
 }
 
-#auth .signup {
-  position: absolute;
-  top: 120px;
-  left: 50%;
-  width: 90%;
-  margin-left: -45%;
+#auth .signin form a {
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 0px !important;
+  text-align: center;
+  width: 100%;
+  float: left;
+  font-size: 17px;
+}
+
+#auth .signup #bussiness {
+  float: right;
 }
 
 #auth .signup #artist,
 #auth .signup #bussiness {
-  border: 5px solid #c2c4c7;
-  background: #fff;
-  height: 300px;
-  border-radius: 10px;
-  margin: 20px;
+  margin: 90px 0px 0;
   text-align: center;
-  padding: 32px;
+  padding: 40px 18px;
   color: #0a4fa3;
-}
-
-#auth .signup #artist:hover,
-#auth .signup #bussiness:hover {
-  color: #fff;
-  background: url("/images/hiring.png") no-repeat;
-  background-size: cover;
+  width: 296px !important;
+  background: #00aef0;
 }
 
 #auth .signup #artist h4,
 #auth .signup #bussiness h4 {
-  border-top: 2px solid #15a45b;
-  border-bottom: 2px solid #15a45b;
-  padding: 20px 10px;
-  font-size: 40px;
-  font-weight: bold;
+  padding: 0px;
+  font-size: 26px;
+  font-weight: 400;
+  color: #fff;
 }
 
 #auth .signup #artist .btn,
 #auth .signup #bussiness .btn {
-  font-size: 18px;
+  font-size: 16px;
   height: auto;
-  font-weight: bold;
+  font-weight: 400;
+  margin: 20px 0px;
+  background-color: #313131;
+  border-color: #313131;
 }
 
 #auth .signup .regmodal {
@@ -10878,15 +10878,56 @@ a:hover {
 }
 
 #auth .signup .regmodal form {
-  border: 3px solid #7ec243;
   background: #fff;
-  max-width: 380px;
-  padding: 25px;
-  border-radius: 20px;
+  max-width: 430px;
+  padding: 0px;
   margin: 30px auto;
   margin-top: 10vh;
   position: relative;
   text-align: center;
+}
+
+#auth .signup .regmodal form .form-text {
+  background: #00aef0;
+  float: left;
+  width: 100%;
+  padding: 10px 0px;
+  text-align: center;
+}
+
+#auth .signup .regmodal form .form-text h1 {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 500;
+  padding: 0px 0px 5px;
+  margin: 0px;
+}
+
+#auth .signup .regmodal form .form-text h3#regtxt {
+  float: left;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0px;
+  padding: 0px;
+}
+
+#auth .signup .regmodal form .form-group {
+  float: left;
+  width: 100%;
+  background: #fff;
+  padding: 20px;
+}
+
+#auth .signup .regmodal form .form-group .ci {
+  text-align: left;
+  color: #fff;
+}
+
+#auth .signup .regmodal form .form-group .ci input[type="radio"] {
+  margin: 13px 5px 0px 0px;
 }
 
 #auth .signup .regmodal form input {
@@ -10897,10 +10938,12 @@ a:hover {
 
 #auth .signup .regmodal form .btn {
   margin: 11px auto;
-  width: 96%;
+  width: 100%;
   height: auto;
-  font-size: 20px;
-  font-weight: bold;
+  background-color: #313131;
+  border-color: #313131;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 #auth .signup .regmodal .close {
@@ -10912,7 +10955,7 @@ a:hover {
 
 #auth .g-recaptcha {
   width: 302px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 #auth .btn-social {
@@ -10946,6 +10989,14 @@ a:hover {
 
 #auth .btn-g:hover {
   background-color: #E33E2B;
+}
+
+.signin-auth {
+  height: 492px;
+  background: url(/images/signup-bg.jpg) 0% 0%/cover no-repeat !important;
+  position: relative;
+  background-position: 0 -266px;
+  background-size: cover;
 }
 
 .dashboard {
@@ -11173,52 +11224,32 @@ a:hover {
   background: #00aef0 !important;
 }
 
-.home-nav.nav-page {
-  float: left;
-  position: relative !important;
-  width: 100%;
-}
-
-.home-nav {
-  padding: 10px 0px !important;
-  position: absolute !important;
+.nav-page {
   border: none !important;
-  width: 100%;
-  border: none;
-  z-index: 999;
+  padding: 5px 0px !important;
 }
 
-.home-nav .nav {
-  padding: 22px 0px 0px !important;
+.nav-page .logo .img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 180px;
+}
+
+.nav-page .nav {
   float: right;
   width: auto;
+  padding: 22px 0px 0px !important;
 }
 
-.home-nav .nav li a {
-  transition: 0.3s ease;
-  color: #fff !important;
-  font-size: 20px !important;
+.nav-page .nav li a {
   text-decoration: none;
+  color: white;
+  font-size: 20px !important;
+  font-weight: 500;
+  transition: 0.3s ease;
+  margin: 0px 5px;
   padding: 8px 15px !important;
-  margin: 0 20px;
-  font-weight: 500 !important;
-}
-
-.home-nav .nav li a:hover {
-  background: transparent !important;
-  color: #00aef0 !important;
-}
-
-.home-nav .nav .signup a {
-  background: #15a45b;
-  color: #fff;
-  float: left;
-  border-radius: 4px;
-}
-
-.home-nav .nav .signup a:hover {
-  background: #000 !important;
-  color: #fff !important;
 }
 
 footer {

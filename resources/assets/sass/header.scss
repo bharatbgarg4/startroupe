@@ -9,7 +9,6 @@
     height: auto;
     width: 180px !important;
   }
-
 }
 .navbar-toggle {
   position: relative;
@@ -34,78 +33,33 @@
   border-radius: 1px;
   background: #00aef0 !important;
 }
-.home-nav.nav-page{
-  float:left;
-  position:relative !important;
-  width:100%;
-  .nav {
-    padding: 22px 0px 0px !important;
-    float: right;
-    width: auto;
-    li {
-        a{
-      transition: 0.3s ease;
-      color: #000 !important;
-      font-size: 20px!important;
-      text-decoration: none;
-      padding: 8px 15px !important;
-      margin: 0 20px;
-      font-weight: 500!important;
-
-      &:hover {
-       background: transparent!important;
-       color: #00aef0!important;
-            }
-
-
+.nav-page {
+    border: none !important;
+    padding:5px 0px !important;
+    .logo
+    {
+      .img-responsive {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        width: 180px;
+    }
+  }
+   .nav {
+      float: right;
+      width: auto;
+      padding: 22px 0px 0px !important;
+      li
+      {
+       a {
+          text-decoration: none;
+          color: rgb(255, 255, 255);
+          font-size: 20px !important;
+          font-weight: 500;
+          transition: 0.3s ease;
+          margin: 0px 5px;
+          padding: 8px 15px !important;
       }
-
-      }
-
-}
-
-.home-nav {
-  padding: 10px 0px !important;
-  position: absolute!important;
-  border: none !important;
-  width: 100%;
-  border: none;
-  z-index: 999;
-
-  .nav {
-    padding: 22px 0px 0px !important;
-    float: right;
-    width: auto;
-    li {
-        a{
-      transition: 0.3s ease;
-      color: #fff !important;
-      font-size: 20px!important;
-      text-decoration: none;
-      padding: 8px 15px !important;
-      margin: 0 20px;
-      font-weight: 500!important;
-
-      &:hover {
-       background: transparent!important;
-       color: #00aef0!important;
-            }
-
-
-      }
-
-      }
- .signup a {
-  background: #15a45b;
-  color: #fff;
-  float: left;
-  border-radius: 4px;
-  &:hover {
-      background: #000 !important;
-      color: #fff!important;
+    }
   }
 }
-}
-
-}
-

@@ -1,10 +1,10 @@
 @extends('layouts.pageFluid')
 
 @section('pagecontent')
-<div id="auth">	
-	<div class="banner"><img src="/images/signin-banner.jpg" alt=""></div>
+<div id="auth" class="signin-auth">
+
 	<h1 class="tac"> SIGN IN </h1>
-<div class="signin">	
+<div class="signin">
 	<p> Sign In here to access your account </p>
 
 	<a href="/login/facebook" class="btn btn-social btn-f"><i class="fa fa-facebook-f"></i>   Facebook</a>
