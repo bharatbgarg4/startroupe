@@ -10215,12 +10215,22 @@ a:hover {
   padding: 24px 0px;
 }
 
+#home .banner .home-search form select.form-control {
+  background: none !important;
+  color: #fff;
+  border: 2px solid #ddd;
+}
+
+#home .banner .home-search form select.form-control option {
+  color: #000;
+}
+
 #home .banner .home-search form input[type="text"] {
   float: left;
   width: 100%;
   background: rgba(0, 0, 0, 0.1);
-  border: 2px solid #fff;
-  font: 400 18px/42px sans-serif;
+  border: 1px solid #fff;
+  font: 400 16px/42px sans-serif;
   padding: 0px 10px;
   color: #fff;
 }
@@ -10246,137 +10256,6 @@ a:hover {
 
 #home .banner .home-search form input.btn .btn-info:hover {
   background: #00aef0 !important;
-}
-
-#home .categories .inner {
-  width: 100%;
-  float: left;
-  padding: 0px;
-}
-
-#home .categories .inner .userBox {
-  width: 100%;
-  float: left;
-  padding: 0px;
-  border: none !important;
-  box-shadow: 0px 3px 7px #ddd;
-  min-height: 300px;
-  margin: 0px 0px 28px !important;
-}
-
-#home .categories .inner .userBox .user-box-img {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  float: left;
-  margin: 0px;
-  padding: 0px;
-}
-
-#home .categories .inner .userBox .user-box-img img {
-  display: inline-block;
-  width: 100%;
-  object-fit: cover;
-  float: left;
-  height: 220px;
-}
-
-#home .categories .inner .userBox .user-box-img img:hover .hover-img {
-  display: block !important;
-}
-
-#home .categories .inner .userBox .user-box-img .hover-img {
-  position: absolute;
-  top: 38%;
-  width: auto !important;
-  height: auto !important;
-  display: block;
-  left: 39%;
-  border: none !important;
-  box-shadow: none !important;
-  margin: 0px auto;
-  cursor: pointer;
-}
-
-#home .categories .inner .userBox .hover-info {
-  float: left;
-  width: 100%;
-  background: #f1f1f1;
-  height: 100%;
-  padding: 0px;
-}
-
-#home .categories .inner .userBox .hover-info h4 {
-  float: left;
-  width: 100%;
-  color: #000 !important;
-  text-align: center;
-  font: 400 17px/24px "Source Sans Pro",sans-serif;
-  padding: 10px 0px 0px;
-  margin: 0px !important;
-}
-
-#home .categories .inner .userBox .hover-info h5 {
-  font: 400 17px/20px "Source Sans Pro",sans-serif;
-  float: left;
-  width: 100%;
-  margin: 0px;
-  padding: 10px 0px 0px;
-  color: #ccc !important;
-}
-
-#home .categories .inner .userBox .hover-info p.bio {
-  float: left;
-  width: 100%;
-  margin: 0px;
-  padding: 18px 14px 8px;
-  font: 400 16px/20px "Source Sans Pro",sans-serif;
-  color: #333 !important;
-  background: #fff;
-}
-
-#home .categories .inner .userBox .hover-info ul {
-  width: 100%;
-  float: left;
-  margin: 0px;
-  padding: 10px 20px 5px;
-}
-
-#home .categories .inner .userBox .hover-info ul li {
-  float: left;
-  margin: 0px;
-  width: auto !important;
-  padding: 0px 2px;
-  list-style: none;
-}
-
-#home .categories .inner .userBox .hover-info ul li:last-child {
-  float: right;
-  font: 600 16px/24px "Source Sans Pro",sans-serif;
-  color: #00aef0 !important;
-}
-
-#home .categories .inner .userBox .hover-info ul li img {
-  width: 16px;
-  float: left;
-  margin: 0px;
-  padding: 0px;
-}
-
-#home .categories .inner h3 {
-  float: none !important;
-  padding: 0px;
-  font: 15px/32px Source, sans-serif;
-  width: 118px;
-  text-transform: capitalize;
-  background: #00aef0 !important;
-  position: absolute;
-  bottom: -12px;
-  margin: 0px auto !important;
-  color: #fff;
-  text-align: center;
-  vertical-align: middle;
-  left: 28%;
 }
 
 #home .companies {
@@ -10630,6 +10509,137 @@ a:hover {
   background-position: 0 -100%;
   color: #00aef0;
   border: 4px solid #fff;
+}
+
+.categories .inner {
+  width: 100%;
+  float: left;
+  padding: 0px;
+}
+
+.categories .inner .userBox {
+  width: 100%;
+  float: left;
+  padding: 0px;
+  border: none !important;
+  box-shadow: 0px 3px 7px #ddd;
+  min-height: 300px;
+  margin: 0px 0px 28px !important;
+}
+
+.categories .inner .userBox .user-box-img {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+}
+
+.categories .inner .userBox .user-box-img img {
+  display: inline-block;
+  width: 100%;
+  object-fit: cover;
+  float: left;
+  height: 220px;
+}
+
+.categories .inner .userBox .user-box-img img:hover .hover-img {
+  display: block !important;
+}
+
+.categories .inner .userBox .user-box-img .hover-img {
+  position: absolute;
+  top: 38%;
+  width: auto !important;
+  height: auto !important;
+  display: block;
+  left: 39%;
+  border: none !important;
+  box-shadow: none !important;
+  margin: 0px auto;
+  cursor: pointer;
+}
+
+.categories .inner .userBox .hover-info {
+  float: left;
+  width: 100%;
+  background: #f1f1f1;
+  height: 100%;
+  padding: 0px;
+}
+
+.categories .inner .userBox .hover-info h4 {
+  float: left;
+  width: 100%;
+  color: #000 !important;
+  text-align: center;
+  font: 400 17px/24px "Source Sans Pro",sans-serif;
+  padding: 10px 0px 0px;
+  margin: 0px !important;
+}
+
+.categories .inner .userBox .hover-info h5 {
+  font: 400 17px/20px "Source Sans Pro",sans-serif;
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 10px 0px 0px;
+  color: #ccc !important;
+}
+
+.categories .inner .userBox .hover-info p.bio {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 18px 14px 8px;
+  font: 400 16px/20px "Source Sans Pro",sans-serif;
+  color: #333 !important;
+  background: #fff;
+}
+
+.categories .inner .userBox .hover-info ul {
+  width: 100%;
+  float: left;
+  margin: 0px;
+  padding: 10px 20px 5px;
+}
+
+.categories .inner .userBox .hover-info ul li {
+  float: left;
+  margin: 0px;
+  width: auto !important;
+  padding: 0px 2px;
+  list-style: none;
+}
+
+.categories .inner .userBox .hover-info ul li:last-child {
+  float: right;
+  font: 600 16px/24px "Source Sans Pro",sans-serif;
+  color: #00aef0 !important;
+}
+
+.categories .inner .userBox .hover-info ul li img {
+  width: 16px;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+}
+
+.categories .inner h3 {
+  float: none !important;
+  padding: 0px;
+  font: 15px/32px Source, sans-serif;
+  width: 118px;
+  text-transform: capitalize;
+  background: #00aef0 !important;
+  position: absolute;
+  bottom: -12px;
+  margin: 0px auto !important;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  left: 28%;
 }
 
 .coming-page {
@@ -11123,20 +11133,171 @@ a:hover {
   text-decoration: none;
 }
 
-.jobBox {
-  border: 2px solid #cecece;
-  padding: 18px;
-  margin: 5px auto;
+.listing {
+  padding-right: 0px;
 }
 
-.jobBox .title {
-  color: #0a4fa3;
+.jobBox {
+  background: #f5f5f5;
+  padding: 20px;
+  margin: 0px 0px 20px;
+  width: 100%;
+  float: left;
+  border-top: 1px solid #ddd;
+}
+
+.jobBox:hover {
+  background: #f2f2f2;
+  border-color: #2bbcf3;
+}
+
+.jobBox:hover .job-head .title {
+  color: #2bbcf3;
+}
+
+.jobBox .job-head {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  float: left;
+}
+
+.jobBox .job-head .title {
+  color: #313131;
   font-weight: bold;
-  margin-top: 0;
+  font-size: 20px;
+  margin: 0px;
+  padding: 0px;
+  float: left;
+  width: auto;
+}
+
+.jobBox .job-head h4 {
+  float: left;
+  width: auto;
+  background: #3FB618;
+  margin: 0px 10px;
+  padding: 0px 10px;
+  color: #fff !important;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 500;
+}
+
+.jobBox .job-head h4.Singer {
+  background: #00aef0 !important;
+}
+
+.jobBox .job-head h4.Model {
+  background: #9954BB !important;
+}
+
+.jobBox .job-head h4.Actor {
+  background: #000 !important;
+}
+
+.jobBox .job-span {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 5px  0px;
+}
+
+.jobBox .job-span span {
+  float: left;
+  width: auto;
+  color: #888;
+  padding: 0px 20px 0px 00px;
+  font-size: 14px !important;
+}
+
+.jobBox .job-span span b {
+  font-weight: 400;
+  padding: 0px 5px;
+}
+
+.jobBox p {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-size: 15px;
+  line-height: 22px;
 }
 
 .jobBox a:hover {
   text-decoration: none;
+}
+
+.jobBox .budget {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 10px 0px;
+}
+
+.single-job .jobBox {
+  background: none;
+  border-top: none;
+  border-right: 1px solid #ddd;
+  padding: 0px;
+}
+
+.single-job .jobBox p {
+  float: left;
+  width: 95%;
+  padding: 0px 0px 10px;
+}
+
+.single-job .sidebar h3 {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.single-job .sidebar .similar {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.single-job .sidebar .similar .ea {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 10px 0px;
+  border-bottom: 1px solid #ddd;
+}
+
+.single-job .sidebar .similar .ea a {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.single-job .sidebar .similar .ea a h3 {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #00aef0;
+}
+
+.single-job .sidebar .similar .ea a h5 {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  color: #999 !important;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 #listing {
@@ -11146,8 +11307,12 @@ a:hover {
 #listing .head {
   font-size: 16px;
   display: inline-block;
-  margin-top: -10px;
-  border-bottom: 1px dotted;
+  background: #00aef0 !important;
+  color: #fff;
+  line-height: 36px;
+  padding: 0px 10px;
+  float: right;
+  margin: 10px 0px;
 }
 
 #listing a {
@@ -11158,8 +11323,66 @@ a:hover {
   color: #444;
 }
 
-#listing .lside select {
-  border-color: #88bfff;
+#listing .lside {
+  margin: 0px 0px 30px;
+}
+
+#listing .lside form {
+  width: 100%;
+  float: left;
+  margin: 0px;
+  padding: 10px 20px;
+  background: #f5f5f5;
+}
+
+#listing .lside form .form-group {
+  float: left;
+  margin: 0px 30px 0px 0px;
+  padding: 0px;
+  width: 37%;
+}
+
+#listing .lside form .form-group label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 0px;
+  font-weight: 600;
+  font-size: 16px;
+  float: left;
+  width: 100%;
+  line-height: 35px;
+}
+
+#listing .lside form .form-group .form-control {
+  display: block;
+  width: 100%;
+  height: 38px;
+  padding: 5px 8px;
+  font-size: 15px;
+  line-height: 35px;
+  color: #333333;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #2bbcf3;
+  border-radius: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+#listing .lside form .form-group input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  padding: 0px 20px;
+  margin: 10px 0px;
+  font-size: 16px;
+  line-height: 34px;
+}
+
+#listing .lside form .form-group:nth-child(4) {
+  padding: 25px 0px 0 !important;
+  width: 20%;
+  float: right;
+  margin: 0px;
 }
 
 #listing .topper {
@@ -11171,17 +11394,42 @@ a:hover {
   background-color: #2bbcf3;
   border: 1px solid #2bbcf3;
   border-radius: 0;
-  padding: 8px 18px 12px 16px;
+  padding: 6px 18px 9px 16px;
   margin-left: -4px;
 }
 
 #listing .topper .form-control {
-  border-radius: 0;
+  height: 38px;
   border: 1px solid #2bbcf3;
+  width: 82%;
 }
 
 #listing .topper .labels {
-  margin-top: 10px;
+  margin: 20px 0px;
+  float: left;
+  width: 100%;
+  padding: 0px;
+}
+
+#listing .topper .labels .label {
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 400;
+  background: #313131;
+}
+
+#listing .topper .search form {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+#listing .topper .search form .form-group {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 
 .logo {
@@ -11227,6 +11475,8 @@ a:hover {
 .nav-page {
   border: none !important;
   padding: 5px 0px !important;
+  box-shadow: 0px 2px 2px #f8f8f8;
+  margin: 0px 0px 30px;
 }
 
 .nav-page .logo .img-responsive {
@@ -11250,6 +11500,44 @@ a:hover {
   transition: 0.3s ease;
   margin: 0px 5px;
   padding: 8px 15px !important;
+}
+
+#nav.main-home {
+  position: absolute;
+  background: none;
+  border: none;
+  width: 100%;
+  float: left;
+  z-index: 999;
+}
+
+#nav.main-home .navbar ul {
+  float: left;
+  margin: 42px 0px 0;
+  padding: 0px;
+  width: auto;
+}
+
+#nav.main-home .navbar ul li {
+  width: auto;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+}
+
+#nav.main-home .navbar ul li a {
+  float: left;
+  width: auto;
+  margin: 0px;
+  padding: 8px 20px;
+  font-size: 20px !important;
+  color: #fff;
+  cursor: pointer;
+}
+
+#nav.main-home .navbar ul li a:hover {
+  color: #00aef0;
+  background: none;
 }
 
 footer {

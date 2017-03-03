@@ -19,7 +19,8 @@
 					<div class="col col-sm-12 form-group">
 
 
-						<input type="text" name="" placeholder="Location">
+							{!! Form::select('location',$select_location,null , ['class'=>'form-control']) !!}
+
 					</div>
 					<!--<div class="col col-sm-12 form-group">
 						{!! Form::label('Talent') !!}

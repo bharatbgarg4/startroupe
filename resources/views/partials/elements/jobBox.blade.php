@@ -1,19 +1,32 @@
 <div class="jobBox">
-	<a href="/job/{{$job->id}}">
-		<span>			
-			<h3 class="title">{{$job->title}}</h3>
-			<h5>Posted By: <i>{{$job->user->name}}</i></h5>
+
+
+		<div class="job-head">
+			<a href="/job/{{$job->id}}">
+				<h3 class="title">{{$job->title}}</h3>
+			</a>
 			@if($job->talent)
-			<h4> {{$job->talent->title}} </h4>
+			<h4 class="{{$job->talent->title}}"> {{$job->talent->title}} </h4>
 			@else
 			<h4> Talent </h4>
 			@endif
+		</div>
+			<div class="job-span">
+				<span>Posted By:
+					<b>{{$job->user->name}}</b></span>
+				<span>Posted:
+				<b>{{$job->created_at->diffForHumans()}}</b>
+				</span>
+
 			@if($job->location)
-			<h4> {{$job->location->title}} </h4>
+			 <span><i class="fa fa-map-marker"></i>
+			 	{{$job->location->title}}
+			 	 </span>
 			@else
-			<h4> Location </h4>
+			<span> Location </span>
 			@endif
-			<div> {!! $job->content !!} </div>
-		</span>
-	</a>
+		</div>
+			<p> {!! $job->content !!} </p>
+
+
 </div>

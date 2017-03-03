@@ -1,18 +1,18 @@
 @extends('layouts.page')
 
 @section('pagecontent')
-<div id="listing">	
-	<div class="row">
-		<div class="col col-sm-3 lside">
+<div id="listing">
+	<div class="row categories">
+		<div class="col col-sm-12 lside">
 
 			@include('partials.elements.talentModals')
 			{!!Form::open(['url'=>'/search'])!!}
-			<div class="form-group">				
+			<div class="form-group">
 				{!! Form::label('Category') !!}
 				@if($talent)
-				{!! Form::select('talent',$select_talent,$talent->slug , ['class'=>'form-control']) !!}		
+				{!! Form::select('talent',$select_talent,$talent->slug , ['class'=>'form-control']) !!}
 				@else
-				{!! Form::select('talent',$select_talent,null , ['class'=>'form-control']) !!}		
+				{!! Form::select('talent',$select_talent,null , ['class'=>'form-control']) !!}
 				@endif
 			</div>
 
@@ -25,15 +25,27 @@
 				@endif
 			</div>
 			<div class="form-group">
-				{!! Form::submit('Filter',['class'=>'btn btn-success','name'=>"type_".$type]) !!}
+				{!! Form::submit('Filter',['class'=>'btn btn-success','name'=>"type_".$type]) !!}<a href="/{{$type}}" class="head">Remove Filter</a>
 			</div>
 			{!!Form::close()!!}
-			<a href="/{{$type}}" class="head">Remove Filter</a>
+
 		</div>
-		<div class="col col-sm-9">
+		<div class="col col-sm-12">
+		<div class="col col-sm-3">
 			<div class="row topper">
-				
-				<div class="col col-sm-7 labels">
+
+
+				<div class="col search">
+					<form action="/search/{{$type}}" method="get" class="form-inline">
+						<div class="form-group">
+
+								<input class="form-control" type="query" id="query" name="query" placeholder="Search"><button type="submit" class="ing"><i class="fa fa-search"></i></button>
+
+						</div>
+
+					</form>
+				</div>
+				<div class="col labels">
 					@if($users)
 					<span class="label label-success">Talent</span>
 					@else
@@ -49,43 +61,35 @@
 					<span class="label label-danger"> Search : {{$query}}</span>
 					@endif
 				</div>
-				<div class="col col-sm-5 search">				
-					<form action="/search/{{$type}}" method="get" class="form-inline">
-						<div class="form-group">
-							<div class="input-group">
-								<input class="form-control" type="query" id="query" name="query" placeholder="Search">
-							</div>
-						</div>
-						<button type="submit" class="ing"><i class="fa fa-search"></i></button>
-					</form>
-				</div>
 			</div>
-			<div class="row listing">
-				@if($users)
-				@if($users->isEmpty())
-				<h4>No Users in this Category</h4>
-				@else
-				@foreach($users as $user)
-				<div class="col-sm-6 col-md-4">
-					<div class="inner">
-						@include('partials.elements.userBox')
-					</div>
-				</div>
-				@endforeach
-				@endif
-				@endif
 
-				@if($jobs)
-				@if($jobs->isEmpty())
-				<h4>No Jobs in this Category</h4>
-				@else
-				@foreach($jobs as $job)
-				@include('partials.elements.jobBox')				
-				@endforeach
-				@endif
-				@endif
-			</div>
 		</div>
+		<div class="col col-sm-9 listing">
+			@if($users)
+			@if($users->isEmpty())
+			<h4>No Users in this Category</h4>
+			@else
+			@foreach($users as $user)
+			<div class="col-sm-6 col-md-4">
+				<div class="inner">
+					@include('partials.elements.userBox')
+				</div>
+			</div>
+			@endforeach
+			@endif
+			@endif
+
+			@if($jobs)
+			@if($jobs->isEmpty())
+			<h4>No Jobs in this Category</h4>
+			@else
+			@foreach($jobs as $job)
+			@include('partials.elements.jobBox')
+			@endforeach
+			@endif
+			@endif
+		</div>
+	</div>
 	</div>
 </div>
 @stop
