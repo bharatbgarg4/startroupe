@@ -2,8 +2,7 @@
 
 
 			<div class="user-box-img"><img src="{{$user->imgUrl}}" width="100%">
-				<img src="/images/ea-play.svg" width="100%" class="hover-img">
-
+			 	<img  data-toggle="modal" data-target="#userbox-modal" src="/images/ea-play.svg" width="100%" class="hover-img" />
 
 				<a href="/profile/{{$user->username}}">
 				@if($user->talent)
@@ -60,24 +59,22 @@
 
 
 
-
-</div><!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
+<div id="userbox-modal" class="modal fade userbox-modal" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
     <div class="modal-content">
-      <div class="modal-header">
+
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
-      </div>
+        <!--<h4 class="modal-title">Modal Header</h4> -->
+
       <div class="modal-body">
-        <p>Some text in the modal.</p>
+       <iframe src="https://www.youtube.com/embed/7DkZ9kyK9Ek?ecver=2" width="640" height="360" frameborder="0" style="width: 733px; height:400px; allowfullscreen></iframe>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
+
     </div>
 
   </div>
 </div>
+</div>
+

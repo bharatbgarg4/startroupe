@@ -10183,7 +10183,7 @@ a:hover {
   width: 100%;
   left: 0;
   top: 0;
-  height: 705px !important;
+  height: 572px !important;
   position: absolute;
 }
 
@@ -10527,6 +10527,10 @@ a:hover {
   margin: 0px 0px 28px !important;
 }
 
+.categories .inner .userBox:hover .hover-img {
+  display: block !important;
+}
+
 .categories .inner .userBox .user-box-img {
   position: relative;
   width: 100%;
@@ -10544,16 +10548,12 @@ a:hover {
   height: 220px;
 }
 
-.categories .inner .userBox .user-box-img img:hover .hover-img {
-  display: block !important;
-}
-
 .categories .inner .userBox .user-box-img .hover-img {
   position: absolute;
   top: 38%;
   width: auto !important;
   height: auto !important;
-  display: block;
+  display: none;
   left: 39%;
   border: none !important;
   box-shadow: none !important;
@@ -10640,6 +10640,32 @@ a:hover {
   text-align: center;
   vertical-align: middle;
   left: 28%;
+}
+
+.categories #userbox-modal .modal-dialog {
+  width: 775px;
+}
+
+.categories #userbox-modal .modal-content {
+  background: #000;
+}
+
+.categories .modal .close {
+  color: #ffffff;
+  position: absolute;
+  right: -36px;
+  top: -21px;
+  font-size: 36px;
+  font-weight: 400;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 100%;
+  width: 36px;
+  opacity: 1;
+}
+
+.categories #userbox-modal .modal-body {
+  position: relative;
+  padding: 0;
 }
 
 .coming-page {
@@ -11118,6 +11144,12 @@ a:hover {
   min-height: 448px;
   border: 7px solid #e8e8e8;
   margin: 10px 0;
+  text-align: center;
+}
+
+.userBox a {
+  width: 100%;
+  float: left;
   text-align: center;
 }
 
@@ -11926,6 +11958,14 @@ footer .lower p {
 
   #nav .nav li a:hover {
     background: #fff !important;
+  }
+
+  .categories .inner h3 {
+    float: none !important;
+    margin: 0px auto 0 -58px !important;
+    left: auto !important;
+    text-align: center;
+    display: inline-block !important;
   }
 }
 

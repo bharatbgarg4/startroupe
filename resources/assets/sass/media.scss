@@ -253,6 +253,13 @@
 		#nav .nav li a:hover {
 	    background: #fff !important;
 	}
+	.categories .inner h3 {
+	    float: none !important;
+	    margin: 0px auto 0 -58px!important;
+	    left:auto !important;
+	    text-align: center;
+	    display: inline-block!important;
+	}
 
 }
 @media(max-width:767px){
