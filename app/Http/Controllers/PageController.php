@@ -51,7 +51,7 @@ class PageController extends Controller
 				->cc('himanshu.vasistha@gmail.com','himanshu vasistha')
 				->subject(env('SITE_NAME').' User Register Notification');
 			});
-		return redirect('coming-soon');
+		return redirect('coming-soon')->with('status','Please check your email for more details');
 	}
 
 	public function index(){
