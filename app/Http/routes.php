@@ -6,11 +6,11 @@ if(env('HTTPS')){
 
 Route::get('coming-soon', 'PageController@coming');
 Route::post('coming', 'PageController@comingsend');
-// if(env('APP_DEBUG')){
-// 	Route::get('/{any}', function ($any) {
-// 		return redirect('coming-soon');
-// 	})->where('any', '.*');
-// }
+if(!env('APP_DEBUG')){
+	Route::get('/{any}', function ($any) {
+		return redirect('coming-soon');
+	})->where('any', '.*');
+}
 
 Route::get('search/{type}', array(
 	'as'    =>  'search',
