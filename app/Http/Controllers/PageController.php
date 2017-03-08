@@ -4,22 +4,56 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
-use Mail;
+use Validator;
 use App\Message;
 use App\Article;
 use App\User;
+use App\Bird;
 use App\Talent;
 use App\Job;
 use App\Users;
 use App\Location;
 use App\Link;
 use Input;
+use Mail;
 use App\Http\Requests\LinkRequest;
 use App\Http\Requests\MessageRequest;
 use App\Http\Controllers\Controller;
 
 class PageController extends Controller
 {
+	public function comingsend(Request $request){
+		// dd(Bird::all()->toArray());
+		// dd(User::all()->toArray());
+		$user=$request->all();
+		$validator = Validator::make($user, [
+			'name' => 'required|max:255',
+			'email' => 'required|email|max:255|unique:users',
+			]);
+
+		if ($validator->fails()) {
+			return redirect()->back()->withErrors($validator)->withInput();
+		}
+		$user['username']=str_slug($user['name']).'-'.str_random(8);
+		$user['password']=str_random(12);
+		Bird::create($user);
+		$user['password']=bcrypt($user['password']);
+		$user=User::create($user);
+		Mail::queue('emails.welcome',['user'=>$user],
+		        function($m) use ($user){
+		            $m->to($user->email, $user->name)
+		            ->subject('Welcome To Startroupe');
+		});
+		Mail::queue('emails.invite',['user'=>$user],
+			function($m){
+				$m->to('bharatbgarg4@gmail.com','Bharat Garg')
+				->cc('kalra.parampreetsingh@gmail.com','parampreet singh kalra')
+				->cc('himanshu.vasistha@gmail.com','himanshu vasistha')
+				->subject(env('SITE_NAME').' User Register Notification');
+			});
+		return redirect('coming-soon');
+	}
+
 	public function index(){
 		if(Auth::user()){
 			return redirect('dashboard');
@@ -38,22 +72,6 @@ class PageController extends Controller
 		return redirect()->back()->with('status','Link Created');
 	}
 
-	public function comingsend(Request $request){
-		$user=$request->all();
-		// dd($user);
-		if($user['name']){
-			if($user['email']){
-				Mail::queue('emails.invite',['user'=>$user],
-					function($m){
-						$m->to('bharatbgarg4@gmail.com','Bharat Garg')
-						->cc('kalra.parampreetsingh@gmail.com','parampreet singh kalra')
-						->cc('himanshu.vasistha@gmail.com','himanshu vasistha')
-						->subject(env('SITE_NAME').' User Register Notification');
-					});
-			}
-		}
-		return redirect('coming-soon');
-	}
 
 	public function coming(){
 		return view('pages.coming');
@@ -132,9 +150,8 @@ class PageController extends Controller
 		if(!$token){
 			return redirect('404');
 		}
-		$user=User::where('confirmation_code',$token)->firstorfail();
-		$user->is_confirmed=true;
-		$user->confirmation_code=null;
+		$user=User::where('token',$token)->firstorfail();
+		$user->token=null;
 		$user->save();
 		Mail::send('emails.welcome',['user'=>$user],
 			function($m) use ($user){

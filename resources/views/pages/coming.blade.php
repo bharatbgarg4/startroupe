@@ -18,22 +18,17 @@
 			<img src="/images/logo.png">
 			<h2>Coming soon...</h2>
 
-			{!!Form::open(['url'=>'/coming'])!!}
-				
+			{!!Form::open(['url'=>'/coming'])!!}				
 			<label>Sign up below for an exclusive invite </label>
 			<p>
-
 			{!! Form::text('name',null,['placeholder'=>'Your Name']) !!}
 			{!! Form::text('email',null,['placeholder'=>'Your Email']) !!}
-
 			{!! Form::submit('Go',['name'=>"submit"]) !!}
 			</p>
 			{!!Form::close()!!}
-
 		</div>
-
 	</div>
-
+	@include('partials.notifications')
 	<script src="{{ elixir('js/all.js') }}"></script>
 	@yield('footinclude')
 </body>
