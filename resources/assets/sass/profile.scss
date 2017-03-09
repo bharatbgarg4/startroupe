@@ -2,10 +2,10 @@
 	display: none;
 }
 .topi{
-	margin-top: 25px;
+	//margin-top: 25px;
 
 	.lefti,.righti{
-		width: 48%;
+		width: 100%;
 		display: inline-block;
 	}
 }
@@ -24,10 +24,13 @@
 	object-fit: cover;
 }
 
-.profileImage{
-	width:100px;
-	height: 100px;
-	object-fit: cover;
+.profileImage {
+	width: 100%;
+	height: 250px;
+	position:relative;
+	object-fit: cover !important;
+	float: left;
+
 }
 
 .folioImage{
@@ -53,9 +56,189 @@
 	height: auto;
 	max-width: 100%;
 }
+.portfolio {
+    //width: 70% !important;
+    float: right;
+   // background: #fff;
+    margin: 20px 0px;
+   // box-shadow: 1px 1px 4px #999999;
+    .videos{
+    	display: none;
+    }
+    .portflio-link {
+        float: left;
+        width: 100%;
+        background: #fff;
+        padding: 22px;
+        margin: 0px;
+        box-shadow: 1px 2px 10px #ccc;
+        h2 {
+            float: left;
+            width: auto;
+            margin: 0px;
+            padding: 0px;
+            font-size: 24px;
+            font-weight: 500;
+            color: #666;
+        }
+        .like-thumb {
+            float: right;
+            width: auto;
+        }
+        .social-link {
+            float: left;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+    }
+    .tabs-profile {
+        float: left;
+        width: 100%;
+        margin: 20px 0px;
+        padding: 0px;
+        .tab-content {
+            float: left;
+            width: 100%;
+            margin: 0px;
+            padding: 10px;
+            border-top: none !important;
+            border: 1px solid #ccc;
+           	}
 
-.portfolio{
-	.videos{
-		display: none;
+    }
+}
+
+.profile {
+	position: relative;
+	width: 100%;
+	height: auto;
+	background: #f5f5f5;
+	float: left;
+	.profile-main {
+		float: left;
+		width: 100%;
+		position: relative;
+		margin: 0px;
+		padding: 0px;
+		.profile-banner {
+			width: 100%;
+			height: 400px;
+			object-fit: cover;
+			background-position: left top;
+			background-image: url(/uploads/profile/sam-I8wO6n27.jpg);
+			background-size: 100%;
+			&:after {
+				background: -webkit-linear-gradient(left, rgba(126, 63, 157, 0.2), rgba(126, 63, 157, 1)rgba(126, 63, 157, 1)); /* For Safari 5.1 to 6.0 */
+				background: -o-linear-gradient(right, rgba(126, 63, 157, 0.2), rgba(126, 63, 157, 1)); /* For Opera 11.1 to 12.0 */
+				background: -moz-linear-gradient(right, rgba(126, 63, 157, 0.2), rgba(126, 63, 157, 1)); /* For Firefox 3.6 to 15 */
+				background: linear-gradient(to right, rgba(126, 63, 157, 0.2), rgba(126, 63, 157, 1)); /* Standard syntax (must be last) */
+
+
+				content: "";
+				position: absolute;
+				height: 400px;
+				width: 100%;
+			//opacity: 0.901;
+		}
+	}
+	.banner-head {
+		position: absolute;
+		bottom: 5px;
+		width: 68%;
+		z-index: 9999999999 !important;
+		float: right;
+		right: 5px;
+		h4 {
+			color: #fff;
+			width: 100%;
+			margin: 0px;
+			padding: 0px;
+			float: left;
+			font-size: 30px;
+			text-transform: capitalize;
+			font-weight: 500;
+		}
+		.righti {
+			float: left;
+			width: 100%;
+			margin: 0px;
+			padding: 0px;
+			p {
+				float: left;
+				color: #fff;
+				font-size: 16px;
+				line-height: 40px;
+				padding: 0px 27px 0px 0px
+			}
+		}
 	}
 }
+.profile-sidebar{
+
+	box-shadow: 1px 1px 4px #999999;
+	padding: 0px;
+	margin: -120px 0px 0px;
+	width: 22%;
+	.lefti{
+		width: 100%;
+		float:left;
+		display: inline-block;
+		position: relative;
+		&:before {
+			background: -webkit-linear-gradient(left, rgba(231, 41, 32, 0.2), rgba(126, 63, 157, 1)rgba(126, 63, 157, 0.7)); /* For Safari 5.1 to 6.0 */
+			background: -o-linear-gradient(right, rgba(126, 63, 157, 0.2), rgba(126, 63, 157, 0.7)); /* For Opera 11.1 to 12.0 */
+			background: -moz-linear-gradient(right, rgba(126, 63, 157, 0.2), rgba(126, 63, 157, 0.7)); /* For Firefox 3.6 to 15 */
+			background: linear-gradient(to right, rgba(126, 63, 157, 0.2), rgba(126, 63, 157, 0.7)); /* Standard syntax (must be last) */
+			content: "";
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left:0px;
+			z-index: 999 !important;
+		}
+		p {
+			position: absolute;
+			background: rgba(39, 128, 227, 0.9);
+			bottom: 16px;
+			width: auto;
+			padding: 0px 17px;
+			color: #fff;
+			font-size: 18px;
+			line-height: 40px;
+			font-weight: 500;
+			border-radius: 34px;
+			float: none;
+			margin: 0px;
+			left: 35px;
+			z-index: 9999 !important;
+		}
+	}
+	.profile-data {
+		float: left;
+		width: 100%;
+		margin: 0px;
+		background: #ffffff;
+		padding: 15px;
+		h4 {
+			float: left;
+			width: 100%;
+			margin: 0px;
+			padding: 0px;
+			font-size: 19px;
+			font-weight: 500;
+		}
+		p {
+			float: left;
+			width: 100%;
+			margin: 0px;
+			padding: 5px 0px;
+			font-size: 14px;
+		}
+	}
+
+}
+
+}
+

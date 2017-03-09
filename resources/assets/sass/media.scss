@@ -267,6 +267,18 @@
 		float: left;
 		margin: 0px 6px 0px 0px !important;
 	}
+	.coming-inner {
+	   	    top: 13% !important;
+	        float: left;
+	}
+	.coming-page form label {
+	    float: left;
+	    padding: 20px 0px !important;
+	    font: 400 18px/20px "Source Sans Pro",Calibri,Candara,Arial,sans-serif !important;
+	}
+	.coming-page h2 {
+	    font: bold italic 40px/80px "Source Sans Pro",Calibri,Candara,Arial,sans-serif  !important;
+	}
 
 }
 
@@ -362,6 +374,11 @@
 			float: left;
 			top: 85px !important;
 		}
+		.coming-page form p {
+		    margin: 0 2% !important;
+		    width: 96% !important;
+		    display: block !important;
+		}
 
 	}
 	@media(max-width:360px){
@@ -376,6 +393,7 @@
 		#home .categories .inner .userBox a .hover-info {
 			padding: 18px 20px !important;
 		}
+
 
 	}
 	@media(max-width:320px){

@@ -10523,7 +10523,7 @@ a:hover {
   padding: 0px;
   border: none !important;
   box-shadow: 0px 3px 7px #ddd;
-  min-height: 300px;
+  min-height: 265px;
   margin: 0px 0px 28px !important;
 }
 
@@ -10545,7 +10545,7 @@ a:hover {
   width: 100%;
   object-fit: cover;
   float: left;
-  height: 220px;
+  height: 150px;
 }
 
 .categories .inner .userBox .user-box-img .hover-img {
@@ -10592,7 +10592,7 @@ a:hover {
   float: left;
   width: 100%;
   margin: 0px;
-  padding: 18px 14px 8px;
+  padding: 20px 14px 12px;
   font: 400 16px/20px "Source Sans Pro",sans-serif;
   color: #333 !important;
   background: #fff;
@@ -10676,6 +10676,7 @@ a:hover {
   text-align: center;
   margin: 0px;
   height: 100%;
+  min-height: 100vh;
   padding: 20px 0px;
 }
 
@@ -11079,13 +11080,9 @@ a:hover {
   display: none;
 }
 
-.topi {
-  margin-top: 25px;
-}
-
 .topi .lefti,
 .topi .righti {
-  width: 48%;
+  width: 100%;
   display: inline-block;
 }
 
@@ -11105,9 +11102,11 @@ a:hover {
 }
 
 .profileImage {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
+  width: 100%;
+  height: 250px;
+  position: relative;
+  object-fit: cover !important;
+  float: left;
 }
 
 .folioImage {
@@ -11136,8 +11135,203 @@ a:hover {
   max-width: 100%;
 }
 
+.portfolio {
+  float: right;
+  margin: 20px 0px;
+}
+
 .portfolio .videos {
   display: none;
+}
+
+.portfolio .portflio-link {
+  float: left;
+  width: 100%;
+  background: #fff;
+  padding: 22px;
+  margin: 0px;
+  box-shadow: 1px 2px 10px #ccc;
+}
+
+.portfolio .portflio-link h2 {
+  float: left;
+  width: auto;
+  margin: 0px;
+  padding: 0px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #666;
+}
+
+.portfolio .portflio-link .like-thumb {
+  float: right;
+  width: auto;
+}
+
+.portfolio .portflio-link .social-link {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.portfolio .tabs-profile {
+  float: left;
+  width: 100%;
+  margin: 20px 0px;
+  padding: 0px;
+}
+
+.portfolio .tabs-profile .tab-content {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 10px;
+  border-top: none !important;
+  border: 1px solid #ccc;
+}
+
+.profile {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: #f5f5f5;
+  float: left;
+}
+
+.profile .profile-main {
+  float: left;
+  width: 100%;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+}
+
+.profile .profile-main .profile-banner {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  background-position: left top;
+  background-image: url(/uploads/profile/sam-I8wO6n27.jpg);
+  background-size: 100%;
+}
+
+.profile .profile-main .profile-banner:after {
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, rgba(126, 63, 157, 0.2), #7e3f9d);
+  /* Standard syntax (must be last) */
+  content: "";
+  position: absolute;
+  height: 400px;
+  width: 100%;
+}
+
+.profile .profile-main .banner-head {
+  position: absolute;
+  bottom: 5px;
+  width: 68%;
+  z-index: 9999999999 !important;
+  float: right;
+  right: 5px;
+}
+
+.profile .profile-main .banner-head h4 {
+  color: #fff;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  float: left;
+  font-size: 30px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.profile .profile-main .banner-head .righti {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.profile .profile-main .banner-head .righti p {
+  float: left;
+  color: #fff;
+  font-size: 16px;
+  line-height: 40px;
+  padding: 0px 27px 0px 0px;
+}
+
+.profile .profile-sidebar {
+  box-shadow: 1px 1px 4px #999999;
+  padding: 0px;
+  margin: -120px 0px 0px;
+  width: 22%;
+}
+
+.profile .profile-sidebar .lefti {
+  width: 100%;
+  float: left;
+  display: inline-block;
+  position: relative;
+}
+
+.profile .profile-sidebar .lefti:before {
+  /* For Safari 5.1 to 6.0 */
+  /* For Opera 11.1 to 12.0 */
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, rgba(126, 63, 157, 0.2), rgba(126, 63, 157, 0.7));
+  /* Standard syntax (must be last) */
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0px;
+  z-index: 999 !important;
+}
+
+.profile .profile-sidebar .lefti p {
+  position: absolute;
+  background: rgba(39, 128, 227, 0.9);
+  bottom: 16px;
+  width: auto;
+  padding: 0px 17px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 500;
+  border-radius: 34px;
+  float: none;
+  margin: 0px;
+  left: 35px;
+  z-index: 9999 !important;
+}
+
+.profile .profile-sidebar .profile-data {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  background: #ffffff;
+  padding: 15px;
+}
+
+.profile .profile-sidebar .profile-data h4 {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.profile .profile-sidebar .profile-data p {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 5px 0px;
+  font-size: 14px;
 }
 
 .userBox {
@@ -11344,7 +11538,7 @@ a:hover {
   line-height: 36px;
   padding: 0px 10px;
   float: right;
-  margin: 10px 0px;
+  margin: 18px 0px;
 }
 
 #listing a {
@@ -11357,21 +11551,20 @@ a:hover {
 
 #listing .lside {
   margin: 0px 0px 30px;
+  background: #f5f5f5;
 }
 
 #listing .lside form {
   width: 100%;
   float: left;
   margin: 0px;
-  padding: 10px 20px;
-  background: #f5f5f5;
 }
 
 #listing .lside form .form-group {
   float: left;
   margin: 0px 30px 0px 0px;
   padding: 0px;
-  width: 37%;
+  width: 100%;
 }
 
 #listing .lside form .form-group label {
@@ -11405,16 +11598,9 @@ a:hover {
   -webkit-appearance: button;
   cursor: pointer;
   padding: 0px 20px;
-  margin: 10px 0px;
+  margin: 18px 0px;
   font-size: 16px;
   line-height: 34px;
-}
-
-#listing .lside form .form-group:nth-child(4) {
-  padding: 25px 0px 0 !important;
-  width: 20%;
-  float: right;
-  margin: 0px;
 }
 
 #listing .topper {
@@ -11422,18 +11608,22 @@ a:hover {
 }
 
 #listing .topper .ing {
+  right: 0;
   color: #ffffff;
   background-color: #2bbcf3;
   border: 1px solid #2bbcf3;
   border-radius: 0;
   padding: 6px 18px 9px 16px;
   margin-left: -4px;
+  position: absolute;
+  top: 0px;
 }
 
 #listing .topper .form-control {
   height: 38px;
   border: 1px solid #2bbcf3;
   width: 82%;
+  position: relative;
 }
 
 #listing .topper .labels {
@@ -11462,6 +11652,7 @@ a:hover {
   width: 100%;
   margin: 0px;
   padding: 0px;
+  position: relative;
 }
 
 .logo {
@@ -11974,6 +12165,21 @@ footer .lower p {
     float: left;
     margin: 0px 6px 0px 0px !important;
   }
+
+  .coming-inner {
+    top: 13% !important;
+    float: left;
+  }
+
+  .coming-page form label {
+    float: left;
+    padding: 20px 0px !important;
+    font: 400 18px/20px "Source Sans Pro",Calibri,Candara,Arial,sans-serif !important;
+  }
+
+  .coming-page h2 {
+    font: bold italic 40px/80px "Source Sans Pro",Calibri,Candara,Arial,sans-serif  !important;
+  }
 }
 
 @media (max-width: 640px) {
@@ -12084,6 +12290,12 @@ footer .lower p {
   #home .banner .home-search {
     float: left;
     top: 85px !important;
+  }
+
+  .coming-page form p {
+    margin: 0 2% !important;
+    width: 96% !important;
+    display: block !important;
   }
 }
 

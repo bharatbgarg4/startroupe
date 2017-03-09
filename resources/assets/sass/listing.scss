@@ -4,9 +4,9 @@
 	margin: 10px 0;
 	text-align:center;
 	a {
-	    width: 100%;
-	    float: left;
-	    text-align: center;
+		width: 100%;
+		float: left;
+		text-align: center;
 	}
 	h3{
 		margin: 5px;
@@ -163,13 +163,13 @@
 						color: #00aef0;
 					}
 					h5 {
-					    float: left;
-					    width: 100%;
-					    margin: 0px;
-					    padding: 0px;
-					    color: #999!important;
-					    font-size: 14px;
-					    font-weight: 500;
+						float: left;
+						width: 100%;
+						margin: 0px;
+						padding: 0px;
+						color: #999!important;
+						font-size: 14px;
+						font-weight: 500;
 					}
 				}
 			}
@@ -187,7 +187,7 @@
 		line-height: 36px;
 		padding: 0px 10px;
 		float: right;
-		margin: 10px 0px;
+		margin: 18px 0px;
 	}
 	a{
 		color: #666;
@@ -197,17 +197,16 @@
 	}
 	.lside{
 		margin: 0px 0px 30px;
+		background: #f5f5f5;
 		form{
 			width: 100%;
 			float: left;
 			margin: 0px;
-			padding: 10px 20px;
-			background: #f5f5f5;
 			.form-group{
 				float: left;
 				margin: 0px 30px 0px 0px;
 				padding: 0px;
-				width: 37%;
+				width: 100%;
 				label {
 					display: inline-block;
 					max-width: 100%;
@@ -237,34 +236,33 @@
 					-webkit-appearance: button;
 					cursor: pointer;
 					padding: 0px 20px;
-					margin: 10px 0px;
+					margin: 18px 0px;
 					font-size: 16px;
 					line-height: 34px;
 				}
 			}
-			.form-group:nth-child(4) {
-				padding: 25px 0px 0 !important;
-				width: 20%;
-				float: right;
-				margin: 0px;
-			}
+
 		}
 
 	}
 	.topper{
 		margin-bottom: 13px;
-		.ing {
+		.ing {		    right: 0;
 			color: #ffffff;
 			background-color: #2bbcf3;
 			border: 1px solid #2bbcf3;
 			border-radius: 0;
 			padding: 6px 18px 9px 16px;
 			margin-left: -4px;
+			position: absolute;
+			top: 0px;
 		}
 		.form-control{
 			height:38px;
 			border: 1px solid #2bbcf3;
 			width: 82%;
+			position: relative;
+
 		}
 		.labels{
 			margin:20px 0px;
@@ -293,7 +291,7 @@
 					width: 100%;
 					margin: 0px;
 					padding: 0px;
-
+					position: relative;
 				}
 			}
 		}

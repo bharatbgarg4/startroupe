@@ -3,17 +3,19 @@
 @section('pagecontent')
 <div id="listing">
 	<div class="row categories">
-		<div class="col col-sm-12 lside">
+		<div class="col col-sm-3 lside">
 
 			@include('partials.elements.talentModals')
 			{!!Form::open(['url'=>'/search'])!!}
 			<div class="form-group">
-				{!! Form::label('Category') !!}
+			{!! Form::label('Category') !!}
+				<input type="text" name="" value="" class="form-control">
+				<!--{!! Form::label('Category') !!}
 				@if($talent)
 				{!! Form::select('talent',$select_talent,$talent->slug , ['class'=>'form-control']) !!}
 				@else
 				{!! Form::select('talent',$select_talent,null , ['class'=>'form-control']) !!}
-				@endif
+				@endif-->
 			</div>
 
 			<div class="form-group">
@@ -28,11 +30,7 @@
 				{!! Form::submit('Filter',['class'=>'btn btn-success','name'=>"type_".$type]) !!}<a href="/{{$type}}" class="head">Remove Filter</a>
 			</div>
 			{!!Form::close()!!}
-
-		</div>
-		<div class="col col-sm-12">
-		<div class="col col-sm-3">
-			<div class="row topper">
+			<div class="topper">
 
 
 				<div class="col search">
@@ -61,10 +59,12 @@
 					<span class="label label-danger"> Search : {{$query}}</span>
 					@endif
 				</div>
-			</div>
 
 		</div>
-		<div class="col col-sm-9 listing">
+		</div>
+		<div class="col col-sm-9">
+
+		<div class="col col-sm-12 listing">
 			@if($users)
 			@if($users->isEmpty())
 			<h4>No Users in this Category</h4>
