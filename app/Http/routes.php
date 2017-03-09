@@ -6,11 +6,11 @@ if(env('HTTPS')){
 
 Route::get('coming-soon', 'PageController@coming');
 Route::post('coming', 'PageController@comingsend');
-// if(env('APP_DEBUG')){
-// 	Route::get('/{any}', function ($any) {
-// 		return redirect('coming-soon');
-// 	})->where('any', '.*');
-// }
+if(!env('APP_DEBUG')){
+	Route::get('/{any}', function ($any) {
+		return redirect('coming-soon');
+	})->where('any', '.*');
+}
 
 Route::get('search/{type}', array(
 	'as'    =>  'search',
@@ -24,10 +24,10 @@ Route::post('login', 'Auth\AuthController@postLogin');
 Route::get('signout', 'Auth\AuthController@getLogout');
 Route::get('signup', 'Auth\AuthController@getRegister');
 Route::post('register', 'Auth\AuthController@postRegister');
-Route::get('login/facebook', 'SocialController@redirectToFacebook');
-Route::get('facebook', 'SocialController@handleFacebookCallback');
-Route::get('login/google', 'SocialController@redirectToGoogle');
-Route::get('google', 'SocialController@handleGoogleCallback');
+
+Route::get('login/{social}', 'SocialController@redirectTo');
+Route::get('facebook', 'SocialController@handleCallback');
+Route::get('google', 'SocialController@handleCallback');
 
 Route::get('register/verify/{token}', 'PageController@verify');
 

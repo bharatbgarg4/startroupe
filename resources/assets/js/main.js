@@ -99,10 +99,10 @@ $(document).ready(function(){
 
 	});
 
-$(document).ready(function() {
-      switch (window.location.pathname) {
-        case '':
-        case '/views/pages/index-blade.php':
-            $('body').addClass('home')
-      }
-  });
+// $(document).ready(function() {
+//       switch (window.location.pathname) {
+//         case '':
+//         case '/views/pages/index-blade.php':
+//             $('body').addClass('home')
+//       }
+//   });

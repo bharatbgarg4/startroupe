@@ -59,7 +59,7 @@ class AuthController extends Controller
 
 	protected function create(array $data)
 	{
-		$confirmation_code=str_random(60);
+		$token=str_random(60);
 		if(env('ENABLE_RECAPTCHA')){
 			$captcha=$data['g-recaptcha-response'];
 			$respon=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".env('GOOGLE_RECAPTCHA_SECRET')."&response=".$captcha);
@@ -74,10 +74,10 @@ class AuthController extends Controller
 			$data['artist']=intval($data['artist']);
 		}
 		$data['editor']=$editor;
-		$data['confirmation_code']=$confirmation_code;
+		$data['token']=$token;
 		$data['password']=bcrypt($data['password']);
 		$user=User::create($data);
-		Mail::queue('emails.verify', ['token' => $confirmation_code], function($message) use ($user){
+		Mail::queue('emails.verify', ['token' => $token], function($message) use ($user){
 			$message->to($user->email, $user->username)
 			->subject('Verify Your email');
 		});
