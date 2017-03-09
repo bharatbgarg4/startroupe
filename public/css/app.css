@@ -10551,7 +10551,7 @@ a:hover {
 .categories .inner .userBox .user-box-img .hover-img {
   position: absolute;
   top: 38%;
-  width: auto !important;
+  width: 44px  !important;
   height: auto !important;
   display: none;
   left: 39%;
@@ -10575,7 +10575,7 @@ a:hover {
   color: #000 !important;
   text-align: center;
   font: 400 17px/24px "Source Sans Pro",sans-serif;
-  padding: 10px 0px 0px;
+  padding: 14px 0px 0px;
   margin: 0px !important;
 }
 
@@ -10602,7 +10602,7 @@ a:hover {
   width: 100%;
   float: left;
   margin: 0px;
-  padding: 10px 20px 5px;
+  padding: 10px 20px;
 }
 
 .categories .inner .userBox .hover-info ul li {
@@ -10813,7 +10813,7 @@ a:hover {
   width: 100%;
   float: left;
   margin: 0px;
-  padding: 50px 0px 0;
+  padding: 40px 0px 0;
   font-size: 34px;
   text-align: center;
   line-height: 40px;
@@ -10822,7 +10822,7 @@ a:hover {
 #auth .signin {
   background: #00aef0;
   width: 420px;
-  margin: 10% auto;
+  margin: 8% auto;
   padding: 20px;
 }
 
@@ -10960,7 +10960,7 @@ a:hover {
 
 #auth .signup .regmodal form .form-group .ci {
   text-align: left;
-  color: #fff;
+  color: #000;
 }
 
 #auth .signup .regmodal form .form-group .ci input[type="radio"] {
@@ -11365,7 +11365,7 @@ a:hover {
 
 .jobBox {
   background: #f5f5f5;
-  padding: 20px;
+  padding: 15px 0px;
   margin: 0px 0px 20px;
   width: 100%;
   float: left;
@@ -11395,7 +11395,7 @@ a:hover {
   margin: 0px;
   padding: 0px;
   float: left;
-  width: auto;
+  width: 82%;
 }
 
 .jobBox .job-head h4 {
@@ -11408,6 +11408,8 @@ a:hover {
   font-size: 16px;
   line-height: 25px;
   font-weight: 500;
+  position: absolute;
+  right: 0;
 }
 
 .jobBox .job-head h4.Singer {
@@ -11462,6 +11464,108 @@ a:hover {
   padding: 10px 0px;
 }
 
+.jobBox .job-rght {
+  text-align: center;
+}
+
+.jobBox .job-rght img {
+  width: 90px;
+  float: none;
+  display: inline-block;
+}
+
+.jobBox .job-rght ul {
+  display: inline-block;
+  width: auto;
+  margin: 0px;
+  padding: 10px 0px;
+}
+
+.jobBox .job-rght ul li {
+  float: left;
+  width: auto;
+  margin: 0px;
+  list-style: none;
+  padding: 0px;
+  position: relative;
+  /*  */
+}
+
+.jobBox .job-rght ul li img {
+  float: left;
+  width: 24px;
+  margin: 0px;
+  padding: 0px 4px 0px 0px;
+}
+
+.jobBox .job-rght ul li i {
+  /*   positioning */
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  /*   gradient   */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.03) 1%, white 30%, white 100%, rgba(255, 255, 255, 0.85) 100%, rgba(255, 255, 255, 0.85) 71%, white 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
+  /* IE6-9 */
+  /*  forming the shine element
+				play around with the width, skew and gradient to get different effects
+				*/
+  width: 15%;
+  height: 100%;
+  transform: skew(-10deg, 0deg);
+  -webkit-transform: skew(-10deg, 0deg);
+  -moz-transform: skew(-10deg, 0deg);
+  -ms-transform: skew(-10deg, 0deg);
+  -o-transform: skew(-10deg, 0deg);
+  /*  animating it  */
+  animation: move 2s;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+  -webkit-animation: move 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: 1s;
+  -moz-transform: skew(-10deg, 0deg);
+  -moz-animation: move 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-delay: 1s;
+  -ms-transform: skew(-10deg, 0deg);
+  -ms-animation: move 2s;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-delay: 1s;
+  -o-transform: skew(-10deg, 0deg);
+  -o-animation: move 2s;
+  -o-animation-iteration-count: infinite;
+  -o-animation-delay: 1s;
+}
+
+@keyframes move {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 0.0;
+  }
+
+  48% {
+    opacity: 0.2;
+  }
+
+  80% {
+    opacity: 0.0;
+  }
+
+  100% {
+    left: 82%;
+  }
+}
+
+.jobBox .job-rght ul .no-star {
+  opacity: 0.3;
+}
+
 .single-job .jobBox {
   background: none;
   border-top: none;
@@ -11473,6 +11577,10 @@ a:hover {
   float: left;
   width: 95%;
   padding: 0px 0px 10px;
+}
+
+.single-job .jobBox .job-head h4 {
+  position: relative;
 }
 
 .single-job .sidebar h3 {
@@ -11552,6 +11660,7 @@ a:hover {
 #listing .lside {
   margin: 0px 0px 30px;
   background: #f5f5f5;
+  padding: 18px;
 }
 
 #listing .lside form {
@@ -11897,15 +12006,16 @@ footer .lower p {
     margin: 0px 16px 0px 0px !important;
   }
 
-  #home .reviewed .testmonial-in {
-    float: left;
-    margin: 44px 0px 20px !important;
-    padding: 6px 0px !important;
+  #home .reviewed .artist {
+    top: auto;
+    position: relative;
+    width: 100%;
   }
 
   #home .reviewed .content {
     font: 17px/24px arial !important;
-    padding: 0px 12px !important;
+    padding: 12px;
+    width: 100%;
   }
 
   #home .invitation .inn {

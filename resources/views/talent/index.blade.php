@@ -9,7 +9,7 @@
 			{!!Form::open(['url'=>'/search'])!!}
 			<div class="form-group">
 			{!! Form::label('Category') !!}
-				<input type="text" name="" value="" class="form-control">
+				<input type="text" name="" value="" class="form-control" placeholder="Search actors, singers, other talent..">
 				<!--{!! Form::label('Category') !!}
 				@if($talent)
 				{!! Form::select('talent',$select_talent,$talent->slug , ['class'=>'form-control']) !!}
