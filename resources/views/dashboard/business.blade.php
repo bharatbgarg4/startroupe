@@ -4,14 +4,17 @@
 <div class="bus">
 	<h1>LATEST ARTIST</h1>
 	<div class="row">
+		<div class="owl-carousel owl-theme">
+
+
 		@foreach($latest as $user)
-		<div class="col col-sm-3">
-			<div class="inner">
+		<div class="item">
+
 				@include('partials.elements.userBox')
-			</div>
+
 		</div>
 		@endforeach
-	</div>
+	</div></div>
 </div>
 
 <div class="bus">

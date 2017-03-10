@@ -11,6 +11,7 @@ elixir(function(mix) {
 		'../../../vendor/bower_components/jquery-ui/jquery-ui.min.js',
 		'../../../vendor/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js',
 		'main.js',
+		'owl.carousel.js'
 		])
 	.version(['css/app.css','js/all.js']);
 });

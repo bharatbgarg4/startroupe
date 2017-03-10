@@ -80,7 +80,7 @@ class UserTableSeeder extends Seeder
 				'viewed'=>\Carbon\Carbon::now(),
 				]);
 		}
-		foreach (range(1,30) as $index) {
+		foreach (range(1,100) as $index) {
 			$name=$faker->name;
 			DB::table('users')->insert([
 				'name' => $name,
