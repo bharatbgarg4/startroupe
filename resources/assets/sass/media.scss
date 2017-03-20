@@ -264,6 +264,7 @@
 	    display: inline-block!important;
 	}
 
+
 }
 @media(max-width:767px){
 	#home .companies .imah {
@@ -281,6 +282,16 @@
 	}
 	.coming-page h2 {
 	    font: bold italic 40px/80px "Source Sans Pro",Calibri,Candara,Arial,sans-serif  !important;
+	}
+	.categories .inner .userBox .user-box-img img {
+	     height: auto !important;
+	    max-height: 300px;
+	}
+	.categories .inner .userBox .user-box-img .hover-img {
+	      top: 45% !important;
+	    width: 60px !important;
+	    height: auto !important;
+	    left: 45% !important;
 	}
 
 }

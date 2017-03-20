@@ -31,8 +31,8 @@
 				</span>
 				<a href="/dashboard/users"><i class="fa fa-group" aria-hidden="true"></i> Troupes</a>
 			</li>
-			<li class="list-group-item"><a href="/dashboard/user/create"><i class="fa fa-user-plus" aria-hidden="true"></i>
-				User<i class="fa fa-plus"></i> </a>
+			<li class="list-group-item"><a href="/dashboard/user/create"><span class="badge" style="padding: 8px;border-radius: 5px;"><i class="fa fa-plus"></i></span> </a><a href="/dashboard/user/create"><i class="fa fa-user-plus" aria-hidden="true"></i>
+				User</a>
 			</li>
 			<li class="list-group-item">
 				<a href="/dashboard/images"><i class="fa fa-picture-o" aria-hidden="true"></i> Images</a>

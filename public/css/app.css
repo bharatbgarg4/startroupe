@@ -11053,6 +11053,7 @@ a:hover {
 .tope .tope-img {
   width: 76px;
   float: left;
+  height: 100px;
 }
 
 .tope .tope-img img {
@@ -11060,6 +11061,8 @@ a:hover {
   float: left;
   margin: 0px;
   padding: 0px;
+  height: 68px;
+  object-fit: cover;
 }
 
 .tope h4 {
@@ -11222,7 +11225,7 @@ a:hover {
   font-family: FontAwesome;
   position: absolute;
   font-size: 32px;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.7);
   color: #2780E3;
   right: 0;
   padding: 0px 8px;
@@ -11237,8 +11240,123 @@ a:hover {
   color: transparent;
 }
 
+.dashboard-inner .profile {
+  background: none !important;
+  float: left;
+}
+
+.dashboard-inner .profile h2 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 30px;
+}
+
+.dashboard-inner .profile p.loc {
+  float: left;
+  width: 100%;
+  font-size: 16px;
+  padding: 10px 0px;
+  margin: 0px;
+}
+
+.dashboard-inner .profile p.loc i {
+  padding: 0px 8px 0px 0px;
+}
+
+.dashboard-inner .profile .public-pro {
+  position: absolute;
+  float: right;
+  right: 0;
+}
+
+.dashboard-inner .profile .tabs-profile {
+  float: left;
+  width: 100%;
+  margin: 20px 0px;
+  padding: 0px;
+}
+
+.dashboard-inner .profile .tabs-profile .tab-content {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 10px;
+  border-top: none !important;
+  border: 1px solid #ccc;
+}
+
+.dashboard-inner #EditProfileForm h2 {
+  font-size: 25px;
+  background: #f5f5f5;
+  padding: 10px;
+  margin: 20px 0px;
+}
+
+.dashboard-inner #EditProfileForm label {
+  float: left;
+  width: 100% !important;
+}
+
+.dashboard-inner #EditProfileForm .radiob {
+  padding: 15px;
+}
+
+.dashboard-inner #ChangePasswordForm h2 {
+  font-size: 25px;
+  background: #f5f5f5;
+  padding: 10px;
+  margin: 20px 0px;
+}
+
+.dashboard-inner #ChangePasswordForm .update-btn {
+  float: left;
+  width: auto;
+  margin: 0px 15px;
+}
+
+.dashboard-inner .createjobbtn {
+  float: right;
+  width: auto;
+}
+
+.dashboard-inner .jobBoxprivate h3.title {
+  color: #2bbcf3;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.dashboard-inner .jobBoxprivate .job-head {
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #f3f3f3;
+  margin: 0px 0px 10px;
+}
+
+.dashboard-inner .jobBoxprivate .job-head p {
+  margin: 0 0 10.5px;
+  float: left;
+  width: 100%;
+}
+
+.dashboard-inner .jobBoxprivate .job-head p span {
+  font-size: 14px;
+  color: #666;
+  padding: 0px 10px 0px 0px;
+  float: left;
+}
+
 .owl-carousel {
   padding: 10px 0px;
+}
+
+.btn {
+  padding: 6px 18px !important;
+  border-radius: 3px;
+}
+
+.userBox a {
+  cursor: pointer;
 }
 
 #EditProfileForm,
@@ -11351,7 +11469,9 @@ a:hover {
   margin: 2px;
   max-width: 152px;
   max-height: 300px;
-  /* display: inline-block; */
+  object-fit: cover;
+  height: 125px;
+  width: 152px;
 }
 
 .portfolio .portflio-link .videos {
@@ -11381,6 +11501,7 @@ a:hover {
   width: 100%;
   margin: 0px;
   padding: 10px;
+  background: #fff;
   border-top: none !important;
   border: 1px solid #ccc;
 }
@@ -11390,6 +11511,11 @@ a:hover {
   width: 100%;
   height: auto;
   background: #f5f5f5;
+  float: left;
+}
+
+.profile .profile-top {
+  width: 100%;
   float: left;
 }
 
@@ -12817,6 +12943,18 @@ footer .lower p {
 
   .coming-page h2 {
     font: bold italic 40px/80px "Source Sans Pro",Calibri,Candara,Arial,sans-serif  !important;
+  }
+
+  .categories .inner .userBox .user-box-img img {
+    height: auto !important;
+    max-height: 300px;
+  }
+
+  .categories .inner .userBox .user-box-img .hover-img {
+    top: 45% !important;
+    width: 60px !important;
+    height: auto !important;
+    left: 45% !important;
   }
 }
 

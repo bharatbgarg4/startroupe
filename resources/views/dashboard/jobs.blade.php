@@ -5,7 +5,7 @@
 @stop
 
 @section('dashboardcontent')
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#jobModal">Create Job</button>
+<button type="button" class="btn btn-info btn-lg  createjobbtn" data-toggle="modal" data-target="#jobModal">Create Job</button>
 
 <div id="jobModal" class="modal fade" role="dialog">
 	<div class="modal-dialog">
@@ -42,7 +42,7 @@
 
 					<div class="form-group">
 						{!! Form::submit('Submit',['class'=>'btn btn-primary','name'=>"submit"]) !!}
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					</div>
 
 					{!!Form::close()!!}
@@ -55,14 +55,18 @@
 </div>
 
 @foreach($jobs as $job)
-<a href="/job/{{$job->id}}">
-	<h3>{{$job->title}}</h3>
-</a>
-	<h5>Posted: {{$job->created_at->diffForHumans()}}</h5>
-	<p>
-		Applications: {{$job->offers()->count()}}
-	</p>
-<hr>
+<div class="col col-md-12 jobBoxprivate">
+	<div class="job-head">
+		<a href="/job/{{$job->id}}">
+			<h3 class="title"> {{$job->title}}</h3>
+		</a>
+		<p><span>Posted: {{$job->created_at->diffForHumans()}}</span>
+			<span><span>Applications: {{$job->offers()->count()}}</span>
+		</p>
+	</div>
+
+</div>
+
 @endforeach
 
 @stop
