@@ -11038,28 +11038,59 @@ a:hover {
 
 .dashboard {
   margin-top: 30px;
+  background: #f5f5f5;
+  padding: 20px;
 }
 
 .tope {
   text-align: center;
-  border: 2px solid #ccc;
+  border: 2px solid #efefef;
   padding: 12px;
   margin-bottom: 15px;
+  background: #fff;
 }
 
-.tope img {
-  width: 80px;
+.tope .tope-img {
+  width: 76px;
+  float: left;
+}
+
+.tope .tope-img img {
+  width: 68px;
+  float: left;
+  margin: 0px;
+  padding: 0px;
 }
 
 .tope h4 {
   color: #00aef0;
-  font-weight: bold;
+  font-weight: 400;
+  font-size: 17px;
+  margin: 0px;
+  text-align: left;
+}
+
+.tope p {
+  font-size: 13px;
+  text-align: left;
+}
+
+.bus {
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  padding: 30px 0px;
+}
+
+.bus:nth-child(1) {
+  padding-top: 0px;
 }
 
 .bus h1 {
-  font-size: 25px;
-  color: #0a4fa3;
+  font-size: 23px;
+  color: #2780E3;
   font-weight: bold;
+  margin: 0px;
 }
 
 .bus .userBox {
@@ -11072,7 +11103,142 @@ a:hover {
 }
 
 .bus .userBox h3 {
-  font-size: 20px;
+  font-size: 20px !important;
+  font-weight: 400;
+  float: left;
+  width: 100%;
+  text-align: left;
+  color: #00aef0;
+  line-height: 25px;
+  margin: 0px;
+  padding: 5px 0px;
+}
+
+.bus .userBox h5 {
+  float: left;
+  font-size: 16px;
+  padding: 0px;
+  margin: 0px;
+  font-weight: normal;
+}
+
+.list-group .list-group-item {
+  border: 1px solid #efefef !important;
+  padding: 15px !important;
+}
+
+.list-group .list-group-item a {
+  font-size: 17px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.list-group .list-group-item a i {
+  padding: 0px 20px 0px 0px !important;
+  width: 34px;
+}
+
+.list-group .list-group-item a i.fa.fa-plus {
+  float: right;
+  margin: 0px;
+  padding: 0px !important;
+  width: 22px;
+}
+
+.list-group .list-group-item .badge {
+  display: inline-block;
+  min-width: auto;
+  padding: 0px !important;
+  font-size: 13px;
+  font-weight: bold;
+  color: #2780E3;
+  line-height: 34px;
+  text-align: center;
+  border-radius: 100% !important;
+  background: #efefef !important;
+  width: 34px;
+  height: 34px;
+  text-align: center;
+}
+
+.dashboard-inner {
+  background: #fff;
+  padding: 15px;
+}
+
+.dashboard-inner .owl-nav.disabled {
+  display: block !important;
+}
+
+.dashboard-inner img.hover-img {
+  display: none !important;
+}
+
+.dashboard-inner .hover-info ul {
+  display: none !important;
+}
+
+.dashboard-inner .bus .userBox {
+  border: none;
+  min-height: auto !important;
+}
+
+.dashboard-inner .bus .userBox img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  height: 135px;
+}
+
+.dashboard-inner .owl-prev {
+  color: transparent;
+  position: absolute;
+  left: -19px;
+  top: 32%;
+}
+
+.dashboard-inner .owl-prev:after {
+  content: '\f104';
+  font-family: FontAwesome;
+  position: absolute;
+  font-size: 32px;
+  background: rgba(255, 255, 255, 0.5);
+  color: #2780E3;
+  left: 0;
+  padding: 0px 8px;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.dashboard-inner .owl-next {
+  color: transparent;
+  position: absolute;
+  right: -20px;
+  top: 32%;
+}
+
+.dashboard-inner .owl-next:after {
+  content: '\f105';
+  font-family: FontAwesome;
+  position: absolute;
+  font-size: 32px;
+  background: rgba(255, 255, 255, 0.5);
+  color: #2780E3;
+  right: 0;
+  padding: 0px 8px;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.dashboard-inner .owl-nav.disabled div {
+  background: none !important;
+  padding: 0px;
+  margin: 0px;
+  color: transparent;
+}
+
+.owl-carousel {
+  padding: 10px 0px;
 }
 
 #EditProfileForm,
