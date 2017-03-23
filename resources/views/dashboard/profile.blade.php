@@ -56,56 +56,48 @@
 
 							<div class="col col-md-6">
 								<p>Height : <b>{{$user->height}}</b></p></div>
-							<div class="col col-md-6">
-								<p>Waist : <b>{{$user->waist}}</b></p>
-							</div>
-							<div class="col col-md-6">
-								<p>Hips : <b>{{$user->hips}}</b></p>
-							</div>
-							<div class="col col-md-6">
-								<p>Chest : <b>{{$user->chest}}</b></p>
-							</div>
-							<div class="col col-md-6">
-								<p>Skin Color : <b>{{$user->skinColor}}</b></p>
-							</div>
-							<div class="col col-md-6">
-								<p>Eyes Color : <b>{{$user->eyesColor}}</b></p>
+								<div class="col col-md-6">
+									<p>Waist : <b>{{$user->waist}}</b></p>
 								</div>
 								<div class="col col-md-6">
-								<p>Hair Color : <b>{{$user->hairColor}}</b></p>
-							</div>
-							<div class="col col-md-6">
-								<p>Language : <b>{{$user->language}}</b></p>
-							</div>
-							<div class="col col-md-6">
-								<p>Married : <b>@if($user->married) Yes @else No @endif</b></p>
-							</div>
-							<div class="col col-md-6">
-								<p>Willing To Travel : <b>@if($user->travel) Yes @else No @endif</b></p>
-							</div>
+									<p>Hips : <b>{{$user->hips}}</b></p>
+								</div>
+								<div class="col col-md-6">
+									<p>Chest : <b>{{$user->chest}}</b></p>
+								</div>
+								<div class="col col-md-6">
+									<p>Skin Color : <b>{{$user->skinColor}}</b></p>
+								</div>
+								<div class="col col-md-6">
+									<p>Eyes Color : <b>{{$user->eyesColor}}</b></p>
+								</div>
+								<div class="col col-md-6">
+									<p>Hair Color : <b>{{$user->hairColor}}</b></p>
+								</div>
+								<div class="col col-md-6">
+									<p>Language : <b>{{$user->language}}</b></p>
+								</div>
+								<div class="col col-md-6">
+									<p>Married : <b>@if($user->married) Yes @else No @endif</b></p>
+								</div>
+								<div class="col col-md-6">
+									<p>Willing To Travel : <b>@if($user->travel) Yes @else No @endif</b></p>
+								</div>
 
 
 							</div>
 
-						</div>
-						<div>
 						</div>
 					</div>
-
-					<hr>
-
-
-
-					<hr>
-
-
 				</div>
 				<a href="#" class="btn btn-primary" id="EditProfile">Edit Profile</a>
-										<a href="#" class="btn btn-primary" id="ChangePassword">Change Password</a>
+				<a href="#" class="btn btn-primary" id="ChangePassword">Change Password</a>
+				<a href="#" class="btn btn-primary" id="ChangePort">Manage Portfolio</a>
 			</div>
 			<div class="col col-md-12">
 
 				<div id="EditProfileForm">
+					<hr>
 					<h2>Edit Profile</h2>
 					{!!Form::model($user,['url'=>'dashboard/'.$user->username,'method'=>'patch','files' => true])!!}
 					<div class="col col-md-6 form-group">
@@ -124,14 +116,14 @@
 					</div>
 
 
-						<div class="form-group col col-md-6">
-							{!! Form::label('Talent') !!}
-							{!! Form::select('talent_id',$select_talent,null , ['class'=>'form-control']) !!}
-						</div>
-						<div class="form-group col col-md-6">
-							{!! Form::label('Location') !!}
-							{!! Form::select('location_id',$select_location,null , ['class'=>'form-control']) !!}
-						</div>
+					<div class="form-group col col-md-6">
+						{!! Form::label('Talent') !!}
+						{!! Form::select('talent_id',$select_talent,null , ['class'=>'form-control']) !!}
+					</div>
+					<div class="form-group col col-md-6">
+						{!! Form::label('Location') !!}
+						{!! Form::select('location_id',$select_location,null , ['class'=>'form-control']) !!}
+					</div>
 
 
 					<div class="col col-md-6 form-group">
@@ -204,7 +196,7 @@
 						{!! Form::text('eyesColor',null,['placeholder'=>'Eyes Color','class'=>'form-control']) !!}
 					</div>
 
-					<div class="fcol col-md-6 form-group">
+					<div class="col col-md-6 form-group">
 						<label>Hair Color</label>
 						{!! Form::text('hairColor',null,['placeholder'=>'Hair Color','class'=>'form-control']) !!}
 					</div>
@@ -242,6 +234,7 @@
 				</div>
 
 				<div id="ChangePasswordForm">
+					<hr>
 					<h2>Change Password</h2>
 					{!!Form::model($user,['url'=>'dashboard/'.$user->username.'/password','method'=>'patch'])!!}
 					<div class="col col-md-6 form-group">
@@ -259,6 +252,31 @@
 					</div>
 					{!! Form::close() !!}
 
+				</div>
+				<div id="PortForm">
+					<hr>
+					<div class="images">						
+					{!! Form::open(array('url'=>'folio/'.$user->username,'method'=>'POST', 'files'=>true)) !!}
+					<div class="form-group">
+						{!! Form::file('images[]', array('multiple'=>true)) !!}
+					</div>
+					<div class="form-group">
+						{!! Form::submit('Upload',['class'=>'btn btn-primary','name'=>"submit"]) !!}
+					</div>
+					{!!Form::close()!!}
+					</div>
+					<div class="videos">
+						{!! Form::open(array('url'=>'folio/video/'.$user->username,'method'=>'POST')) !!}
+						<div class="form-group">
+							{!! Form::label('Youtube Video Link') !!}
+							{!! Form::text('url',null,['placeholder'=>'Youtube Video Link','class'=>'form-control']) !!}
+						</div>
+						<div class="form-group">
+							{!! Form::submit('Submit',['class'=>'btn btn-primary','name'=>"submit"]) !!}
+						</div>
+						{!!Form::close()!!}
+					</div>
+					<a href="#" class="btn btn-warning pull-right canceledit">Cancel</a>
 				</div>
 
 			</div>

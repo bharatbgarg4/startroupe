@@ -12,7 +12,7 @@ class JobSeeder extends Seeder
 	public function run()
 	{
 		$faker = Faker::create('en_IN');
-		foreach (range(1,20) as $index) {
+		foreach (range(1,80) as $index) {
 			DB::table('jobs')->insert([
 				'title'   =>$faker->sentence,
 				'budget'	=> $faker->numberBetween(300,40000),

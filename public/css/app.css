@@ -160,7 +160,6 @@
 :root .fa-rotate-270,
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical {
-  -webkit-filter: none;
   filter: none;
 }
 
@@ -11360,7 +11359,8 @@ a:hover {
 }
 
 #EditProfileForm,
-#ChangePasswordForm {
+#ChangePasswordForm,
+#PortForm {
   display: none;
 }
 

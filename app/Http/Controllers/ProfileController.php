@@ -35,18 +35,10 @@ class ProfileController extends Controller
 
 	public function show(User $user){
 		$liked=0;
-		$owner=0;
-		if(Auth::check()){
-			$liked=Like::where('user_id',Auth::user()->id)->where('profile_id',$user->id)->count();
-			if(Auth::user()->id==$user->id or Auth::user()->admin){
-				$owner=1;
-			}
-		}
-		// dd(Folio::all()->toArray());
 		$images=Folio::where('user_id',$user->id)->where('type','image')->get();
 		$videos=Folio::where('user_id',$user->id)->where('type','video')->get();
 		$user->update(['viewed'=>Carbon::now(),'views'=>$user->views+1]);
-		return view('pages.profile',compact('user','liked','images','videos','owner'));
+		return view('pages.profile',compact('user','liked','images','videos'));
 	}
 
 	public function update(ProfileRequest $request,User $user){

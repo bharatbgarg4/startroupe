@@ -45,6 +45,8 @@ Route::get('dashboard/images','ImageController@index');
 Route::post('dashboard/images','ImageController@store');
 
 Route::get('dashboard/autocomplete',"AdminController@autocomplete");
+Route::get('dashboard/autoreset',"AdminController@autoreset");
+Route::get('dashboard/word/{act}/{id}',"AdminController@wordAct");
 Route::get('dashboard/admins',"AdminController@admins");
 Route::get('dashboard/editors',"AdminController@editors");
 Route::get('dashboard/users',"AdminController@users");

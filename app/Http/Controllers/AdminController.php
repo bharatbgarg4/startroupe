@@ -30,11 +30,20 @@ class AdminController extends Controller
 	public function autocomplete(){
 		$words=Word::where('valid',1)->orderBy('count','desc')->get();
 		$reject=Word::where('valid',0)->orderBy('count','desc')->get();
-		dd($words->toArray());
+		// dd($words->toArray());
 		return view('dashboard.autocomplete',compact('words','reject'));
 	}
 
-	public function autocompleteReset(){
+	public function wordAct($act,$id){
+		$word=Word::where('id',$id)->firstOrFail();
+		$word->valid=0;
+		if($act=='restore'){
+			$word->valid=1;
+		}
+		$word->update();
+		return redirect()->back();
+	}
+	public function autoreset(){
 		$words=[];
 		$reject=[];
 		foreach(Talent::all() as $talent){
@@ -54,9 +63,10 @@ class AdminController extends Controller
 		$words = array_map('strtolower', $words);
 		$words=array_count_values($words);
 		foreach ($words as $word => $count){
-			$already=Word::where('word',$word)->count();
-			if($already){
-				$already->update(['word'=>$word,'count'=>$count]);
+			$a=Word::where('word',$word)->count();
+			if($a){
+				$w=Word::where('word',$word)->first();
+				$w->update(['word'=>$word,'count'=>$count]);
 			}
 			else{
 				Word::create(['word'=>$word,'count'=>$count]);
