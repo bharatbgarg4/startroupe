@@ -69,7 +69,7 @@
 			{!! Form::close() !!}
 			@endif
 			@else
-			<a href="/signin" class="btn btn-info">Sign In To Apply</a>
+			<a href="/signin?job={{$job->id}}" class="btn btn-info">Sign In To Apply</a>
 			@endif
 
 		</div>
