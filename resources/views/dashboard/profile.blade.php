@@ -255,7 +255,8 @@
 				</div>
 				<div id="PortForm">
 					<hr>
-					<div class="images">						
+					<h4>Add Portfolio images</h4>
+					<div class="images">
 					{!! Form::open(array('url'=>'folio/'.$user->username,'method'=>'POST', 'files'=>true)) !!}
 					<div class="form-group">
 						{!! Form::file('images[]', array('multiple'=>true)) !!}
@@ -266,6 +267,7 @@
 					{!!Form::close()!!}
 					</div>
 					<div class="videos">
+						<h4>Add Portfolio Video</h4>
 						{!! Form::open(array('url'=>'folio/video/'.$user->username,'method'=>'POST')) !!}
 						<div class="form-group">
 							{!! Form::label('Youtube Video Link') !!}

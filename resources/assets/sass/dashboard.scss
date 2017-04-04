@@ -11,10 +11,21 @@
 	padding: 12px;
 	margin-bottom: 15px;
 	background: #fff;
+	float: left;
+	width: 100%;
+	.tope-head {
+		width: 66%!important;
+		float: right;
+		p {
+			font-size: 12px;
+			text-align: left;
+			height: 54px;
+			overflow: hidden;
+		}
+	}
 	.tope-img {
-		width: 76px;
+		width: 33%;
 		float: left;
-		height: 100px;
 
 		img{
 			width: 68px;
@@ -26,6 +37,7 @@
 		}
 
 	}
+
 
 	h4{
 		color: #00aef0;

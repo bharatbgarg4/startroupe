@@ -228,18 +228,24 @@
 
 		}
 		.no-star {
-		    opacity: 0.3;
+			opacity: 0.3;
 		}
 	}
 }
 
+}
+.sidebar{
+	.list-group {
+		float: left;
+		width: 100%;
+	}
 }
 .single-job{
 	.jobBox {
 		background: none;
 		border-top: none;
 		border-right: 1px solid #ddd;
-		padding: 0px;
+		padding: 0px 15px;
 		p {
 			float: left;
 			width: 95%;
@@ -260,6 +266,10 @@
 			padding: 0px;
 			font-size: 19px;
 			font-weight: bold;
+		}
+		.list-group {
+			float: left;
+			width: 100%;
 		}
 		.similar {
 			float: left;
@@ -360,8 +370,9 @@
 				input[type="submit"] {
 					-webkit-appearance: button;
 					cursor: pointer;
-					padding: 0px 20px;
+					padding: 0px 20px !important;
 					margin: 18px 0px;
+					border-radius:0px;
 					font-size: 16px;
 					line-height: 34px;
 				}
@@ -421,4 +432,7 @@
 			}
 		}
 	}
+}
+.btn {
+    border-radius: 0px  !important;
 }

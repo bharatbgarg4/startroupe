@@ -160,6 +160,7 @@
 :root .fa-rotate-270,
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical {
+  -webkit-filter: none;
   filter: none;
 }
 
@@ -11047,12 +11048,25 @@ a:hover {
   padding: 12px;
   margin-bottom: 15px;
   background: #fff;
+  float: left;
+  width: 100%;
+}
+
+.tope .tope-head {
+  width: 66% !important;
+  float: right;
+}
+
+.tope .tope-head p {
+  font-size: 12px;
+  text-align: left;
+  height: 54px;
+  overflow: hidden;
 }
 
 .tope .tope-img {
-  width: 76px;
+  width: 33%;
   float: left;
-  height: 100px;
 }
 
 .tope .tope-img img {
@@ -11955,11 +11969,16 @@ a:hover {
   opacity: 0.3;
 }
 
+.sidebar .list-group {
+  float: left;
+  width: 100%;
+}
+
 .single-job .jobBox {
   background: none;
   border-top: none;
   border-right: 1px solid #ddd;
-  padding: 0px;
+  padding: 0px 15px;
 }
 
 .single-job .jobBox p {
@@ -11979,6 +11998,11 @@ a:hover {
   padding: 0px;
   font-size: 19px;
   font-weight: bold;
+}
+
+.single-job .sidebar .list-group {
+  float: left;
+  width: 100%;
 }
 
 .single-job .sidebar .similar {
@@ -12095,8 +12119,9 @@ a:hover {
 #listing .lside form .form-group input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
-  padding: 0px 20px;
+  padding: 0px 20px !important;
   margin: 18px 0px;
+  border-radius: 0px;
   font-size: 16px;
   line-height: 34px;
 }
@@ -12151,6 +12176,10 @@ a:hover {
   margin: 0px;
   padding: 0px;
   position: relative;
+}
+
+.btn {
+  border-radius: 0px  !important;
 }
 
 .logo {
