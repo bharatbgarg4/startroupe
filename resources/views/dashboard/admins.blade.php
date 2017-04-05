@@ -21,4 +21,23 @@
 @endforeach
 </table>
 
+
+<h4>Send SMS</h4>
+{!!Form::open(['url'=>'sms'])!!}
+<div class="row">
+<div class="form-group col col-md-6">
+{!! Form::label('Mobile') !!}
+{!! Form::text('mobile',null,['placeholder'=>'Mobile','class'=>'form-control']) !!}
+</div>
+<div class="form-group col col-md-6">
+{!! Form::label('Message') !!}
+{!! Form::text('message',null,['placeholder'=>'Message','class'=>'form-control']) !!}
+</div>
+</div>
+
+<div class="form-group">
+	{!! Form::submit('Submit',['class'=>'btn btn-primary','name'=>"submit"]) !!}
+</div>
+{!!Form::close()!!}
+
 @stop

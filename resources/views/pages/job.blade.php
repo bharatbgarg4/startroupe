@@ -19,7 +19,7 @@
 			</div>
 				<div class="job-span">
 					<span>Posted By:
-						<b>{{$job->user->name}}</b></span>
+						<b><a href="/profile/{{$job->user->username}}"><img src="{{$job->user->imgUrl}}" style="width: 40px;">{{$job->user->name}}</a></b></span>
 					<span>Posted:
 					<b>{{$job->created_at->diffForHumans()}}</b>
 					</span>
@@ -39,12 +39,27 @@
 			</p>
 
 			@if(Auth::check())
+			@if(!Auth::user()->editor or Auth::user()->admin)
+			{!!Form::open(['url'=>'/apply/'.$job->id,'files' => true])!!}
+			<div class="form-group">
+				{!! Form::label('Comment') !!}
+				{!! Form::textarea('content',null,['placeholder'=>'Do you have any questions?','class'=>'form-control']) !!}
+			</div>
+			<div class="form-group">
+			<p><i>Your contact details will be sent.</i></p>
+				{!! Form::submit('Apply for this Job',['class'=>'btn btn-success','name'=>"submit"]) !!}
+			</div>
+			{!! Form::close() !!}
+			@else
+			<a href="/signin" class="btn btn-info">Sign In To Apply</a>
+			@endif
+
 			@if(Auth::user()->id==$job->user_id or Auth::user()->admin)
+			<h3>Artists Applications</h3>
 			<div class="offers">
 				@foreach($job->offers as $offer)
 				<div class="row inner">
 					<div class="col col-sm-4">
-
 					<img src="{{$offer->user->imgUrl}}" class="sim">
 					</div>
 					<div class="col col-sm-8">
@@ -57,28 +72,9 @@
 				@endforeach
 			</div>
 			@endif
-			@if(!Auth::user()->editor or Auth::user()->admin)
-			{!!Form::open(['url'=>'/apply/'.$job->id,'files' => true])!!}
-			<div class="form-group">
-				{!! Form::label('Comment') !!}
-				{!! Form::textarea('content',null,['placeholder'=>'Comment','class'=>'form-control']) !!}
-			</div>
-			<div class="form-group">
-				{!! Form::submit('Apply for this Job',['class'=>'btn btn-success','name'=>"submit"]) !!}
-			</div>
-			{!! Form::close() !!}
 			@endif
-			@else
-			<a href="/signin?job={{$job->id}}" class="btn btn-info">Sign In To Apply</a>
-			@endif
-
 		</div>
 	</div>
-
-
-
-
-
 	<div class="col col-sm-4 sidebar">
 		<h3>Similar Jobs</h3>
 		<div class="similar">

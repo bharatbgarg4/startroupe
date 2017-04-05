@@ -3,7 +3,7 @@
 if(env('HTTPS')){
 	URL::forceSchema('https');
 }
-
+/*
 Route::get('coming-soon', 'PageController@coming');
 Route::post('coming', 'PageController@comingsend');
 if(!env('APP_DEBUG')){
@@ -11,7 +11,7 @@ if(!env('APP_DEBUG')){
 		return redirect('coming-soon');
 	})->where('any', '.*');
 }
-
+*/
 Route::get('search/{type}', array(
 	'as'    =>  'search',
 	'uses'  =>  'PageController@searchJobs'
@@ -19,6 +19,7 @@ Route::get('search/{type}', array(
 
 Route::get('/', 'PageController@index');
 
+Route::post('sms', 'PageController@sms');
 Route::get('signin', 'Auth\AuthController@getLogin');
 Route::post('login', 'Auth\AuthController@postLogin');
 Route::get('signout', 'Auth\AuthController@getLogout');
