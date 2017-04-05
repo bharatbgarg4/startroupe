@@ -15,7 +15,7 @@
 							{{$user->location->title}}
 							@endif
 						</p>
-						<p>Talent:
+						<p>Industry:
 							@if($user->talent)
 							<b> {{$user->talent->title}}</b>
 							@endif
@@ -30,9 +30,9 @@
 				</div>
 				<div class="tabs-profile">
 					<ul class="nav nav-tabs">
-						<li class="active"><a data-toggle="tab" href="#social11">Social link</a></li>
+						<li class="active"><a data-toggle="tab" href="#social11">Social Profiles</a></li>
 
-						<li><a data-toggle="tab" href="#work12">Work Experience</a></li>
+						<li><a data-toggle="tab" href="#work12">Experience</a></li>
 						<li><a data-toggle="tab" href="#details13">Details</a></li>
 					</ul>
 
