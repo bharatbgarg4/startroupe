@@ -19,12 +19,10 @@
 						{!! Form::select('location',$select_location,null , ['class'=>'form-control']) !!}
 					</div> 
 				</div>
-
 				<div class="form-group">
 					{!! Form::submit('Get Jobs',['class'=>'btn btn-primary','name'=>"type_jobs"]) !!}
 					{!! Form::submit('Get Talent',['class'=>'btn btn-info','name'=>"type_talent"]) !!}
 				</div>
-
 				{!!Form::close()!!}
 			</div>
 		</div>
@@ -36,8 +34,6 @@
 				@foreach($talents as $talent)
 				<span><a href="/talent/{{$talent->slug}}"> {{$talent->title}} </a></span>
 				@endforeach
-
-
 			</div>
 			<div class="row categories">
 				@if($users->isEmpty())

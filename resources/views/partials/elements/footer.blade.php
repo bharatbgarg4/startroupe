@@ -2,17 +2,13 @@
 	<div class="container">
 		<div class="row">
 			<div class="col col-sm-4">
-				<h4 class="hothead"><strong> Company Info </strong> </h4>
+				<h4 class="hothead"><strong> Links </strong> </h4>
 				<ul>
-					<li> <a href="#">About Us</a> </li>
-					<li> <a href="#">Press </a></li>
+					<li> <a href="#">About</a> </li>
 					<li> <a href="#">Careers </a></li>
-					<li> <a href="#">Upwork Blog </a></li>
-					<li> <a href="#">Terms of Service </a></li>
-					<li> <a href="#">Privacy Policy </a></li>
-					<li> <a href="#">Trust & Safety </a></li>
-					<li> <a href="#">Hiring Headquarters </a></li>
-					<li> <a href="#">Online Work Report </a></li>
+					<li> <a href="#">Terms</a></li>
+					<li> <a href="#">Privacy</a></li>
+					<li> <a href="#">Contact</a></li>
 				</ul>
 			</div>
 			<div class="col col-sm-4">
@@ -41,7 +37,7 @@
 			</div>
 
 			<div class="col col-sm-4">
-				<h4 class="hothead"><strong> Company Info </strong> </h4>
+				<h4 class="hothead"><strong> Browse </strong> </h4>
 				<ul>
 					<li><a href="#"> Photographers for wedding </a></li>
 					<li><a href="#"> Punjabi Singers </a></li>

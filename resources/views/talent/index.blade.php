@@ -30,16 +30,11 @@
 			</div>
 			{!!Form::close()!!}
 			<div class="topper">
-
-
 				<div class="col search">
 					<form action="/search/{{$type}}" method="get" class="form-inline">
 						<div class="form-group">
-
 								<input class="form-control" type="query" id="query" name="query" placeholder="Search"><button type="submit" class="ing"><i class="fa fa-search"></i></button>
-
 						</div>
-
 					</form>
 				</div>
 				<div class="col labels">
@@ -58,7 +53,6 @@
 					<span class="label label-danger"> Search : {{$query}}</span>
 					@endif
 				</div>
-
 		</div>
 		</div>
 		<div class="col col-sm-9">
