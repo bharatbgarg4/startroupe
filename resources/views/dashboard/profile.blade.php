@@ -31,9 +31,12 @@
 				<div class="tabs-profile">
 					<ul class="nav nav-tabs">
 						<li class="active"><a data-toggle="tab" href="#social11">Social Profiles</a></li>
-
+						@if($user->editor)
+						<li><a data-toggle="tab" href="#work12">Projects</a></li>
+						@else
 						<li><a data-toggle="tab" href="#work12">Experience</a></li>
 						<li><a data-toggle="tab" href="#details13">Details</a></li>
+						@endif
 					</ul>
 
 					<div class="tab-content">
@@ -48,7 +51,9 @@
 						<div id="work12" class="tab-pane fade">
 
 							<p>Last Job : <b>{{$user->lastJob}}</b></p>
+						@if(!$user->editor)
 							<p>Last Job Details : <b>{{$user->lastJobDetails}}</b></p>
+							@endif
 							<p>Company : <b>{{$user->company}}</b></p>
 						</div>
 
