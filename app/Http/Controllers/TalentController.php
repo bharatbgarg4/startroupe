@@ -93,7 +93,7 @@ class TalentController extends Controller
 
 	public function delete(Talent $talent){
 		$talent->delete();
-		return redirect('/talent')->with('status-danger','Category Deleted');
+		return redirect()->back()->with('status-danger','Category Deleted');
 	}
 
 	public function saveLocation(Request $request)
@@ -112,6 +112,6 @@ class TalentController extends Controller
 
 	public function deleteLocation(Location $location){
 		$location->delete();
-		return redirect('/talent')->with('status-danger','Location Deleted');
+		return redirect()->back()->with('status-danger','Location Deleted');
 	}
 }

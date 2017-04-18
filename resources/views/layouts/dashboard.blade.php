@@ -39,6 +39,9 @@
 				<a href="/dashboard/images"><i class="fa fa-picture-o" aria-hidden="true"></i> Images</a>
 			</li>
 			<li class="list-group-item">
+				<a href="/dashboard/manage"><i class="fa fa-list" aria-hidden="true"></i> Manage Lists</a>
+			</li>
+			<li class="list-group-item">
 				<a href="/dashboard/autocomplete"><i class="fa fa-file-text-o" aria-hidden="true"></i> Autocomplete</a>
 			</li>
 		</ul>

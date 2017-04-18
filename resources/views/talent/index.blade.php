@@ -8,7 +8,6 @@
 			@include('partials.elements.talentModals')
 			{!!Form::open(['url'=>'/search'])!!}
 			<div class="form-group">
-			{!! Form::label('Category') !!}
 				{!! Form::label('Category') !!}
 				@if($talent)
 				{!! Form::select('talent',$select_talent,$talent->slug , ['class'=>'form-control']) !!}
@@ -26,14 +25,15 @@
 				@endif
 			</div>
 			<div class="form-group">
-				{!! Form::submit('Filter',['class'=>'btn btn-success','name'=>"type_".$type]) !!}<a href="/{{$type}}" class="head">Remove Filter</a>
+				{!! Form::submit('Filter',['class'=>'btn btn-success','name'=>"type_".$type]) !!}
+				<a href="/{{$type}}" class="head">Remove Filter</a>
 			</div>
 			{!!Form::close()!!}
 			<div class="topper">
 				<div class="col search">
 					<form action="/search/{{$type}}" method="get" class="form-inline">
 						<div class="form-group">
-								<input class="form-control" type="query" id="query" name="query" placeholder="Search"><button type="submit" class="ing"><i class="fa fa-search"></i></button>
+							<input class="form-control" type="query" id="query" name="query" placeholder="Search"><button type="submit" class="ing"><i class="fa fa-search"></i></button>
 						</div>
 					</form>
 				</div>
@@ -53,36 +53,36 @@
 					<span class="label label-danger"> Search : {{$query}}</span>
 					@endif
 				</div>
-		</div>
+			</div>
 		</div>
 		<div class="col col-sm-9">
 
-		<div class="col col-sm-12 listing">
-			@if($users)
-			@if($users->isEmpty())
-			<h4>No Users in this Category</h4>
-			@else
-			@foreach($users as $user)
-			<div class="col-sm-6 col-md-4">
-				<div class="inner">
-					@include('partials.elements.userBox')
+			<div class="col col-sm-12 listing">
+				@if($users)
+				@if($users->isEmpty())
+				<h4>No Users in this Category</h4>
+				@else
+				@foreach($users as $user)
+				<div class="col-sm-6 col-md-4">
+					<div class="inner">
+						@include('partials.elements.userBox')
+					</div>
 				</div>
-			</div>
-			@endforeach
-			@endif
-			@endif
+				@endforeach
+				@endif
+				@endif
 
-			@if($jobs)
-			@if($jobs->isEmpty())
-			<h4>No Jobs in this Category</h4>
-			@else
-			@foreach($jobs as $job)
-			@include('partials.elements.jobBox')
-			@endforeach
-			@endif
-			@endif
+				@if($jobs)
+				@if($jobs->isEmpty())
+				<h4>No Jobs in this Category</h4>
+				@else
+				@foreach($jobs as $job)
+				@include('partials.elements.jobBox')
+				@endforeach
+				@endif
+				@endif
+			</div>
 		</div>
-	</div>
 	</div>
 </div>
 @stop

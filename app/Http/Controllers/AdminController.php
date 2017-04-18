@@ -34,6 +34,12 @@ class AdminController extends Controller
 		return view('dashboard.autocomplete',compact('words','reject'));
 	}
 
+	public function manage(){
+		$locations=Location::all();
+		$talents=Talent::all();
+		return view('dashboard.manage',compact('talents','locations'));
+	}
+
 	public function wordAct($act,$id){
 		$word=Word::where('id',$id)->firstOrFail();
 		$word->valid=0;

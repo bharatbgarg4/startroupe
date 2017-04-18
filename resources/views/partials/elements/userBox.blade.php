@@ -11,7 +11,6 @@
 		</div>
 		<div class="hover-info">
 			<p class="bio">   {{$user->name}}	</p>
-
 			@if($user->location)
 			<h5> {{$user->location->title}} </h5>
 			@else
