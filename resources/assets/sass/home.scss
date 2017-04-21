@@ -1,4 +1,17 @@
-
+.auton{
+	position: absolute;
+	background: #fff;
+	width: 200px;
+	padding: 10px;
+	top: 141px;
+	left: 30px;
+	.echo{
+		cursor: pointer;
+		padding:2px;
+		font-size: 18px;
+		font-weight: bold;
+	}
+}
 #home{
 	.banner{
 		background: url('/images/banner.jpg') no-repeat;

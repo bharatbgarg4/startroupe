@@ -16,6 +16,7 @@ Route::get('search/{type}', array(
 	));
 
 Route::get('/', 'PageController@index');
+Route::get('autocomplete', 'PageController@autocomplete');
 
 Route::post('sms', 'PageController@sms');
 Route::get('signin', 'Auth\AuthController@getLogin');
@@ -83,6 +84,7 @@ Route::post('seolink/save', 'PageController@createLink');
 Route::post('seolink/{link}/delete', 'PageController@deleteLink');
 
 Route::post('search', 'PageController@search');
+Route::post('autosearch', 'PageController@autosearch');
 
 Route::get('job/{job}', 'JobController@show');
 Route::post('job/save', 'JobController@save');

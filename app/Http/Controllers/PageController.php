@@ -19,9 +19,15 @@ use Mail;
 use App\Http\Requests\LinkRequest;
 use App\Http\Requests\MessageRequest;
 use App\Http\Controllers\Controller;
+use App\Word;
 
 class PageController extends Controller
 {
+	public function autocomplete(){
+		$words=Word::where('valid',1)->select('word','count')->get();
+		return response()->json($words);
+	}
+
 	public function comingsend(Request $request){
 		// dd(Bird::all()->toArray());
 		// dd(User::all()->toArray());
@@ -99,6 +105,15 @@ class PageController extends Controller
 			$url='/'.$type.'/'.$talent.'/'.$location;
 		}
 		return redirect($url);
+	}
+
+	public function autosearch(Request $request){
+		$input=$request->all();
+		$type='jobs';
+		if(array_key_exists('type_talent',$input)){
+			$type='talent';
+		}
+		return redirect('/search/'.$type.'?query='.$input['word']);
 	}
 
 	public function deleteLink(Link $link){

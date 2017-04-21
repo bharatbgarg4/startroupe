@@ -5,25 +5,9 @@
 <div id="home">
 	<section class="banner">
 		<div class="container">
-
 			<div class="home-search">
 				<h1 class="tac"> Find Best of Local Artists </h1>
-				{!!Form::open(['url'=>'/search'])!!}
-
-				<div class="row">
-					<div class="col col-sm-12 form-group">
-						{!! Form::select('talent',$select_talent,null , ['class'=>'form-control']) !!}
-					</div>
-
-					<div class="col col-sm-12 form-group">
-						{!! Form::select('location',$select_location,null , ['class'=>'form-control']) !!}
-					</div> 
-				</div>
-				<div class="form-group">
-					{!! Form::submit('Get Jobs',['class'=>'btn btn-primary','name'=>"type_jobs"]) !!}
-					{!! Form::submit('Get Talent',['class'=>'btn btn-info','name'=>"type_talent"]) !!}
-				</div>
-				{!!Form::close()!!}
+				@include('partials.elements.autosearch')
 			</div>
 		</div>
 	</section>
@@ -160,4 +144,50 @@
 		<a href="/signup" class="started"> Get Started </a>
 	</div></section>
 </div>
+@stop
+
+@section('footinclude')
+<script>
+	console.log('autocomplete');
+	var data=[];
+	String.prototype.beginsWith = function (string) {
+	    return(this.indexOf(string) === 0);
+	};
+	function popu(data,k=0){
+		$( ".auton" ).empty();
+		if(k){
+			data=data.filter(function (el) {
+				return el.word.beginsWith(k);
+			});
+		}
+		if(data.length>0){
+			data.sort(function(a, b) {
+				return parseFloat(b.count) - parseFloat(a.count);
+			}).slice(0,6).forEach(function(d){
+				$( ".auton" ).append( '<div class="echo">'+d.word+'</div>' );
+			});
+		}
+		else{
+			$( ".auton" ).append( '<div class="nora">No Result</div>' );			
+		}
+	}
+	$.getJSON('/autocomplete', function(d) {
+		data=d;
+	});
+	$(".auton").hide();
+	$( ".autof" ).focus(function() {
+		popu(data);
+		$(".auton").show();
+	});
+	$( ".autof" ).focusout(function() {
+		$(".auton").fadeOut();
+	});
+	$( ".autof" ).keyup(function() {
+		var v=$('.autof').val();
+		popu(data,v);
+	});
+	$(".auton").on('click',".echo",function(){
+		$('.autof').val($(this).text());
+	});
+</script>
 @stop
