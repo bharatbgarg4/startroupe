@@ -163,8 +163,14 @@
 				});
 			}
 			</script>
+			<script type='text/javascript'>
+			if (top.location!= self.location)
+			{
+			top.location = self.location
+			}
+			</script>
 
-			<div id="facebook_invite"></div>
+			<div id="fb-root"></div>
 			<a href='#' onClick="FBInvite();" class="started"> Get Started </a>
 		</div>
 	</section>
