@@ -7,7 +7,7 @@
 	<div class="auton"></div>
 </div>
 <div class="form-group">
-	{!! Form::submit('Get Jobs',['class'=>'btn btn-primary','name'=>"type_jobs"]) !!}
-	{!! Form::submit('Get Talent',['class'=>'btn btn-info','name'=>"type_talent"]) !!}
+	{!! Form::submit('Search Jobs',['class'=>'btn btn-primary','name'=>"type_jobs"]) !!}
+	{!! Form::submit('Search Talent',['class'=>'btn btn-info','name'=>"type_talent"]) !!}
 </div>
 {!!Form::close()!!}

@@ -30,7 +30,7 @@
 						<li><a href="/signout">Sign Out</a></li>
 						@else
 						<li><a href="/signin">Sign In</a></li>
-						<li class="signup"><a href="/signup"> Sign Up </a></li>
+						<li class="signup-btn"><a href="/signup"> Sign Up </a></li>
 						@endif
 					</ul></div>
 				</nav>

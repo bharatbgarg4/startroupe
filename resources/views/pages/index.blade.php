@@ -150,17 +150,22 @@
 				xfbml:true
 			});
 
-			function FacebookInviteFriends()
-			{
+			function FBInvite(){
 				FB.ui({
 					method: 'apprequests',
-					message: 'Invite to Startroupe'
+					message: 'Invite your Facebook Friends'
+				},function(response) {
+					if (response) {
+						alert('Successfully Invited');
+					} else {
+						alert('Failed To Invite');
+					}
 				});
 			}
 			</script>
 
-			<div id="fb-root"></div>
-			<a href='#' onClick="FacebookInviteFriends();" class="started"> Get Started </a>
+			<div id="facebook_invite"></div>
+			<a href='#' onClick="FBInvite();" class="started"> Get Started </a>
 		</div>
 	</section>
 </div>
