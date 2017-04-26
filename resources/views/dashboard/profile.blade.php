@@ -23,6 +23,7 @@
 
 						<p>Email : <b>{{$user->email}}</b></p>
 						<p>Bio : <b>{{$user->bio}}</b></p>
+						<p>Mobile : <b>{{$user->mobile}}</b></p>
 						<p>Username : <b>{{$user->username}}</b></p>
 						<p>Date of Birth : <b>{{$user->birthDate}}</b></p>
 						<p>Registered : <b>{{$user->created_at->diffForHumans()}}</b></p>
@@ -113,6 +114,11 @@
 					<div class="col col-md-6 form-group">
 						<label>Username</label>
 						{!! Form::text('username',null,['placeholder'=>'Username','class'=>'form-control']) !!}
+					</div>
+
+					<div class="col col-md-6 form-group">
+						<label>Mobile</label>
+						{!! Form::text('mobile',null,['placeholder'=>'Mobile','class'=>'form-control']) !!}
 					</div>
 
 					<div class="col col-md-6 form-group">

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Job;
 use App\Offer;
 use Auth;
+use Mail;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -31,7 +32,13 @@ class JobController extends Controller
 
     public function apply(Job $job,Request $request){
         $input=$request->all();
+        $employer=$job->user;
         Offer::create(['content'=>$input['content'],'user_id'=>Auth::user()->id,'job_id'=>$job->id]);
+        Mail::queue('emails.applied',['user'=>Auth::user(),'job'=>$job],
+            function($m) use ($employer){
+                $m->to($employer->email,$employer->name)
+                ->subject(env('SITE_NAME').' Job Application');
+            });
         return redirect()->back()->with('status','Applied');
     }
 }

@@ -137,13 +137,21 @@
 			margin: 0px;
 			padding: 0px 0px 16px;
 		}
-		.list a{
+		.shipper .ship:not(:first-child) {
+			display: none;
+		}
+		.list a span{
+			background:#00aef0;
+			color:#fff;
+		}
+		.list span{
 			padding: 10px 15px;
 			display: inline-block;
 			background: none;
 			margin:10px 20px ;
 			font: 400 18px/30px "Source Sans Pro",sans-serif;
 			color: #000;
+			cursor:pointer;
 			&:hover{
 				background: #ddd;
 				color: #00aef0;

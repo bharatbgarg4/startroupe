@@ -11,6 +11,7 @@ class UserTableSeeder extends Seeder
 	 */
 	public function image(){
 		$faker = Faker::create('en_IN');
+		return $faker->imageUrl($width = 640, $height = 480);
 		$image=$faker->image('./public/uploads/seed',400, 400);
 		return explode("public", $image)[1];
 	}
@@ -22,6 +23,7 @@ class UserTableSeeder extends Seeder
 			'bio'   => $faker->sentence,
 			'username'   => 'bharat',
 			'email'      => 'bharatbgarg4@gmail.com',
+			'mobile'=>$faker->mobile,
 			'imgUrl'    => $this->image(),
 			'talent_id'=>$faker->numberBetween(1,4),
 			'location_id'=>$faker->numberBetween(1,12),
@@ -38,6 +40,7 @@ class UserTableSeeder extends Seeder
 			'bio'   => $faker->sentence,
 			'username'   => 'himanshu',
 			'email'      => 'himanshu.vasistha@gmail.com',
+			'mobile'=>$faker->mobile,
 			'imgUrl'    => $this->image(),
 			'talent_id'=>$faker->numberBetween(1,4),
 			'location_id'=>$faker->numberBetween(1,12),
@@ -53,6 +56,7 @@ class UserTableSeeder extends Seeder
 			'bio'   => $faker->sentence,
 			'username'   => 'param',
 			'email'      => 'kalra.parampreetsingh@gmail.com',
+			'mobile'=>$faker->mobile,
 			'imgUrl'    => $this->image(),
 			'talent_id'=>$faker->numberBetween(1,4),
 			'location_id'=>$faker->numberBetween(1,12),
@@ -70,6 +74,7 @@ class UserTableSeeder extends Seeder
 				'bio'   => $faker->sentence,
 				'username'=>str_slug($name),
 				'email' => $faker->email,
+				'mobile'=>$faker->mobile,
 				'imgUrl'    => $this->image(),
 				'talent_id'=>$faker->numberBetween(1,4),
 				'location_id'=>$faker->numberBetween(1,12),
@@ -87,6 +92,7 @@ class UserTableSeeder extends Seeder
 				'bio'   => $faker->sentence,
 				'username'=>str_slug($name),
 				'email' => $faker->email,
+				'mobile'=>$faker->mobile,
 				'imgUrl'    => $this->image(),
 				'talent_id'=>$faker->numberBetween(1,4),
 				'location_id'=>$faker->numberBetween(1,12),

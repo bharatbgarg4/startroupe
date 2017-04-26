@@ -14,23 +14,25 @@
 	<section class="profile">
 		<div class="container">
 			<div class="list">
-				<span><a href="/talent" class="seeall"> All </a></span>
 				@foreach($talents as $talent)
-				<span><a href="/talent/{{$talent->slug}}"> {{$talent->title}} </a></span>
+				<span class="dock dock-{{$talent->title}}">{{$talent->title}}</span>
 				@endforeach
+				<a href="/talent"><span>More</span></a>
 			</div>
-			<div class="row categories">
-				@if($users->isEmpty())
-				<h4>No Users in this Category</h4>
-				@else
-				@foreach($users as $user)
-				<div class="col-md-3">
-					<div class="inner">
-						@include('partials.elements.userBox')
+			<div class="shipper">
+				@foreach($talents as $talent)
+				<div class="ship ship-{{$talent->title}}">				
+					<div class="row categories">
+						@foreach($talent->users->take(8) as $user)
+						<div class="col-md-3">
+							<div class="inner">
+								@include('partials.elements.userBox')
+							</div>
+						</div>
+						@endforeach
 					</div>
 				</div>
 				@endforeach
-				@endif
 			</div>
 		</div>
 	</section>
@@ -166,7 +168,7 @@
 			<script type='text/javascript'>
 			if (top.location!= self.location)
 			{
-			top.location = self.location
+				top.location = self.location
 			}
 			</script>
 
@@ -220,5 +222,15 @@ $( ".autof" ).keyup(function() {
 $(".auton").on('click',".echo",function(){
 	$('.autof').val($(this).text());
 });
+
+$(".dock").click(function(){
+	$('.ship').hide();
+	var classNames = $(this).attr("class").toString().split(' ');
+	console.log(classNames);
+	var r=classNames[1].split('-')[1];
+	console.log(r);
+	$('.ship-'+r).show();
+});
+
 </script>
 @stop

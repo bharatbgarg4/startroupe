@@ -64,12 +64,11 @@ class PageController extends Controller
 		if(Auth::user()){
 			return redirect('dashboard');
 		}
-		$users=User::all()->take(8);
 		$talents=Talent::all()->take(4);
 		$links=Link::all();
 		$select_talent=Talent::lists('title', 'slug')->toArray();
 		$select_location=Location::lists('title', 'slug')->toArray();
-		return view('pages.index',compact('users','talents','links','select_talent','select_location'));
+		return view('pages.index',compact('talents','links','select_talent','select_location'));
 	}
 
 	public function createLink(LinkRequest $request){
