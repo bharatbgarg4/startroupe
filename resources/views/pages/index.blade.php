@@ -141,20 +141,25 @@
 	</section>
 	<section class="invitation">
 		<div class="container"><h4 class="inn">  Invite Your <span>Band, Team, Troupe Onboard </span> </h4>
-			<div id="fb-root"></div>
-			<script src="http://connect.facebook.net/en_US/all.js"></script>
+			<script src="https://connect.facebook.net/en_US/all.js"></script>
 			<script>
-			FB.init({ 
-				appId:'1712754652385392', cookie:true, 
-				status:true, xfbml:true 
+			FB.init({
+				appId:'1712754652385392',
+				cookie:true,
+				status:true,
+				xfbml:true
 			});
+
 			function FacebookInviteFriends()
 			{
-				FB.ui({ method: 'apprequests', 
-					message: 'VISIT THIS WEB SITE'});
+				FB.ui({
+					method: 'apprequests',
+					message: 'Invite to Startroupe'
+				});
 			}
 			</script>
 
+			<div id="fb-root"></div>
 			<a href='#' onClick="FacebookInviteFriends();" class="started"> Get Started </a>
 		</div>
 	</section>
