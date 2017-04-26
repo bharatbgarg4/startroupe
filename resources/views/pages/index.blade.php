@@ -141,53 +141,68 @@
 	</section>
 	<section class="invitation">
 		<div class="container"><h4 class="inn">  Invite Your <span>Band, Team, Troupe Onboard </span> </h4>
-		<a href="/signup" class="started"> Get Started </a>
-	</div></section>
+			<div id="fb-root"></div>
+			<script src="http://connect.facebook.net/en_US/all.js"></script>
+			<script>
+			FB.init({ 
+				appId:'1712754652385392', cookie:true, 
+				status:true, xfbml:true 
+			});
+			function FacebookInviteFriends()
+			{
+				FB.ui({ method: 'apprequests', 
+					message: 'VISIT THIS WEB SITE'});
+			}
+			</script>
+
+			<a href='#' onClick="FacebookInviteFriends();" class="started"> Get Started </a>
+		</div>
+	</section>
 </div>
 @stop
 
 @section('footinclude')
 <script>
-	console.log('autocomplete');
-	var data=[];
-	String.prototype.beginsWith = function (string) {
-	    return(this.indexOf(string) === 0);
-	};
-	function popu(data,k=0){
-		$( ".auton" ).empty();
-		if(k){
-			data=data.filter(function (el) {
-				return el.word.beginsWith(k);
-			});
-		}
-		if(data.length>0){
-			data.sort(function(a, b) {
-				return parseFloat(b.count) - parseFloat(a.count);
-			}).slice(0,6).forEach(function(d){
-				$( ".auton" ).append( '<div class="echo">'+d.word+'</div>' );
-			});
-		}
-		else{
-			$( ".auton" ).append( '<div class="nora">No Result</div>' );			
-		}
+console.log('autocomplete');
+var data=[];
+String.prototype.beginsWith = function (string) {
+	return(this.indexOf(string) === 0);
+};
+function popu(data,k=0){
+	$( ".auton" ).empty();
+	if(k){
+		data=data.filter(function (el) {
+			return el.word.beginsWith(k);
+		});
 	}
-	$.getJSON('/autocomplete', function(d) {
-		data=d;
-	});
-	$(".auton").hide();
-	$( ".autof" ).focus(function() {
-		popu(data);
-		$(".auton").show();
-	});
-	$( ".autof" ).focusout(function() {
-		$(".auton").fadeOut();
-	});
-	$( ".autof" ).keyup(function() {
-		var v=$('.autof').val();
-		popu(data,v);
-	});
-	$(".auton").on('click',".echo",function(){
-		$('.autof').val($(this).text());
-	});
+	if(data.length>0){
+		data.sort(function(a, b) {
+			return parseFloat(b.count) - parseFloat(a.count);
+		}).slice(0,6).forEach(function(d){
+			$( ".auton" ).append( '<div class="echo">'+d.word+'</div>' );
+		});
+	}
+	else{
+		$( ".auton" ).append( '<div class="nora">No Result</div>' );			
+	}
+}
+$.getJSON('/autocomplete', function(d) {
+	data=d;
+});
+$(".auton").hide();
+$( ".autof" ).focus(function() {
+	popu(data);
+	$(".auton").show();
+});
+$( ".autof" ).focusout(function() {
+	$(".auton").fadeOut();
+});
+$( ".autof" ).keyup(function() {
+	var v=$('.autof').val();
+	popu(data,v);
+});
+$(".auton").on('click',".echo",function(){
+	$('.autof').val($(this).text());
+});
 </script>
 @stop
