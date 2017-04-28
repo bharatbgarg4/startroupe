@@ -18,6 +18,8 @@ class CreateUsersTable extends Migration
 			$table->string('bio');
 			$table->string('imgUrl');
 			$table->string('mobile');
+			$table->string('vmobile');
+			$table->string('otp');
 
 			$table->timestamp('viewed');
 

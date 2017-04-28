@@ -44,6 +44,11 @@ Route::post('apply/{job}','JobController@apply');
 Route::get('dashboard/images','ImageController@index');
 Route::post('dashboard/images','ImageController@store');
 
+Route::get('dashboard/mobile','DashboardController@mobile');	
+Route::post('dashboard/mobile','DashboardController@storemobile');	
+Route::post('dashboard/mobileVerify','DashboardController@verifymobile');
+Route::get('dashboard/resend/otp','DashboardController@resendOtp');
+
 Route::get('dashboard/autocomplete',"AdminController@autocomplete");
 Route::get('dashboard/manage',"AdminController@manage");
 Route::get('dashboard/autoreset',"AdminController@autoreset");
@@ -58,6 +63,7 @@ Route::get('dashboard/messages',"AdminController@messages");
 Route::get('dashboard/message/{message}/delete',"AdminController@delete_message");
 Route::get('dashboard/articles',"AdminController@articles");
 Route::get('dashboard/discussions',"AdminController@discussions");
+
 
 Route::get('dashboard/{user}/articles',"DashboardController@articles");
 Route::get('dashboard/{user}/discussions',"DashboardController@discussions");

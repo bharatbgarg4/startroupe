@@ -8,7 +8,9 @@ use App\User;
 use App\Location;
 use App\Talent;
 use App\Offer;
-
+use Illuminate\Http\Request;
+use App\Http\Requests;
+use App\Http\Requests\MobileRequest;
 class DashboardController extends Controller
 {
 	public function __construct(){
@@ -57,5 +59,48 @@ class DashboardController extends Controller
 	public function discussions(User $user){
 		$discussions=$user->discussions()->latest()->get();
 		return view('dashboard.discussions',compact('discussions'));
+	}
+
+	public function mobile(){
+		return view('dashboard.mobile');
+	}
+
+	public function storemobile(MobileRequest $request){
+		$input=$request->all();
+		$mobile=$input['mobile'];
+		if($mobile==Auth::user()->mobile){
+			return redirect()->back()->with('status-alert','Same No. not allowed');
+		}
+		$otp = substr(str_shuffle("0123456789"), 0, 6);
+		$msg="Your verification code for StarTroupe is ".$otp;
+		$url="http://bhashsms.com/api/sendmsg.php?user=mindvis&pass=BulkSMS1234&sender=MINDVI&phone=".$mobile."&text=".urlencode($msg)."&priority=ndnd&stype=normal";
+		$respon=file_get_contents($url);
+		Auth::user()->update(['vmobile'=>$mobile,'otp'=>$otp]);
+		return redirect()->back()->with('status',"Verifiction code sent to your Mobile No.");
+	}
+
+	public function resendOtp(){
+		$otp=Auth::user()->otp;
+		if(!$otp){
+			return redirect()->back()->with('status-alert','No Request Pending');
+		}
+		$mobile=Auth::user()->vmobile;
+		$msg="Your verification code for StarTroupe is ".$otp;
+		$url="http://bhashsms.com/api/sendmsg.php?user=mindvis&pass=BulkSMS1234&sender=MINDVI&phone=".$mobile."&text=".urlencode($msg)."&priority=ndnd&stype=normal";
+		echo($url);
+		$respon=file_get_contents($url);
+		return redirect()->back()->with('status',"Verification Code Sent");
+	}
+
+	public function verifymobile(Request $request){
+		$input=$request->all();
+		if($input['otp']==Auth::user()->otp){
+			$mobile=Auth::user()->vmobile;
+			Auth::user()->update(['otp'=>null,'mobile'=>$mobile,'vmobile'=>null]);
+			return redirect('dashboard/courses')->with('status','Mobile No. Updated');
+		}
+		else{
+			return redirect()->back()->with('status-alert','Try again');
+		}
 	}
 }

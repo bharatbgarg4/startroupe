@@ -50,6 +50,9 @@
 			<li class="list-group-item">
 				<a href="/dashboard/{{Auth::user()->username}}/profile"><i class="fa fa-user fa-6" aria-hidden="true"></i>Profile</a>
 			</li>
+			<li class="list-group-item">
+				<a href="/dashboard/mobile"><i class="fa fa-user fa-6" aria-hidden="true"></i>Mobile</a>
+			</li>
 			@if(Auth::user()->editor or Auth::user()->admin)
 			<li class="list-group-item">
 				<a href="/dashboard/jobs"><i class="fa fa-briefcase" aria-hidden="true"></i>Jobs</a>

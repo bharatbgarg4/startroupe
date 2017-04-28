@@ -117,11 +117,6 @@
 					</div>
 
 					<div class="col col-md-6 form-group">
-						<label>Mobile</label>
-						{!! Form::text('mobile',null,['placeholder'=>'Mobile','class'=>'form-control']) !!}
-					</div>
-
-					<div class="col col-md-6 form-group">
 						<label>Bio</label>
 						{!! Form::text('bio',null,['placeholder'=>'Bio','class'=>'form-control']) !!}
 					</div>
