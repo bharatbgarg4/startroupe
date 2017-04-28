@@ -67,40 +67,40 @@ class UserTableSeeder extends Seeder
 			'updated_at'=>\Carbon\Carbon::now(),
 			'viewed'=>\Carbon\Carbon::now(),
 			]);
-		foreach (range(1,10) as $index) {
-			$name=$faker->name;
-			DB::table('users')->insert([
-				'name' => $name,
-				'bio'   => $faker->sentence,
-				'username'=>str_slug($name),
-				'email' => $faker->email,
-				'mobile'=>$faker->phoneNumber,
-				'imgUrl'    => $this->image(),
-				'talent_id'=>$faker->numberBetween(1,4),
-				'location_id'=>$faker->numberBetween(1,12),
-				'password' => bcrypt('qwert'),
-				'editor'   => true,
-				'created_at'=>\Carbon\Carbon::now(),
-				'updated_at'=>\Carbon\Carbon::now(),
-				'viewed'=>\Carbon\Carbon::now(),
-				]);
-		}
-		foreach (range(1,100) as $index) {
-			$name=$faker->name;
-			DB::table('users')->insert([
-				'name' => $name,
-				'bio'   => $faker->sentence,
-				'username'=>str_slug($name),
-				'email' => $faker->email,
-				'mobile'=>$faker->phoneNumber,
-				'imgUrl'    => $this->image(),
-				'talent_id'=>$faker->numberBetween(1,4),
-				'location_id'=>$faker->numberBetween(1,12),
-				'password' => bcrypt('qwert'),
-				'created_at'=>\Carbon\Carbon::now(),
-				'updated_at'=>\Carbon\Carbon::now(),
-				'viewed'=>\Carbon\Carbon::now(),
-				]);
-		}
+		// foreach (range(1,10) as $index) {
+		// 	$name=$faker->name;
+		// 	DB::table('users')->insert([
+		// 		'name' => $name,
+		// 		'bio'   => $faker->sentence,
+		// 		'username'=>str_slug($name),
+		// 		'email' => $faker->email,
+		// 		'mobile'=>$faker->phoneNumber,
+		// 		'imgUrl'    => $this->image(),
+		// 		'talent_id'=>$faker->numberBetween(1,4),
+		// 		'location_id'=>$faker->numberBetween(1,12),
+		// 		'password' => bcrypt('qwert'),
+		// 		'editor'   => true,
+		// 		'created_at'=>\Carbon\Carbon::now(),
+		// 		'updated_at'=>\Carbon\Carbon::now(),
+		// 		'viewed'=>\Carbon\Carbon::now(),
+		// 		]);
+		// }
+		// foreach (range(1,100) as $index) {
+		// 	$name=$faker->name;
+		// 	DB::table('users')->insert([
+		// 		'name' => $name,
+		// 		'bio'   => $faker->sentence,
+		// 		'username'=>str_slug($name),
+		// 		'email' => $faker->email,
+		// 		'mobile'=>$faker->phoneNumber,
+		// 		'imgUrl'    => $this->image(),
+		// 		'talent_id'=>$faker->numberBetween(1,4),
+		// 		'location_id'=>$faker->numberBetween(1,12),
+		// 		'password' => bcrypt('qwert'),
+		// 		'created_at'=>\Carbon\Carbon::now(),
+		// 		'updated_at'=>\Carbon\Carbon::now(),
+		// 		'viewed'=>\Carbon\Carbon::now(),
+		// 		]);
+		// }
 	}
 }

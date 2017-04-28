@@ -17,8 +17,8 @@ class DatabaseSeeder extends Seeder
         $this->call(CatTableSeeder::class);
         $this->call(LocationTableSeeder::class);
         $this->call(UserTableSeeder::class);
-        $this->call(LinkSeeder::class);
-        $this->call(JobSeeder::class);
+        // $this->call(LinkSeeder::class);
+        // $this->call(JobSeeder::class);
 
         Model::reguard();
     }
