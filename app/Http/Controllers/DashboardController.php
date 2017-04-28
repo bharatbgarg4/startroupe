@@ -97,7 +97,7 @@ class DashboardController extends Controller
 		if($input['otp']==Auth::user()->otp){
 			$mobile=Auth::user()->vmobile;
 			Auth::user()->update(['otp'=>null,'mobile'=>$mobile,'vmobile'=>null]);
-			return redirect('dashboard/courses')->with('status','Mobile No. Updated');
+			return redirect('dashboard')->with('status','Mobile No. Updated');
 		}
 		else{
 			return redirect()->back()->with('status-alert','Try again');
