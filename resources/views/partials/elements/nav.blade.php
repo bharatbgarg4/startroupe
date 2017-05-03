@@ -14,13 +14,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-
-        </div>
-
-
-
-
-				<nav class="navbar navigation">
+          </div>
+        
+				
 					<div class="collapse navbar-collapse" id="navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="/talent"> Talent </a></li>
@@ -33,8 +29,9 @@
 						<li class="signup-btn"><a href="/signup"> Sign Up </a></li>
 						@endif
 					</ul></div>
-				</nav>
+				
 			</div>
 		</div>
+
 	</div>
 </div>
