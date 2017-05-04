@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use App\Message;
 use App\Word;
 use App\User;
+use App\Link;
 use App\Location;
 use App\Talent;
 use App\Article;
