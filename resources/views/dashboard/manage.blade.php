@@ -1,8 +1,8 @@
 @extends('layouts.dashboard')
 
 @section('dashboardcontent')
+@include('partials.elements.linkModal')
 @include('partials.elements.talentModals')
-
 <h4>Talent</h4>
 @foreach($talents as $talent)
 <div>

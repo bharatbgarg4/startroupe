@@ -89,7 +89,7 @@
 				</div>
 			</div>
 			<div class="row">
-				@include('partials.elements.linkModal')
+				
 				@foreach($links as $link)
 				<div class="col-sm-3">
 					<span class="seo-link"><a href="/talent/{{$link->talent->slug}}/{{$link->location->slug}}">{{$link->title}}</a></span>
