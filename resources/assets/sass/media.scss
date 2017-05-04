@@ -1,3 +1,24 @@
+.categories .inner .userBox .hover-info h5{
+	color:#000!important;
+}
+#home .top-talent span.seo-link{
+	background:none;
+	border:none;
+	margin:0px;
+}
+#home .top-talent span.seo-link a{
+	background:none !important;
+	border:none;
+	margin:0px;
+	padding:2px 0px;
+}
+#home .top-talent span.seo-link a:hover{
+	background:none !important; color:#00aef0;
+}
+#home section h2.tac{
+	text-align:center;
+}
+
 @media(max-width:1050px){
 	#home .works .inner {
 		padding: 10px 0px !important;
@@ -255,6 +276,19 @@
 	    line-height: 40px;
 	    padding: 0px 20px;
 	    display: inline-block;
+	}
+	.sidebar {
+	    width: 100%;
+	    float: left;
+	}
+	.dashboard-inner{
+	    width: 100%;
+	    float: left; 
+	}
+	.dashboard-inner .profile .public-pro {
+	    position: relative;
+	    width: 100% ;
+	    margin: 10px 0px;
 	}
 
 }
@@ -524,7 +558,10 @@
 	}
 	.categories .inner .userBox .user-box-img img {
 	     height: auto !important;
-	    max-height: 300px;
+	    
+	}
+	#home .reviewed .content{
+		height: auto;
 	}
 	.categories .inner .userBox .user-box-img .hover-img {
 	      top: 45% !important;
@@ -563,7 +600,41 @@
  #auth .tac {
      font-size: 18px;
  }
-
+ .nav > li > a {
+     padding: 10px 7px;
+     font-size: 14px;
+ }
+ .dashboard-inner a {
+     width: 100%;
+     margin: 10px 0px;
+ }
+ .dashboard-inner h1 {
+     font-size: 20px;
+ }
+ .form-control{
+ 	margin: 10px 0px;
+ }
+ .dashboard-inner .createjobbtn {
+     float: right;
+     width: 100%;
+ }
+ #home .profile .list span {
+     padding: 10px ;
+     margin: 0px;
+     font-size:15px;
+     float: left;
+ }
+ #home .profile .list a {
+     padding: 6px 0px !important;
+     float: left;
+     width: 100%;
+     margin: 0px !important;
+ }
+ #home .profile .list a span {
+     padding: 10px 0px;
+     float: left;
+     width: 100%;
+ }
 }
 
 	@media(max-width:640px){
@@ -579,10 +650,7 @@
 		#home .companies .imah:nth-child(5){
 			width: 50%;
 		}
-		#home .profile .list a {
-			margin: 10px !important;
-
-		}
+		
 		.logo .img-responsive {
 			width: 130px !important;
 		}
@@ -687,9 +755,7 @@
 			float: left;
 		}
 
-		#home .profile .list a {
-			padding: 6px 12px !important;
-		}
+		
 		#home .categories .inner .userBox a .hover-info {
 			padding: 18px 20px !important;
 		}

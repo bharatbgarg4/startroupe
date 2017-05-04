@@ -88,6 +88,10 @@
 						&:hover{
 							background: #00aef0 !important;
 						}
+						::-webkit-input-placeholder { color: white; } 
+						:-moz-placeholder           { color: white; }
+						::-moz-placeholder          { color: white; }
+						:-ms-input-placeholder      { color: white; } 
 					}
 				}
 			}
