@@ -37,7 +37,10 @@ class AdminController extends Controller
 	public function manage(){
 		$locations=Location::all();
 		$talents=Talent::all();
-		return view('dashboard.manage',compact('talents','locations'));
+		$links=Link::all();
+		$select_talent=Talent::lists('title', 'slug')->toArray();
+		$select_location=Location::lists('title', 'slug')->toArray();
+		return view('dashboard.manage',compact('talents','locations','links','select_location','select_talent'));
 	}
 
 	public function wordAct($act,$id){
