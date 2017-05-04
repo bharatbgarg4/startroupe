@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Http\Requests\LinkRequest;
 use App\Message;
 use App\Word;
 use App\User;
@@ -39,9 +39,20 @@ class AdminController extends Controller
 		$locations=Location::all();
 		$talents=Talent::all();
 		$links=Link::all();
-		$select_talent=Talent::lists('title', 'slug')->toArray();
-		$select_location=Location::lists('title', 'slug')->toArray();
-		return view('dashboard.manage',compact('talents','locations','links','select_location','select_talent'));
+		$select_talent=Talent::lists('title', 'id')->toArray();
+		$select_location=Location::lists('title', 'id')->toArray();
+		return view('dashboard.manage',compact('talents','locations','select_location','select_talent','links'));
+	}
+
+	public function createLink(LinkRequest $request){
+		$input=$request->all();
+		Link::create($input);
+		return redirect()->back()->with('status','Link Created');
+	}
+
+	public function deleteLink(Link $link){
+		$link->delete();
+		return redirect()->back()->with('status-danger','Link Deleted');
 	}
 
 	public function wordAct($act,$id){

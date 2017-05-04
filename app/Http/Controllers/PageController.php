@@ -16,7 +16,7 @@ use App\Location;
 use App\Link;
 use Input;
 use Mail;
-use App\Http\Requests\LinkRequest;
+
 use App\Http\Requests\MessageRequest;
 use App\Http\Controllers\Controller;
 use App\Word;
@@ -66,22 +66,12 @@ class PageController extends Controller
 		}
 		$talents=Talent::all()->take(4);
 		$links=Link::all();
-		$select_talent=Talent::lists('title', 'slug')->toArray();
-		$select_location=Location::lists('title', 'slug')->toArray();
-		return view('pages.index',compact('talents','links','select_talent','select_location'));
+		return view('pages.index',compact('talents','links'));
 	}
-
-	public function createLink(LinkRequest $request){
-		$input=$request->all();
-		Link::create($input);
-		return redirect()->back()->with('status','Link Created');
-	}
-
 
 	public function coming(){
 		return view('pages.coming');
 	}
-
 
 	public function search(Request $request){
 		$input=$request->all();
@@ -113,11 +103,6 @@ class PageController extends Controller
 			$type='talent';
 		}
 		return redirect('/search/'.$type.'?query='.$input['word']);
-	}
-
-	public function deleteLink(Link $link){
-
-		return redirect()->back()->with('status-danger','Link Deleted');
 	}
 
 	public function talent(Talent $talent){

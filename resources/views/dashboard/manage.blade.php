@@ -18,4 +18,12 @@
 </div>
 @endforeach
 
+
+<h4>Links</h4>
+@foreach($links as $link)
+<div>
+	{{$link->title}} <a href="/seolink/{{$link->id}}/delete"><i class="fa fa-trash"></i></a>
+</div>
+@endforeach
+
 @stop

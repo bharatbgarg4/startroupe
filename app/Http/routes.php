@@ -86,8 +86,8 @@ Route::post('location/save', 'TalentController@saveLocation');
 Route::get('talent/delete/{talent}', 'TalentController@delete');
 Route::get('location/delete/{location}', 'TalentController@deleteLocation');
 
-Route::post('seolink/save', 'PageController@createLink');
-Route::post('seolink/{link}/delete', 'PageController@deleteLink');
+Route::post('seolink/save', 'AdminController@createLink');
+Route::get('seolink/{link}/delete', 'AdminController@deleteLink');
 
 Route::post('search', 'PageController@search');
 Route::post('autosearch', 'PageController@autosearch');
