@@ -233,6 +233,11 @@
 					</div>
 
 					<div class="col col-md-6 form-group">
+						{!! Form::label('Cover Image') !!}
+						{!! Form::file('coverPic', null,['class'=>'btn btn-primary']) !!}
+					</div>
+
+					<div class="col col-md-6 form-group">
 						<button type="submit" class="btn btn-primary form-control">Update</button>
 					</div>
 					{!! Form::close() !!}

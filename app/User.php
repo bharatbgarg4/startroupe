@@ -29,7 +29,7 @@ CanResetPasswordContract
 	 * @var array
 	 */
 	protected $fillable = ['name', 'bio','username','imgUrl','birthDate','lastJob','lastJobDetails','company','height','skinColor','eyesColor','chest','waist','hips','hairColor','house','street','city','state','pinCode','married','travel','language','talent_id','location_id','facebook','youtube','twitter','linkedin','mobile','vmobile','otp',
-	'views','likes', 'email', 'password','viewed','admin','editor','artist','token'];
+	'views','likes', 'email', 'password','viewed','admin','editor','artist','token','coverPic'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.

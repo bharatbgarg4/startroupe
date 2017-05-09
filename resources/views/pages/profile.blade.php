@@ -2,7 +2,7 @@
 
 @section('maincontent')
 <div class="profile">
-    <div class="profile-main"><div class="profile-banner"></div>
+    <div class="profile-main"><div class="profile-banner">@if($user->coverPic)<img src="{{$user->coverPic}}" alt="">@endif</div>
     <div class="banner-head"><h4>{{$user->name}}</h4>
         <div class="righti">
             <p>@if($user->talent)

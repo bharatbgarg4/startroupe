@@ -54,7 +54,12 @@ class ProfileController extends Controller
 			$request->file('imgUrl')->move(
 				base_path() . '/public/uploads/profile/',$imageName);
 			$input['imgUrl']='/uploads/profile/'.$imageName;
-
+		}
+		if($request->hasFile('coverPic')){
+			$imageName = Auth::user()->username.'-'.str_random(8).'.'.$request->file('coverPic')->getClientOriginalExtension();
+			$request->file('coverPic')->move(
+				base_path() . '/public/uploads/covers/',$imageName);
+			$input['coverPic']='/uploads/covers/'.$imageName;
 		}
 		$user->update($input);
 		return redirect('dashboard/'.$user->username.'/profile')->with('status','Profile Updated');

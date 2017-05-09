@@ -1,8 +1,10 @@
 <div class="userBox">
 	<a href="/profile/{{$user->username}}">
 		<div class="user-box-img"><img src="{{$user->imgUrl}}" width="100%">
+			@if(isset($hover))
+			@else
 			<img  data-toggle="modal" data-target="#userbox-modal" src="/images/ea-play.svg" width="100%" class="hover-img" />
-
+			@endif
 			@if($user->talent)
 			<h3> {{$user->talent->title}} </h3>
 			@else

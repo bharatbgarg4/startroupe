@@ -66,7 +66,8 @@ class PageController extends Controller
 		}
 		$talents=Talent::all()->take(4);
 		$links=Link::all();
-		return view('pages.index',compact('talents','links'));
+		$hover=1;
+		return view('pages.index',compact('talents','links','hover'));
 	}
 
 	public function coming(){
